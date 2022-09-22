@@ -24,8 +24,8 @@ export const Spacing = ({
       // @ts-ignore: Unreachable code error
       style={
         spacing == "large" ? SpacingLarge :
-        spacing == "medium" ? SpacingLarge :
-        spacing == "small" ? SpacingLarge :
+        spacing == "medium" ? SpacingMedium :
+        spacing == "small" ? SpacingSmall :
         null
       }
     >

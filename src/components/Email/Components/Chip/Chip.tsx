@@ -1,4 +1,5 @@
 import React from 'react'
+import { Spacing } from '@email'
 
 const ChipStyles = {
   display: 'inline-block',
@@ -14,17 +15,21 @@ const ChipStyles = {
 
 interface ChipProps {
   title: string
+  spacing?: 'large' | 'medium' | 'small'
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Chip = ({
-    title
+    title,
+    spacing
   }: ChipProps ) => {
   
   return(
 
-    <div style={ ChipStyles }><strong>{ title }</strong></div>
-    
+    <Spacing {...{ spacing }}>
+      <div style={ ChipStyles }><strong>{ title }</strong></div>
+    </Spacing>
+
   )
 }

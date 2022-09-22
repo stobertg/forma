@@ -1,5 +1,18 @@
 import React from 'react'
 
+const IntroStyle = {
+  backgroundColor: '#150050',
+  color: '#fff',
+  width: '100%',
+  borderRadius: 32
+}
+
+const IntroContent = {
+  width: '80%',
+  margin: '0 auto',
+  padding: '50px 0'
+}
+ 
 // -------------- Typescript declarations -------------- //
 
 interface IntroProps {
@@ -14,8 +27,8 @@ export const Intro = ({
   
   return(
 
-    <div>
-      <div>
+    <div style={ IntroStyle }>
+      <div style={ IntroContent }>
         { children }
       </div>
     </div>
