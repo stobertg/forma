@@ -1,21 +1,20 @@
 import React from 'react'
-import { GlobalContainer } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
-interface EmailProps {
-
+interface GlobalContainerProps {
+  children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Email = ({
-
-  }: EmailProps ) => {
+export const GlobalContainer = ({
+    children
+  }: GlobalContainerProps ) => {
   
     return(
 
-     <>This is some content</>
+     <table>{ children }</table>
      
     )
 }
