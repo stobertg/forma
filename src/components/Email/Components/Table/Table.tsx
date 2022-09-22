@@ -1,6 +1,10 @@
 import React from 'react'
 import { Tbody } from '@email'
 
+const tableStyles = {
+
+}
+
 // -------------- Typescript declarations -------------- //
 
 interface TableProps {
