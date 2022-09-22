@@ -14,7 +14,7 @@ const ChipStyles = {
 // -------------- Typescript declarations -------------- //
 
 interface ChipProps {
-  title: string
+  title: string | React.ReactNode
   spacing?: 'large' | 'medium' | 'small'
 }
 

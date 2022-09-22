@@ -1,20 +1,25 @@
 import React from 'react'
+import { Spacing } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
 interface TrProps {
+  spacing?: 'large' | 'medium' | 'small'
   children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Tr = ({
+    spacing,
     children
   }: TrProps ) => {
   
-    return(
+  return(
 
-     <table>{ children }</table>
-     
-    )
+    <Spacing {...{ spacing }}>
+      <table>{ children }</table>
+    </Spacing>
+    
+  )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tbody } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
@@ -14,7 +15,11 @@ export const Table = ({
   
   return(
 
-    <table>{ children }</table>
+    <table>
+      <Tbody>
+        { children }
+      </Tbody>
+    </table>
      
   )
 }

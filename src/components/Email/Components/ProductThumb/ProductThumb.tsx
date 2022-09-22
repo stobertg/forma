@@ -2,19 +2,19 @@ import React from 'react'
 
 // -------------- Typescript declarations -------------- //
 
-interface TheadProps {
-  children: React.ReactNode
+interface ProductThumbProps {
+
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Thead = ({
-    children
-  }: TheadProps ) => {
+export const ProductThumb = ({
+
+  }: ProductThumbProps ) => {
   
     return(
 
-     <table>{ children }</table>
+     <div></div>
      
     )
 }

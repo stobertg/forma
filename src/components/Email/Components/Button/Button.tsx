@@ -1,6 +1,9 @@
 import React from 'react'
+import { Spacing } from '@email'
 
 const ButtonStyles = {
+  display: 'inline-block',
+  fontSize: 15,
   fontFamily: 'Labil Grotesk',
   padding: '16px 20px',
   borderRadius: 8,
@@ -21,6 +24,7 @@ const ButtonSecondary = {
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
+  spacing?: 'small' | 'medium' | 'large'
   href?: string
   title: string
   variant?: 'primary' | 'secondary'
@@ -29,6 +33,7 @@ interface ButtonProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Button = ({
+    spacing,
     href,
     title,
     variant
@@ -36,11 +41,17 @@ export const Button = ({
 
   const ButtonBase = () => {
     return(
-      <strong style={ 
-        variant == 'primary' ? ButtonPrimary :
-        variant == 'secondary' ? ButtonSecondary :
-        ButtonStyles 
-      }>{ title }</strong>
+      <Spacing {...{ spacing }}>
+        <strong 
+          style={ 
+            variant == 'primary' ? ButtonPrimary :
+            variant == 'secondary' ? ButtonSecondary :
+            ButtonStyles 
+          }
+        >
+          { title }
+        </strong>
+      </Spacing>
     )
   }
   

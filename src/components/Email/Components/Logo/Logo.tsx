@@ -2,19 +2,19 @@ import React from 'react'
 
 // -------------- Typescript declarations -------------- //
 
-interface TheadProps {
-  children: React.ReactNode
+interface LogoProps {
+
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Thead = ({
-    children
-  }: TheadProps ) => {
+export const Logo = ({
+
+  }: LogoProps ) => {
   
     return(
 
-     <table>{ children }</table>
+     <div></div>
      
     )
 }
