@@ -1,7 +1,8 @@
 import React from 'react'
 
 const BodyStyles = {
-  display: 'table'
+  display: 'table',
+  borderRadius: 16
 }
 
 const BodyWidthSmall = {

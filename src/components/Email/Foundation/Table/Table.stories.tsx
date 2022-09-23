@@ -2,7 +2,7 @@ import React from 'react';
 import { Table } from '@email';
 
 const story = {
-  title: 'email/components/Table',
+  title: 'email/foundation/Table',
   parameters: { layout: 'centered' },
   component: Table
 }

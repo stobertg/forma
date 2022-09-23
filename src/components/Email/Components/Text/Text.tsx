@@ -44,18 +44,37 @@ export const Text = ({
   
   return(
 
-    <Spacing {...{ spacing }}>
-      <div 
-        style={ 
-          fontSize == 'large' ? TextLarge :
-          fontSize == 'medium' ? TextMedium :
-          fontSize == 'small' ? TextSmall :
-          TextStyles  
-        }
-      >
-        <p>{ bold ? ( <strong>{ children }</strong> ) : <>{ children }</> }</p>
-      </div>
-    </Spacing>
+    <>
+      { spacing ? (
+
+        <Spacing {...{ spacing }}>
+          <div 
+            style={ 
+              fontSize == 'large' ? TextLarge :
+              fontSize == 'medium' ? TextMedium :
+              fontSize == 'small' ? TextSmall :
+              TextStyles  
+            }
+          >
+            <p>{ bold ? ( <strong>{ children }</strong> ) : <>{ children }</> }</p>
+          </div>
+        </Spacing>
+
+      ) : (
+
+        <div 
+          style={ 
+            fontSize == 'large' ? TextLarge :
+            fontSize == 'medium' ? TextMedium :
+            fontSize == 'small' ? TextSmall :
+            TextStyles  
+          }
+        >
+          <p>{ bold ? ( <strong>{ children }</strong> ) : <>{ children }</> }</p>
+        </div>
+
+      )}
+    </>
     
   )
 }

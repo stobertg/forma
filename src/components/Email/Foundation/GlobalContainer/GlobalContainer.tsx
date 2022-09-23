@@ -12,12 +12,14 @@ const TableStyles = {
 // -------------- Typescript declarations -------------- //
 
 interface GlobalContainerProps {
+  supportInFooter?: boolean
   children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const GlobalContainer = ({
+    supportInFooter,
     children
   }: GlobalContainerProps ) => {
   
@@ -26,7 +28,7 @@ export const GlobalContainer = ({
     <table style={ TableStyles }>
       <Tbody>
         { children }
-        <Footer />
+        <Footer support={ supportInFooter } />
       </Tbody>
     </table>
     

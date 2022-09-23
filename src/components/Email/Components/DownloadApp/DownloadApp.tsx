@@ -20,13 +20,19 @@ const ButtonStyle = {
 // -------------- Typescript declarations -------------- //
 
 interface DownloadAppProps {
-
+  title: string
+  appProviders: {
+    href: string
+    provider: string
+    title: string
+  }[]
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const DownloadApp = ({
-
+    title,
+    appProviders
   }: DownloadAppProps ) => {
   
   return(
@@ -34,17 +40,19 @@ export const DownloadApp = ({
     <Tr spacing="medium">
       <Td>
         <div style={ WrapStyle }>
-          <Heading bold size="small" title="Benefits on the go with the Forma app" />
+          <Heading bold size="small" title={ title } />
 
           <Spacing spacing="small">
             <div style={ ButtonContainer }>
-              <a style={{ ...ButtonStyle, marginRight: 12 }} href="https://storage.googleapis.com/assets.twicapp-production.twic.ai/sendgrid/member-stipend/AnimaPackage-Web-PJgaj/img/large-reminder-expiration-download-store-ios-531F0136-FE67-41EA-9836-1446029E3D85@2x.png">
-                <Image src="/appstore/apple.png" alt="Download from the App Store" />
-              </a>
-
-              <a style={ ButtonStyle } href="https://storage.googleapis.com/assets.twicapp-production.twic.ai/sendgrid/member-stipend/AnimaPackage-Web-PJgaj/img/large-reminder-expiration-download-store-play-37D4ED26-D807-486B-B077-331820EDD4FF@2x.png">
-                <Image src="/appstore/google.png" alt="Download from the Google Play Store" />
-              </a>
+              { appProviders.map(( provider, i ) => (
+                <a 
+                  key={`provider-${ i }`}
+                  style={{ ...ButtonStyle, marginRight: 12 }} 
+                  href={ provider.href }
+                >
+                  <Image src={`/appstore/${ provider.provider }.png`} alt={ provider.title } />
+                </a>
+              ))}
             </div>
           </Spacing>
         </div>

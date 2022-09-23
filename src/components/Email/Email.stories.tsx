@@ -10,7 +10,7 @@ export default story
 
 export const Layout1 = () => (
 
-  <Email>
+  <Email supportInFooter={ true }>
     <Intro 
       contentWidth="medium"
       bgColor="#150050"

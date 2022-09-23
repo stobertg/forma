@@ -6,18 +6,20 @@ import { GlobalContainer } from '@email'
 interface EmailProps {
   contentWidth?: 'small' | 'medium'
   children: React.ReactNode
+  supportInFooter?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Email = ({
     contentWidth,
-    children
+    children,
+    supportInFooter
   }: EmailProps ) => {
   
   return(
       
-    <GlobalContainer {...{ contentWidth }}>
+    <GlobalContainer {...{ contentWidth, supportInFooter }}>
       { children }
     </GlobalContainer>
     

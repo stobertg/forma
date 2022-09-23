@@ -1,0 +1,69 @@
+import React from 'react'
+import { Table, Tr, Td, Text, Support, DownloadApp, Legal } from '@email'
+
+// -------------- Typescript declarations -------------- //
+
+interface FooterProps {
+  support?: boolean
+}
+
+// ---------- This is the end of declarations ---------- //
+
+export const Footer = ({
+    support 
+  }: FooterProps ) => {
+  
+  return(
+
+    <Table 
+      tableWidth="medium"
+      contentWidth="small"
+      bgColor="#fff" 
+    >
+      { support ? (
+        <Support 
+          supportItems={[
+            { 
+              href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
+              title: 'Find help',
+              descp: 'Visit our detailed Help Center to find answers to commonly asked questions',
+              buttonTitle: 'Visit Help Center'
+            },
+            { 
+              spacing: 'medium',
+              href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
+              title: 'Chat with us',
+              descp: 'Chat with our support team online 24/7 when you login to Forma, or email support@joinforma.com',
+              buttonTitle: 'Got to Forma'
+            }
+          ]}
+        />
+      ) : null }
+
+      <DownloadApp 
+        title="Benefits on the go with the Forma app"
+        appProviders={[
+          { 
+            href: 'https://storage.googleapis.com/assets.twicapp-production.twic.ai/sendgrid/member-stipend/AnimaPackage-Web-PJgaj/img/large-reminder-expiration-download-store-ios-531F0136-FE67-41EA-9836-1446029E3D85@2x.png',
+            provider: 'apple',
+            title: 'Download from the App store'
+          },
+          { 
+            href: 'https://storage.googleapis.com/assets.twicapp-production.twic.ai/sendgrid/member-stipend/AnimaPackage-Web-PJgaj/img/large-reminder-expiration-download-store-play-37D4ED26-D807-486B-B077-331820EDD4FF@2x.png',
+            provider: 'google',
+            title: 'Download from the Google Play store'
+          }
+        ]}
+      />
+
+      <Legal 
+        items={[
+          { title: '47000 Warm Springs Blvd, Fremont, CA 94539 USA' },
+          { title: 'Copyright ©2022 Forma, Inc. All rights reserved.' },
+          { title: <>Questions about this email? Contact <a style={{ textDecoration: 'underline' }} href="mailto:support@joinforma.com">support@joinforma.com</a></> }
+        ]}
+      />
+    </Table>
+    
+  )
+}

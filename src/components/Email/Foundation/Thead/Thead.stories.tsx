@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Tbody } from '@email';
+import { Thead } from '@email';
 
 const story = {
-  title: 'email/components/Tbody',
-  component: Tbody
+  title: 'email/foundation/Thead',
+  component: Thead
 }
 export default story
 
 export const Primary = () => (
-  <Tbody>This is some content</Tbody>
+  <Thead>This is some content</Thead>
 )
 

@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Spacing } from '@email';
 
 const story = {
-  title: 'email/components/Spacing',
+  title: 'email/foundation/Spacing',
   parameters: { layout: 'centered' },
   component: Spacing
 }

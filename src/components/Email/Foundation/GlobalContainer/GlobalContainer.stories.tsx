@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { GlobalContainer } from '@email';
 
 const story = {
-  title: 'email/components/GlobalContainer',
+  title: 'email/foundation/GlobalContainer',
   component: GlobalContainer
 }
 export default story
