@@ -10,8 +10,11 @@ export default story
 
 export const Layout1 = () => (
 
-  <Email contentWidth="medium">
-    <Intro bgColor="#150050">
+  <Email>
+    <Intro 
+      contentWidth="medium"
+      bgColor="#150050"
+    >
       <Heading 
         size="large" 
         title={ <>Jane, treat yourself to <span style={{ color: '#fa9bfa' }}>reinvigorate your body, mind, and soul</span></> } 
@@ -33,8 +36,8 @@ export const Layout1 = () => (
 
 export const Layout2 = () => (
 
-  <Email contentWidth="small">
-    <Intro>
+  <Email>
+    <Intro contentWidth="small">
       <Heading 
         bold
         size="large" 
@@ -46,16 +49,16 @@ export const Layout2 = () => (
         that balance work and play and keep them in movement and flow. You are eligible for these handpicked 
         products, and we highly encourage you to use your benefit funds on some of these products.   
       </Text>
-
-      <ProductHero
-        spacing="large"
-        image="/products/sony/sony-noise-canceling.png"
-        imageAlt="Sony noise canceling headphones"
-        deal="Save 10%"
-        title="Sony intelligent industry-leading noise canceling headphones - black"
-        buttonTitle="Hurry up, limited time offer"
-      />
     </Intro>
+
+    <ProductHero
+      spacing="large"
+      image="/products/sony/sony-noise-canceling.png"
+      imageAlt="Sony noise canceling headphones"
+      deal="Save 10%"
+      title="Sony inteligent industry-leading noise canceling headphones - black"
+      buttonTitle="Hurry up, limited time offer"
+    />
   </Email>
 
 )

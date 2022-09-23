@@ -12,9 +12,9 @@ export const Td = ({
     children
   }: TdProps ) => {
   
-    return(
+  return(
 
-     <table>{ children }</table>
-     
-    )
+    <td>{ children }</td>
+    
+  )
 }

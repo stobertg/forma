@@ -17,6 +17,7 @@ const BodyWidthMedium = {
 // -------------- Typescript declarations -------------- //
 
 interface TbodyProps {
+  bgColor?: string
   width?: 'small' | 'medium'
   children: React.ReactNode
 }
@@ -24,6 +25,7 @@ interface TbodyProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Tbody = ({
+    bgColor,
     width,
     children
   }: TbodyProps ) => {
@@ -32,9 +34,9 @@ export const Tbody = ({
 
     <tbody 
       style={
-        width == 'small' ? BodyWidthSmall : 
-        width == 'medium' ? BodyWidthMedium : 
-        BodyStyles 
+        width == 'small' ? { ...BodyWidthSmall, backgroundColor: bgColor }: 
+        width == 'medium' ? { ...BodyWidthMedium, backgroundColor: bgColor } : 
+        { ...BodyStyles, backgroundColor: bgColor }
       }
     >
       { children }

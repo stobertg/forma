@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logo } from '@email'
+import { Table, Logo } from '@email'
 
 const IntroStyle = {
   width: '100%'
@@ -24,6 +24,7 @@ const IntroContentHasBg = {
 // -------------- Typescript declarations -------------- //
 
 interface IntroProps {
+  contentWidth?: 'small' | 'medium'
   bgColor?: string
   children: React.ReactNode
 }
@@ -31,18 +32,21 @@ interface IntroProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Intro = ({
+    contentWidth,
     bgColor,
     children
   }: IntroProps ) => {
   
   return(
 
-    <div style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
-      <div style={ bgColor ? IntroContentHasBg : IntroContent }>
-        <Logo />
-        { children }
+    <Table {...{ contentWidth }}>
+      <div style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
+        <div style={ bgColor ? IntroContentHasBg : IntroContent }>
+          <Logo />
+          { children }
+        </div>
       </div>
-    </div>
+    </Table>
     
   )
 }

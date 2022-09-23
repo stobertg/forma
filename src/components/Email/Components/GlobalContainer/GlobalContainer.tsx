@@ -12,22 +12,22 @@ const TableStyles = {
 // -------------- Typescript declarations -------------- //
 
 interface GlobalContainerProps {
-  contentWidth?: 'small' | 'medium'
   children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const GlobalContainer = ({
-    contentWidth,
     children
   }: GlobalContainerProps ) => {
   
   return(
 
     <table style={ TableStyles }>
-      <Tbody width={ contentWidth }>{ children }</Tbody>
-      <Footer />
+      <Tbody>
+        { children }
+        <Footer />
+      </Tbody>
     </table>
     
   )

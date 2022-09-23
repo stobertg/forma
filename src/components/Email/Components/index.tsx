@@ -1,6 +1,7 @@
 export { Button } from './Button/Button'
 export { Chip } from './Chip/Chip'
 export { Color } from './Color/Color'
+export { DownloadApp } from './DownloadApp/DownloadApp'
 export { Footer } from './Footer/Footer'
 export { GlobalContainer } from './GlobalContainer/GlobalContainer'
 export { Heading } from './Heading/Heading'
