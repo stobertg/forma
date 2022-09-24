@@ -9,6 +9,6 @@ const story = {
 export default story
 
 export const Primary = () => (
-  <Logo>This is some content</Logo>
+  <Logo />
 )
 

@@ -59,7 +59,7 @@ export const Button = ({
 
     <>
       { href 
-        ? ( <a href={ href }><ButtonBase /></a> ) 
+        ? ( <a style={{ display: 'inline-block' }} href={ href }><ButtonBase /></a> ) 
         : ( <><ButtonBase /></> )
       }
     </>

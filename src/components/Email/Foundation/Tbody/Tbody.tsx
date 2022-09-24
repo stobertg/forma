@@ -7,19 +7,29 @@ const BodyStyles = {
 
 const BodyWidthSmall = {
   ...BodyStyles,
+  padding: '0px 50px',
+}
+
+const BodyWidthSmallIntro = {
+  ...BodyStyles,
   padding: '40px 50px',
+}
+
+const BodyWidthMediumIntro = {
+  ...BodyStyles,
+  padding: 20,
 }
 
 const BodyWidthMedium = {
   ...BodyStyles,
-  padding: 20,
+  padding: "0px 20px",
 }
 
 // -------------- Typescript declarations -------------- //
 
 interface TbodyProps {
   bgColor?: string
-  width?: 'small' | 'medium'
+  width?: 'small' | 'medium' | 'smallIntro' | 'mediumIntro'
   children: React.ReactNode
 }
 
@@ -35,7 +45,9 @@ export const Tbody = ({
 
     <tbody 
       style={
-        width == 'small' ? { ...BodyWidthSmall, backgroundColor: bgColor }: 
+        width == 'smallIntro' ? { ...BodyWidthSmallIntro, backgroundColor: bgColor } :  
+        width == 'mediumIntro' ? { ...BodyWidthMediumIntro, backgroundColor: bgColor } :  
+        width == 'small' ? { ...BodyWidthSmall, backgroundColor: bgColor } : 
         width == 'medium' ? { ...BodyWidthMedium, backgroundColor: bgColor } : 
         { ...BodyStyles, backgroundColor: bgColor }
       }

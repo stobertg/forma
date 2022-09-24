@@ -10,12 +10,14 @@ export default story
 
 export const Layout1 = () => (
 
-  <Email supportInFooter={ true }>
+  <Email supportInFooter>
     <Intro 
-      contentWidth="medium"
+      logoOnDarkBg
+      contentWidth="mediumIntro"
       bgColor="#150050"
     >
       <Heading 
+        spacing="medium"
         size="large" 
         title={ <>Jane, treat yourself to <span style={{ color: '#fa9bfa' }}>reinvigorate your body, mind, and soul</span></> } 
       />
@@ -36,9 +38,10 @@ export const Layout1 = () => (
 
 export const Layout2 = () => (
 
-  <Email>
+  <Email supportInFooter>
     <Intro contentWidth="small">
       <Heading 
+        spacing="medium"
         bold
         size="large" 
         title="Bring play, creativity, flow to your home office."
