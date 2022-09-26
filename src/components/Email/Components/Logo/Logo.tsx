@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from '@email'
+import { Tr, Image, Heading } from '@email'
 
 const LogoMarkStyle = {
   display: 'inline-block',
@@ -16,6 +16,8 @@ const WordMarkStyle = {
 // -------------- Typescript declarations -------------- //
 
 interface LogoProps {
+  spacingTop?: 'small' | 'medium' | 'large'
+  text?: string
   noWordMark?: boolean
   onDarkBg?: boolean
 }
@@ -23,13 +25,15 @@ interface LogoProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Logo = ({
+    spacingTop,
+    text,
     noWordMark,
     onDarkBg
   }: LogoProps ) => {
   
   return(
 
-    <div>
+    <Tr {...{ spacingTop }}>
       <div style={ LogoMarkStyle }><Image src="/global/logo/logomark.png" alt="Forma Logomark" /></div>
       
       <>
@@ -37,21 +41,27 @@ export const Logo = ({
           <>
             { onDarkBg ? (
 
-              <div style={ WordMarkStyle }>
-                <Image src="/global/logo/wordmark-white.png" alt="Forma wordmark" />
-              </div>
+              <>
+                <div style={ WordMarkStyle }>
+                  <Image src="/global/logo/wordmark-white.png" alt="Forma wordmark" />
+                </div>
+                { text ? <Heading spacing="small" size="tiny" title={ text } /> : null }
+              </>
 
             ) : (
 
-              <div style={ WordMarkStyle }>
-                <Image src="/global/logo/wordmark-indigo.png" alt="Forma wordmark" />
-              </div>
+              <>
+                <div style={ WordMarkStyle }>
+                  <Image src="/global/logo/wordmark-indigo.png" alt="Forma wordmark" />
+                </div>
+                { text ? <Heading spacing="small" size="tiny" title={ text } /> : null }
+              </>
 
             )}
           </>
         )}
       </>
-    </div>
+    </Tr>
     
   )
 }

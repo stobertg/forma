@@ -17,7 +17,7 @@ export const Legal = ({
   
   return(
 
-    <Tr spacing="small">
+    <Tr spacingTop="small">
       <Td>
         <Text fontSize="small">
           { items.map(( item, i ) => (

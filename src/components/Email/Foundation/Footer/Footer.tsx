@@ -15,31 +15,31 @@ export const Footer = ({
   
   return(
 
-    <Tr spaceAndWidth="medium">
-      { support ? (
-        <Support 
-          supportItems={[
-            { 
-              href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
-              title: 'Find help',
-              descp: 'Visit our detailed Help Center to find answers to commonly asked questions',
-              buttonTitle: 'Visit Help Center'
-            },
-            { 
-              spacing: 'medium',
-              href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
-              title: 'Chat with us',
-              descp: 'Chat with our support team online 24/7 when you login to Forma, or email support@joinforma.com',
-              buttonTitle: 'Got to Forma'
-            }
-          ]}
-        />
-      ) : null }
+    <Tr 
+      spacingTop="medium" 
+      sideSpacing="medium"
+      bgColor="#fff" 
+      padding="large"
+    >
+      <Support 
+        supportItems={[
+          { 
+            href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
+            title: 'Find help',
+            descp: 'Visit our detailed Help Center to find answers to commonly asked questions',
+            buttonTitle: 'Visit Help Center'
+          },
+          { 
+            spacingTop: 'medium',
+            href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
+            title: 'Chat with us',
+            descp: 'Chat with our support team online 24/7 when you login to Forma, or email support@joinforma.com',
+            buttonTitle: 'Got to Forma'
+          }
+        ]}
+      />
 
-      <Tr spacing="large">
-        <Logo />
-        <Heading spacing="small" size="tiny" title="Employee benefits that flex to fit everyone&apos;s life" />
-      </Tr>
+      <Logo spacingTop="large" text="Employee benefits that flex to fit everyone&apos;s life" />
 
       <DownloadApp 
         title="Benefits on the go with the Forma app"

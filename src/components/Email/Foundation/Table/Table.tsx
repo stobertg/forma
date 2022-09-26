@@ -1,17 +1,6 @@
 import React from 'react'
 import { Tbody } from '@email'
 
-const tableStyles = {
-}
-
-const TableWidthSmall = {
-  padding: '40px 50px',
-}
-
-const TableWidthMedium = {
-  padding: 20,
-}
-
 // -------------- Typescript declarations -------------- //
 
 interface TableProps {
@@ -33,12 +22,10 @@ export const Table = ({
   return(
 
     <table
-      // @ts-ignore: Unreachable code error
-      style={
-        tableWidth == 'small' ? TableWidthSmall : 
-        tableWidth == 'medium' ? TableWidthMedium : 
-        null
-      }
+      style={{
+        display: 'table',
+        padding: tableWidth == 'small' ? '40px 50px' : tableWidth == 'medium' ? 20 : 0
+      }}
     >
       <Tbody width={ contentWidth } {...{ bgColor }}>
         { children }

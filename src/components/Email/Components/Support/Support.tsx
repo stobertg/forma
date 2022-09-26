@@ -5,7 +5,7 @@ import { Table, Tr, Td, Heading, Text, Button } from '@email'
 
 interface SupportProps {
   supportItems: {
-    spacing?: 'small' | 'medium'
+    spacingTop?: 'small' | 'medium'
     href: string
     title: string
     descp: string
@@ -24,7 +24,7 @@ export const Support = ({
     <>
       { supportItems.map(( item, i ) => (
 
-        <Tr key={`support-${ i }`} spacing={ item.spacing }>
+        <Tr key={`support-${ i }`} spacingTop={ item.spacingTop }>
           <Td>
             <Heading 
               size="medium" 

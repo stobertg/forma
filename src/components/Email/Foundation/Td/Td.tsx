@@ -14,7 +14,7 @@ export const Td = ({
   
   return(
 
-    <td>{ children }</td>
+    <td style={{ display: 'block', width: '100%' }}>{ children }</td>
     
   )
 }
