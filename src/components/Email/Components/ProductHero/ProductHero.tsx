@@ -49,8 +49,8 @@ export const ProductHero = ({
         <div style={ ProductContent }>
           <div style={ ProductImage }><Image src={ image } alt={ imageAlt } /></div>
           <Chip spacing="medium" title={ deal } />
-          <Heading spacing="medium" bold size="medium" {...{ title }} />
-          <Button spacing="medium" variant="primary" title={ buttonTitle } />
+          <Heading spacing="small" bold size="medium" {...{ title }} />
+          <Button spacing="small" variant="primary" title={ buttonTitle } />
         </div>
       </div>
     </Tr>

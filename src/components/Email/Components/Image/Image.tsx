@@ -1,17 +1,13 @@
 import React from 'react'
 import { Spacing } from '@email'
 
-const ImageStyle = {
-  width: '100%'
-}
-
-
 // -------------- Typescript declarations -------------- //
 
 interface ImageProps {
   src: string
   alt: string
   spacing?: 'large' | 'medium' | 'small'
+  height?: number
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -19,13 +15,14 @@ interface ImageProps {
 export const Image = ({
     src,
     alt,
-    spacing
+    spacing,
+    height
   }: ImageProps ) => {
   
   return(
 
     <Spacing {...{ spacing }}>
-      <img style={ ImageStyle } src={ src } alt={ alt } />
+      <img style={{ maxWidth: '100%', height: height }} src={ src } alt={ alt } />
     </Spacing>
 
   )

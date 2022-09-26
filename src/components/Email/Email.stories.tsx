@@ -40,9 +40,7 @@ export const Layout1 = () => (
 export const Layout2 = () => (
 
   <Email>
-    <Intro 
-      padding="large"
-    >
+    <Intro padding="large">
       <Heading 
         spacing="medium"
         bold
@@ -66,7 +64,71 @@ export const Layout2 = () => (
       buttonTitle="Hurry up, limited time offer"
     />
 
-    <ProductThumb />
+    <ProductThumb 
+      productList={[
+        { 
+          href: 'http://tylerstober.com',
+          marginRight: 6, 
+          productImage: "/products/sony/earbuds-noisecancelling.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        },
+        { 
+          href: 'http://tylerstober.com',
+          marginLeft: 6, 
+          productImage: "/products/sony/earbuds-noisecancelling.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        },
+      ]}
+    />
+
+    <ProductHero
+      spacingTop="small"
+      sideSpacing="small"
+      image="/products/sony/sony-noise-canceling.png"
+      imageAlt="Sony noise canceling headphones"
+      deal="Best Deal"
+      title="FluidStance Springboard Active-Standing Mat"
+      buttonTitle="Hurry up, limited time offer"
+    />
+
+    <ProductThumb 
+      productList={[
+        { 
+          href: 'http://tylerstober.com',
+          productHeight: 150,
+          marginRight: 6, 
+          productImage: "/products/fluidstance/naturalwood.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        },
+        { 
+          href: 'http://tylerstober.com',
+          productHeight: 150,
+          marginLeft: 6, 
+          productImage: "/products/fluidstance/graphite.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        },
+        { 
+          href: 'http://tylerstober.com',
+          productHeight: 63,
+          marginRight: 6, 
+          productImage: "/products/fluidstance/dryerase.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        },
+        { 
+          href: 'http://tylerstober.com',
+          productHeight: 63,
+          marginLeft: 6, 
+          productImage: "/products/fluidstance/whiteboard.png",
+          product: 'Sont Earbuds',
+          buttonTitle: 'Shop Forma Store'
+        }
+      ]}
+    />
   </Email>
 
 )

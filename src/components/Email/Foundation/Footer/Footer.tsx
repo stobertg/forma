@@ -5,7 +5,7 @@ export const Footer = () => {
   return(
 
     <Tr 
-      spacingTop="medium" 
+      spacingTop="large" 
       sideSpacing="medium"
       bgColor="#fff" 
       padding="large"

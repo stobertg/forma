@@ -21,6 +21,11 @@ const ButtonSecondary = {
   border: '1px solid #4967E5'
 }
 
+const NoStyle = {
+  fontFamily: 'Labil Grotesk',
+  color: '#4967e5'
+}
+
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
@@ -46,7 +51,7 @@ export const Button = ({
           style={ 
             variant == 'primary' ? ButtonPrimary :
             variant == 'secondary' ? ButtonSecondary :
-            ButtonStyles 
+            NoStyle
           }
         >
           { title }
