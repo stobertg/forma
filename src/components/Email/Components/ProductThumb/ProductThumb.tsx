@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tr, Image, Button } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
@@ -12,9 +13,12 @@ export const ProductThumb = ({
 
   }: ProductThumbProps ) => {
   
-    return(
+  return(
 
-     <div></div>
-     
-    )
+    <Tr bgColor="#fff">
+      <div><Image src="/products/sony/earbuds-noisecancelling.png" alt="Sony Earbuds" /></div>
+      <Button title="Shop Forma Store" />
+    </Tr>
+    
+  )
 }

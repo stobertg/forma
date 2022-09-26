@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Image, Chip, Heading, Button, Spacing } from '@email'
+import { Tr, Image, Chip, Heading, Button } from '@email'
 
 const ProductStyles = {
   padding: '50px 0',
@@ -21,7 +21,8 @@ const ProductContent = {
 // -------------- Typescript declarations -------------- //
 
 interface ProductHeroProps {
-  spacing?: 'large' | 'medium' | 'small'
+  spacingTop?: 'large' | 'medium' | 'small'
+  sideSpacing?: 'small' | 'medium'
   image: string
   imageAlt: string
   deal?: string
@@ -32,7 +33,8 @@ interface ProductHeroProps {
 // ---------- This is the end of declarations ---------- //
 
 export const ProductHero = ({
-    spacing,
+    spacingTop,
+    sideSpacing,
     image,
     imageAlt,
     deal,
@@ -42,7 +44,7 @@ export const ProductHero = ({
   
   return(
 
-    <Table {...{ spacing }} contentWidth="small">
+    <Tr {...{ spacingTop, sideSpacing }}>
       <div style={ ProductStyles }>
         <div style={ ProductContent }>
           <div style={ ProductImage }><Image src={ image } alt={ imageAlt } /></div>
@@ -51,7 +53,7 @@ export const ProductHero = ({
           <Button spacing="medium" variant="primary" title={ buttonTitle } />
         </div>
       </div>
-    </Table>
+    </Tr>
     
   )
 }

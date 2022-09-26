@@ -1,5 +1,5 @@
 import React from 'react';
-import { Intro, Heading, Text, Image, ProductHero } from '@email'
+import { Intro, Heading, Text, Image, ProductHero, ProductThumb } from '@email'
 import { Email } from './Email';
 
 const story = {
@@ -10,9 +10,11 @@ export default story
 
 export const Layout1 = () => (
 
-  <Email supportInFooter>
+  <Email>
     <Intro 
+      spacingTop="small"
       logoOnDarkBg
+      sideSpacing="medium"
       bgColor="#150050"
     >
       <Heading 
@@ -37,8 +39,10 @@ export const Layout1 = () => (
 
 export const Layout2 = () => (
 
-  <Email supportInFooter>
-    <Intro contentWidth="small">
+  <Email>
+    <Intro 
+      padding="large"
+    >
       <Heading 
         spacing="medium"
         bold
@@ -54,13 +58,15 @@ export const Layout2 = () => (
     </Intro>
 
     <ProductHero
-      spacing="large"
+      sideSpacing="small"
       image="/products/sony/sony-noise-canceling.png"
       imageAlt="Sony noise canceling headphones"
       deal="Save 10%"
       title="Sony inteligent industry-leading noise canceling headphones - black"
       buttonTitle="Hurry up, limited time offer"
     />
+
+    <ProductThumb />
   </Email>
 
 )

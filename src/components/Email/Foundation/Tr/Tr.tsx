@@ -1,5 +1,4 @@
 import React from 'react'
-import { Spacing } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
@@ -17,8 +16,6 @@ interface TrProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Tr = ({
-    width,
-    spaceAndWidth,
     sideSpacing,
     padding,
     bgColor,
@@ -33,8 +30,8 @@ export const Tr = ({
         display: 'block',
         borderCollapse: 'collapse',
         marginTop: spacingTop == 'small' ? 12 : spacingTop == 'medium' ? 32 : spacingTop == 'large' ? 50 :  0,
-        marginLeft: sideSpacing == 'medium' ? 20 : 0,
-        marginRight: sideSpacing == 'medium' ? 20 : 0,
+        marginLeft: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : 0,
+        marginRight: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : 0,
         padding: padding == 'small' ? 12 : padding == 'medium' ? 32 : padding == 'large' ? 50 : 0,
         borderRadius: 16,
         backgroundColor: bgColor,

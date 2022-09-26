@@ -19,16 +19,15 @@ interface GlobalContainerProps {
 // ---------- This is the end of declarations ---------- //
 
 export const GlobalContainer = ({
-    supportInFooter,
     children
   }: GlobalContainerProps ) => {
   
   return(
 
-    <table style={ TableStyles }>
+    <table style={{ ...TableStyles, paddingBottom: 32 }}>
       <Tbody>
         { children }
-        <Footer support={ supportInFooter } />
+        <Footer />
       </Tbody>
     </table>
     

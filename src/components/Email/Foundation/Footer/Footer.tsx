@@ -1,18 +1,7 @@
 import React from 'react'
-import { Tr, Support, DownloadApp, Legal, Logo, Heading } from '@email'
+import { Tr, Support, DownloadApp, Legal, Logo } from '@email'
 
-// -------------- Typescript declarations -------------- //
-
-interface FooterProps {
-  support?: boolean
-}
-
-// ---------- This is the end of declarations ---------- //
-
-export const Footer = ({
-    support 
-  }: FooterProps ) => {
-  
+export const Footer = () => {
   return(
 
     <Tr 
@@ -21,6 +10,13 @@ export const Footer = ({
       bgColor="#fff" 
       padding="large"
     >
+
+      { 
+        /* For the support item, to find help, or contact us. This component can be infinite, where copying a bracket info and replacing 
+           the lines with what is needed
+        */ 
+      }
+
       <Support 
         supportItems={[
           { 
@@ -39,7 +35,14 @@ export const Footer = ({
         ]}
       />
 
-      <Logo spacingTop="large" text="Employee benefits that flex to fit everyone&apos;s life" />
+      { /* For the Forma logo, right above the download apps container */ }
+
+      <Logo 
+        spacingTop="large" 
+        text="Employee benefits that flex to fit everyone&apos;s life" 
+      />
+
+      { /* For the container to download the app on Apple or the Google Play store */ }
 
       <DownloadApp 
         title="Benefits on the go with the Forma app"
@@ -56,6 +59,8 @@ export const Footer = ({
           }
         ]}
       />
+
+      { /* For the contat and legal information on the bottom of the container */ }
 
       <Legal 
         items={[

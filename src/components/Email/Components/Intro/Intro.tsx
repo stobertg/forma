@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Tr, Td, Logo } from '@email'
+import { Tr, Td, Logo } from '@email'
 
 const IntroStyle = {
   width: '100%'
@@ -24,6 +24,9 @@ const IntroContentHasBg = {
 // -------------- Typescript declarations -------------- //
 
 interface IntroProps {
+  spacingTop?: 'small' | 'medium' | 'large'
+  sideSpacing?: 'small' | 'medium'
+  padding?: 'small' | 'medium' | 'large'
   logoOnDarkBg?: boolean
   contentWidth?: 'small' | 'medium'
   bgColor?: string
@@ -34,25 +37,25 @@ interface IntroProps {
 
 export const Intro = ({
     logoOnDarkBg,
-    contentWidth,
-    bgColor,
+    spacingTop,
+    sideSpacing,
+    padding,
+    bgColor, 
     children
   }: IntroProps ) => {
   
   return(
 
-    <Table {...{ contentWidth }}>
-      <Tr>
-        <Td>
-          <div style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
-            <div style={ bgColor ? IntroContentHasBg : IntroContent }>
-              <Logo onDarkBg={ logoOnDarkBg } />
-              { children }
-            </div>
+    <Tr {...{ spacingTop, sideSpacing, padding }}>
+      <Td>
+        <div style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
+          <div style={ bgColor ? IntroContentHasBg : IntroContent }>
+            <Logo onDarkBg={ logoOnDarkBg } />
+            { children }
           </div>
-        </Td>
-      </Tr>
-    </Table>
-    
+        </div>
+      </Td>
+    </Tr>
+  
   )
 }
