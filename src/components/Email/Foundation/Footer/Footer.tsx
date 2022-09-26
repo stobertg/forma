@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Tr, Td, Text, Support, DownloadApp, Legal } from '@email'
+import { Tr, Support, DownloadApp, Legal, Logo, Heading } from '@email'
 
 // -------------- Typescript declarations -------------- //
 
@@ -15,11 +15,7 @@ export const Footer = ({
   
   return(
 
-    <Table 
-      tableWidth="medium"
-      contentWidth="small"
-      bgColor="#fff" 
-    >
+    <Tr spaceAndWidth="medium">
       { support ? (
         <Support 
           supportItems={[
@@ -39,6 +35,11 @@ export const Footer = ({
           ]}
         />
       ) : null }
+
+      <Tr spacing="large">
+        <Logo />
+        <Heading spacing="small" size="tiny" title="Employee benefits that flex to fit everyone&apos;s life" />
+      </Tr>
 
       <DownloadApp 
         title="Benefits on the go with the Forma app"
@@ -63,7 +64,7 @@ export const Footer = ({
           { title: <>Questions about this email? Contact <a style={{ textDecoration: 'underline' }} href="mailto:support@joinforma.com">support@joinforma.com</a></> }
         ]}
       />
-    </Table>
+    </Tr>
     
   )
 }

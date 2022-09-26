@@ -13,7 +13,6 @@ export const Layout1 = () => (
   <Email supportInFooter>
     <Intro 
       logoOnDarkBg
-      contentWidth="mediumIntro"
       bgColor="#150050"
     >
       <Heading 

@@ -37,7 +37,7 @@ export const DownloadApp = ({
   
   return(
 
-    <Tr spacing="medium">
+    <Tr spacing="small">
       <Td>
         <div style={ WrapStyle }>
           <Heading bold size="small" title={ title } />

@@ -27,7 +27,6 @@ export const Support = ({
         <Tr key={`support-${ i }`} spacing={ item.spacing }>
           <Td>
             <Heading 
-              spacing="small" 
               size="medium" 
               title={ item.title }
             />
