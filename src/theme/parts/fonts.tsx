@@ -1,7 +1,37 @@
+export const Typeface = [
+  {
+    fontFamily: 'Labil-Medium',
+    src: 'local("Labil-Medium"), url("/fonts/LabilGrotesk-Medium.woff2")',
+  },
+  {
+    fontFamily: 'Labil-Medium-Italic',
+    src: 'local("Labil-Medium-Italic"), url("/fonts/LabilGrotesk-MediumItalic.woff2")',
+  },
+  {
+    fontFamily: 'Labil-Regular',
+    src: 'local("Labil-Regular"), url("/fonts/LabilGrotesk-Regular.woff2")',
+  },
+  {
+    fontFamily: 'Labil-Regular-Italic',
+    src: 'local("Labil-Regular-Italic"), url("/fonts/LabilGrotesk-RegularItalic.woff2")',
+  }
+]
+
 export const fonts = {
-  sansSerif: 'Satoshi-Regular',
-  sansSerifBold: 'Satoshi-Bold',
-  sansSerifBlack: 'Labil-Black',
+  sansSerif: 'Labil-Regular',
+  sansSerifItalic: 'Labil-Regular-Italic',
+  sansSerifBold: 'Labil-Medium',
   serif: 'Source Serif 4',
   code: 'Source Code Pro'
+}
+
+export const fontSizes = {
+  s0: '0.875rem', // 14px
+  s1: '1.125rem', // 18px
+  s2: '1.25rem', // 20px
+  s3: '1.5rem', // 24px
+  s4: '1.75rem', // 28px
+  s5: '2rem', // 32px
+  s6: '2.5rem', // 40px
+  s7: '4.625rem' // 52px
 }

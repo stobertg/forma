@@ -4,6 +4,7 @@ import { Logo } from '@email';
 
 const story = {
   title: 'email/components/Logo',
+  parameters: { layout: 'centered' },
   component: Logo
 }
 export default story

@@ -7,6 +7,7 @@ interface EmailProps {
   contentWidth?: 'small' | 'medium'
   children: React.ReactNode
   supportInFooter?: boolean
+  withoutFooter?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -14,12 +15,13 @@ interface EmailProps {
 export const Email = ({
     contentWidth,
     children,
-    supportInFooter
+    supportInFooter,
+    withoutFooter
   }: EmailProps ) => {
   
   return(
       
-    <GlobalContainer {...{ contentWidth, supportInFooter }}>
+    <GlobalContainer {...{ contentWidth, supportInFooter, withoutFooter }}>
       { children }
     </GlobalContainer>
     

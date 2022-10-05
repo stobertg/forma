@@ -6,7 +6,10 @@ import { styled } from '@theme'
 
 const HeadingWrap = styled('div', {
   position: 'relative',
-  fontFamily: '$sansSerif',
+
+  strong: {
+    fontFamily: '$sansSerifBold',
+  },
 
   // For the different font sizes supported within the headings of the site
 
@@ -58,18 +61,10 @@ export const Heading = ({
   return(
     
     <HeadingWrap {...{ size, color }}>
-      <>
-        { font == 'code' ? ( <span style={{ fontFamily: 'Source Code Pro' }}>{ title }</span> ) 
-        : (
-          <>
-            { bold == 'heavy' ? ( <strong style={{ fontFamily: 'Satoshi-Black' }}>{ title }</strong> ) 
-            : bold == 'bold' ? ( <strong style={{ fontFamily: 'Satoshi-Bold' }}>{ title }</strong> ) 
-            : ( <>{ title }</> )
-            }
-          </>
-          )
-        }
-      </>
+      { font == 'code' 
+        ? ( <span style={{ fontFamily: 'Source Code Pro' }}>{ title }</span> ) 
+        : ( <>{ bold ? ( <strong>{ title }</strong> ) : ( <>{ title }</> )}</> )
+      }
     </HeadingWrap>
     
   )

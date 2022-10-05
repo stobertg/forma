@@ -84,24 +84,34 @@ const Legal = styled('div', {
   marginTop: 32
 })
 
+interface FooterProps {
+  withoutFooter?: boolean
+} 
+
 // ---------- This is the end of declarations ---------- //
 
-export const Footer = () => {
+export const Footer = ({ withoutFooter }:FooterProps) => {
   
   return(
 
-    <FooterWrap>
-      <FooterContain>
-        <Logo />
-        
-        <Legal>
-          <List direction="horizontal" spacing="l1r">
-            <li><a href="/" target="_blank"><strong>Privacy policy</strong></a></li>
-            <li><a href="/" target="_blank"><strong>Terms and conditions</strong></a></li>
-          </List>
-        </Legal>
-      </FooterContain>
-    </FooterWrap>
+    <>
+      { withoutFooter ? null : (
+
+        <FooterWrap>
+          <FooterContain>
+            <Logo />
+            
+            <Legal>
+              <List direction="horizontal" spacing="l1r">
+                <li><a href="/" target="_blank"><strong>Privacy policy</strong></a></li>
+                <li><a href="/" target="_blank"><strong>Terms and conditions</strong></a></li>
+              </List>
+            </Legal>
+          </FooterContain>
+        </FooterWrap>
+
+      )}
+    </>
     
   )
 }

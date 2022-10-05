@@ -31,7 +31,7 @@ export const Td = ({
     <td 
       style={{ 
         display: 'inline-block', 
-        width: width == 'half' ? '48.672%' : '100%',
+        width: width == 'half' ? '48.6%' : '100%',
         marginTop: spacingTop == 'small' ? 12 : spacingTop == 'medium' ? 32 : spacingTop == 'large' ? 50 :  0,
         marginLeft: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginLeft,
         marginRight: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginRight,

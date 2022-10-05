@@ -1,15 +1,7 @@
+import { Typeface } from './fonts'
 
 export const globalStyle = {
-  '@font-face': [
-    {
-      fontFamily: 'Labil-Black',
-      src: 'local("LabilBlack"), url("../../../public/fonts/LabilGrotesk-Black.woff2")',
-    },
-    {
-      fontFamily: 'CustomFont2',
-      src: 'local("CustomFont2"), url("CustomFont2.woff2")',
-    },  
-  ],
+  '@font-face': Typeface,
 
   '*': {
     boxSizing: 'border-box',

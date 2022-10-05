@@ -14,12 +14,14 @@ const TableStyles = {
 interface GlobalContainerProps {
   supportInFooter?: boolean
   children: React.ReactNode
+  withoutFooter?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const GlobalContainer = ({
-    children
+    children,
+    withoutFooter
   }: GlobalContainerProps ) => {
   
   return(
@@ -27,7 +29,7 @@ export const GlobalContainer = ({
     <table style={{ ...TableStyles, paddingBottom: 32 }}>
       <Tbody>
         { children }
-        <Footer />
+        <Footer {...{ withoutFooter }} />
       </Tbody>
     </table>
     

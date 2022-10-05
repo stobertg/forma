@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { SiteContainer, Block } from '@components'
-import { ProductHero } from '@email';
+import { ProductHero } from '@email'
+import { Email } from '../../Email'
 
 const story = {
   title: 'email/components/ProductHero',
@@ -8,17 +9,41 @@ const story = {
 }
 export default story
 
-export const Primary = () => (
+export const PngProductImage = () => (
 
   <SiteContainer>
-    <Block width="tiny" alignment="center">
-      <ProductHero 
-        image="/products/sony/sony-noise-canceling.png"
-        imageAlt="Sony noise canceling headphones"
-        deal="Save 10%"
-        title="Sony intelligent industry-leading noise canceling headphones - black"
-        buttonTitle="Hurry up, limited time offer"
-      />
+    <Block alignment="center">
+      <Email withoutFooter>
+        <ProductHero
+          sideSpacing="small"
+          productWidth="small"
+          image="/products/sony/sony-noise-canceling.png"
+          imageAlt="Sony noise canceling headphones"
+          deal="Save 10%"
+          title="Sony inteligent industry-leading noise canceling headphones - black"
+          buttonTitle="Hurry up, limited time offer"
+        />
+      </Email>
+    </Block>
+  </SiteContainer>
+  
+)
+
+export const FullWidthImage = () => (
+
+  <SiteContainer>
+    <Block alignment="center">
+      <Email withoutFooter>
+        <ProductHero
+          spacingTop="small"
+          sideSpacing="small"
+          image="/products/fluidstance/board.png"
+          imageAlt="Sony noise canceling headphones"
+          deal="Best Deal"
+          title="FluidStance Springboard Active-Standing Mat"
+          buttonTitle="Hurry up, limited time offer"
+        />
+      </Email>
     </Block>
   </SiteContainer>
   
