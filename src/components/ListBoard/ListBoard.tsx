@@ -1,6 +1,6 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
-import { List, Image, Avatar, Heading, Button, Text } from '@components'
+import { styled } from '@theme'
+import { List, Image, Heading, Button, Text } from '@components'
 
 const Wrap = styled('div', {
   position: 'relative',
@@ -125,7 +125,7 @@ export const ListBoard = ({
                   lessons ? (
                     <Image variant="thumb" borderRadius="r1" image={ item.image } />
                   ) : students ? (
-                    <Avatar size="l1" name="Tyler Stober" />
+                    <Image variant="thumb" borderRadius="r1" image={ item.image } />
                   ) : null 
                 }
                 

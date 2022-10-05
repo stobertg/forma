@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { Logo, Button, List } from '@components'
 
 // For the master container of the header
@@ -57,7 +57,7 @@ export const SiteHeader = () => {
 
     <Header>
       <Nav>
-        <Side><Logo linkToHome /></Side>
+        <Side><Logo /></Side>
         <Middle>
           <List direction="horizontal">
             <li><Button notBold size="l0" title="Research" /></li>

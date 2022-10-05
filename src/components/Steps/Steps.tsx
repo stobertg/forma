@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { List, Icon, Heading } from '@components'
 
 /* 

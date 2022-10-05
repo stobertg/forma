@@ -5,25 +5,11 @@ import { Logo } from '@components'
 const story = {
   title: 'atoms/Logo',
   component: Logo,
-  layout: 'fullscreen',
-  argTypes: {
-    
-    // outline: { control: 'boolean' },
-    // disabled: { control: 'boolean' },
-    // level: {
-    //   options: [0, 1, 2],
-    //   control: { type: 'select' },
-    // },
-    // glyph: {
-    //   options: { '— none —': undefined, ...glyphKey },
-    //   control: { type: 'select' },
-    // },
-  }
+  parameters: { layout: 'centered' },
+  argTypes: {}
 }
 export default story
 
-export const Primary = () => (
-
-  <Logo />
-  
-)
+export const Full = () => ( <Logo variant="logo-full" size="l1" /> )
+export const LogoMark = () => ( <Logo variant="logo-mark" size="l1" /> )
+export const WordMark = () => ( <Logo variant="word-mark" size="l0" /> )

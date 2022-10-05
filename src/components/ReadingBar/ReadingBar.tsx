@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 
 // For the master container of the foundational ReadingBar component
 // This component is used to automate spacing, sizes, widths, ect for components wrapped within this components

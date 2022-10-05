@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Logo, List } from '@components'
 
 const NavWrap = styled('div', {
   position: 'fixed',
@@ -7,7 +8,15 @@ const NavWrap = styled('div', {
   left: 0,
   width: 300,
   height: '100vh',
-  background: '$moon'
+  background: '$bgSecondary'
+})
+
+const NavHeader = styled('div', {
+
+})
+
+const NavHeaderContent = styled('div', {
+
 })
 
 // -------------- Typescript declarations -------------- //
@@ -24,7 +33,16 @@ export const LeftNav = ({
   
   return(
 
-    <NavWrap>This is some content</NavWrap>
+    <NavWrap>
+      <NavHeader>
+        <NavHeaderContent>
+          <Logo variant="logo-full" />
+        </NavHeaderContent>
+      </NavHeader>
+      
+      <List>
+      </List>
+    </NavWrap>
     
   )
 }

@@ -1,35 +1,15 @@
 
 export const globalStyle = {
-  // '@font-face': [
-  //   {
-  //     fontFamily: 'Satoshi-Bold',
-  //     src: 'local("Satoshi-Bold"), url("../../../public/fonts/Satoshi-Bold.woff2")',
-  //     fontWeight: 700,
-  //     fontDisplay: 'swap',
-  //     fontStyle: 'normal'
-  //   },
-  //   {
-  //     fontFamily: 'Satoshi-Regular',
-  //     src: 'local("Satoshi-Regular"), url("../../../public/fonts/Satoshi-Regular.woff2")',
-  //     fontWeight: 400,
-  //     fontDisplay: 'swap',
-  //     fontStyle: 'normal'     
-  //   },   
-  //   {
-  //     fontFamily: 'Satoshi-Italic',
-  //     src: 'local("Satoshi-Italic"), url("../../../public/fonts/Satoshi-Italic.woff2"), format("woff2")',
-  //     fontWeight: 400,
-  //     fontDisplay: 'swap',
-  //     fontStyle: 'italic'   
-  //   }, 
-  //   {
-  //     fontFamily: 'Satoshi-Black',
-  //     src: 'local("Satoshi-Black"), url("../../../public/fonts/Satoshi-Black.woff2"), format("woff2")',
-  //     fontWeight: 400,
-  //     fontDisplay: 'swap',
-  //     fontStyle: 'italic'   
-  //   },    
-  // ],
+  '@font-face': [
+    {
+      fontFamily: 'Labil-Black',
+      src: 'local("LabilBlack"), url("../../../public/fonts/LabilGrotesk-Black.woff2")',
+    },
+    {
+      fontFamily: 'CustomFont2',
+      src: 'local("CustomFont2"), url("CustomFont2.woff2")',
+    },  
+  ],
 
   '*': {
     boxSizing: 'border-box',

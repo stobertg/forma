@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block } from '@components'
+import { SiteContainer, Block, Heading } from '@components'
 
 const Home: NextPage = () => {
   return (
@@ -7,6 +7,7 @@ const Home: NextPage = () => {
     <SiteContainer>
       <Block width="medium" blockItemSpacing="l1">
         <div>This is some content</div>
+        <Heading bold="heavy" title="This is the heading" />
       </Block>
     </SiteContainer>
 
