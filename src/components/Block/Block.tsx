@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 
 // For the master container of the foundational Block component
 // This component is used to automate spacing, sizes, widths, ect for components wrapped within this components
@@ -7,7 +7,8 @@ import { styled } from '../../../stitches.config'
 const BlockWrap = styled('div', {
   display: 'flex',
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  color: '$indigo800'
 })
 
 // For all of the content within the site

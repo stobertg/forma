@@ -10,7 +10,7 @@ module.exports = ({ config }) => {
     // '@forms': path.resolve(__dirname, '..', 'src', 'forms'),
     '@pages': path.resolve(__dirname, '..', 'src', 'pages', '*'),
     '@public': path.resolve(__dirname, '..', 'public', '*'),
-    // '@theme': path.resolve(__dirname, '..', 'src', 'theme'),
+    '@theme': path.resolve(__dirname, '..', 'src', 'theme', 'stitches.config.ts'),
     // '@gql': path.resolve(__dirname, '..', 'src', 'gql'),
     '@lib': path.resolve(__dirname, '..', 'src', 'lib'),
     // '@types': path.resolve(__dirname, '..', 'src', 'types'),

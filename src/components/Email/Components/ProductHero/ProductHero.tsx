@@ -12,6 +12,11 @@ const ProductImage = {
   margin: '0 auto'
 }
 
+const ProductImageFull = {
+  maxWidth: '100%',
+  margin: '0 auto'
+}
+
 const ProductContent = {
   width: '75%',
   margin: '0 auto'
@@ -21,6 +26,7 @@ const ProductContent = {
 // -------------- Typescript declarations -------------- //
 
 interface ProductHeroProps {
+  productWidth?: 'small'
   spacingTop?: 'large' | 'medium' | 'small'
   sideSpacing?: 'small' | 'medium'
   image: string
@@ -33,6 +39,7 @@ interface ProductHeroProps {
 // ---------- This is the end of declarations ---------- //
 
 export const ProductHero = ({
+    productWidth,
     spacingTop,
     sideSpacing,
     image,
@@ -47,7 +54,7 @@ export const ProductHero = ({
     <Tr {...{ spacingTop, sideSpacing }}>
       <div style={ ProductStyles }>
         <div style={ ProductContent }>
-          <div style={ ProductImage }><Image src={ image } alt={ imageAlt } /></div>
+          <div style={ productWidth == 'small' ? ProductImage : ProductImageFull }><Image src={ image } alt={ imageAlt } /></div>
           <Chip spacing="medium" title={ deal } />
           <Heading spacing="small" bold size="medium" {...{ title }} />
           <Button spacing="small" variant="primary" title={ buttonTitle } />

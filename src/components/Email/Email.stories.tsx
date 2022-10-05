@@ -57,6 +57,7 @@ export const Layout2 = () => (
 
     <ProductHero
       sideSpacing="small"
+      productWidth="small"
       image="/products/sony/sony-noise-canceling.png"
       imageAlt="Sony noise canceling headphones"
       deal="Save 10%"
@@ -86,7 +87,7 @@ export const Layout2 = () => (
     <ProductHero
       spacingTop="small"
       sideSpacing="small"
-      image="/products/sony/sony-noise-canceling.png"
+      image="/products/fluidstance/board.png"
       imageAlt="Sony noise canceling headphones"
       deal="Best Deal"
       title="FluidStance Springboard Active-Standing Mat"

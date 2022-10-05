@@ -24,7 +24,7 @@
       "@lib": ["src/lib"],
       "@pages": ["src/pages"],
       "@public/*": ["public/*"],
-      "@theme": ["src/theme"],
+      "@theme": [ "src/theme/stitches.config.ts" ],
       "@types": ["src/types"],
       "@copy/*": ["src/copy/*"]
     },

@@ -1,15 +1,12 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { SiteContainer, Block, Hero } from '@components'
+import { SiteContainer, Block } from '@components'
 
 const Home: NextPage = () => {
   return (
     
     <SiteContainer>
-      <Block><Hero /></Block>
       <Block width="medium" blockItemSpacing="l1">
-        
+        <div>This is some content</div>
       </Block>
     </SiteContainer>
 
