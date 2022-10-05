@@ -69,7 +69,7 @@ const Button = styled('div', {
         height: 56,
         minWidth: 120,
         padding: '0 32px',
-        background: '$iris',
+        background: '$buttonPrimary',
         color: '$white',
         borderRadius: '$pill',
       

@@ -5,6 +5,7 @@ import { Button } from './Button';
 const story = {
   title: 'atoms/Button',
   component: Button,
+  parameters: { layout: 'centered' },
   argTypes: {
     icon: { control: 'boolean' },
     // disabled: { control: 'boolean' },
@@ -36,7 +37,6 @@ export const DefaultWithIcon = () => (
 export const Primary = () => (
   <Button 
     variant="primary"
-    icon="give--white"
     title="Action"
   />
 )

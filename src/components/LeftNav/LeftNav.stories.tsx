@@ -1,5 +1,4 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { LeftNav } from '@components'
 
 const story = {
@@ -8,10 +7,6 @@ const story = {
   layout: 'fullscreen',
   argTypes: {}
 }
+
 export default story
-
-export const Primary = () => (
-
-  <LeftNav />
-  
-)
+export const Primary = () => ( <LeftNav /> )

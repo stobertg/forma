@@ -1,3 +1,7 @@
+
+// For the typeface used in all Forma products, which is Labil Grotesk
+// https://www.kometa.xyz/typefaces/labil-grotesk/
+
 export const Typeface = [
   {
     fontFamily: 'Labil-Medium',

@@ -5,19 +5,17 @@ export const globalStyle = {
 
   '*': {
     boxSizing: 'border-box',
-    fontFamily: 'inherit',
-    color: 'inherit',
+    fontFamily: '$sansSerif',
+    color: '$textPrimary',
     fontSmoothing: 'antialiased',
   },
 
   body: {
     padding: 0,
     margin: 0,
-    fontFamily: '$sansSerif',
     lineHeight: 1,
     fontSize: '1rem',
-    background: '$siteBg',
-    color: '$contentColor'
+    background: '$white50'
   },
 
   a: { textDecoration: 'none' },

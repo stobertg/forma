@@ -20,7 +20,7 @@ export const lightThemeColors = {
 
   // Button Colors
 
-  buttonActive: '$blue500',
+  buttonPrimary: '$blue500',
   buttonHover: '$blue600',
   ButtonDisabled: '$indigo100',
   buttonDanger: '$red700',
