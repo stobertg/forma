@@ -110,7 +110,7 @@ export const ListBoard = ({
       <BoardHeader>
         <div>
           <TitleAccent>Lesson Two</TitleAccent>
-          <Heading bold="heavy" size="l6" title={ title } />
+          <Heading bold size="l6" title={ title } />
         </div>
         
         <Text fontSize="l1">{ info }</Text>
@@ -132,7 +132,7 @@ export const ListBoard = ({
                 { students ? null : (
                   <figcaption>
                     { lessons ? ( <HeadingAccent>Page { i + 1 } of { items.length }</HeadingAccent> ) : null }
-                    <Heading bold="heavy" size="l2" title={ item.title } />
+                    <Heading bold size="l2" title={ item.title } />
                     <div>{ item.subtitle }</div>
                   </figcaption>
                 )}

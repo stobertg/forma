@@ -6,9 +6,7 @@ const Home: NextPage = () => {
     
     <SiteContainer>
       <Block width="medium" blockItemSpacing="l1">
-        <div>This is some content</div>
-        <Heading bold="heavy" title="This is the heading" />
-        <Button variant="primary" title="Action" />
+
       </Block>
     </SiteContainer>
 

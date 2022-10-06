@@ -40,7 +40,7 @@ export const lightThemeColors = {
 
   // Input colors
 
-  inputEnabled: '$indigo400',
+  inputBorder: '$indigo400',
   inputHover: '$indigo600',
   inputDisabled: '$indigo200',
   inputNegative: '$red700',

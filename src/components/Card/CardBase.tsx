@@ -65,7 +65,7 @@ export const CardBase = ({
           />
 
           <CardText>
-            <Heading {...{ title }} size="l3" bold="heavy" />
+            <Heading {...{ title }} size="l3" bold />
             { subTitle ? ( <div>{ subTitle }</div> ) : null }
             { children ? ( <div>{ children }</div> ) : null }
           </CardText>

@@ -28,7 +28,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       enableSystem={ false }
     >
       <SiteWrap>
-        <LeftNav />
+        <LeftNav 
+          links={[
+            { href: '/', title: 'Button' },
+            { href: '/', title: 'Chip' },
+            { href: '/', title: 'Icon' },
+            { href: '/', title: 'Image' },
+            { href: '/', title: 'List' },
+            { href: '/', title: 'Logo' },
+            { href: '/', title: 'Menu Button' },
+          ]}
+        />
         <ContentStage><Component {...pageProps} /></ContentStage>
         {/* <Footer /> */}
       </SiteWrap>

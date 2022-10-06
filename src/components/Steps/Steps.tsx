@@ -102,7 +102,7 @@ export const Steps = ({ steps }: StepsProps ) => {
         { steps.map(( step:any, i:number ) => (
           <li key={`step-${ i }`}>
             <GraphicWrap><StepGraphic><Icon size="l0" iconAlt={ step.icon } /></StepGraphic></GraphicWrap>
-            <div><Heading size="l0" bold="heavy" title={ step.title } /></div>
+            <div><Heading size="l0" bold title={ step.title } /></div>
           </li>
         ))}
       </List>
