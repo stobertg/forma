@@ -6,7 +6,7 @@ export const globalStyle = {
   '*': {
     boxSizing: 'border-box',
     fontFamily: '$sansSerif',
-    color: '$textPrimary',
+    color: 'inherit',
     fontSmoothing: 'antialiased',
   },
 
@@ -15,7 +15,8 @@ export const globalStyle = {
     margin: 0,
     lineHeight: 1,
     fontSize: '1rem',
-    background: '$white50'
+    background: '$white50',
+    color: '$textPrimary'
   },
 
   a: { textDecoration: 'none' },
