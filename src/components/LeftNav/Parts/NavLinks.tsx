@@ -93,7 +93,7 @@ export const NavLinks = ({
   return(
 
     <NavLinksWrap>
-      <div><Heading bold size="l1" title="Components" /></div>
+      <div><Heading bold size="l1" title="Email" /></div>
       <List>
         { links.map(( link, i ) => (
 

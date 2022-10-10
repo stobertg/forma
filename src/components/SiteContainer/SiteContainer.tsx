@@ -7,10 +7,10 @@ import { styled } from '@theme'
 
 const SiteWrap = styled('div', {
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column',
   alignItems: 'center',
   position: 'relative',
-  width: '100vw',
+  width: '100%',
   minHeight: '100vh'
 })
 

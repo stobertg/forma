@@ -27,7 +27,7 @@ const BlockContent = styled('div', {
   variants: {
 
     blockItemSpacing: {
-      l0: { '> *': { marginBottom: 32 }},
+      l0: { '> *': { marginBottom: 24 }},
       l1: { '> *': { marginBottom: 50 }},
       l2: { '> *': { marginBottom: 100 }},
       l3: { '> *': { marginBottom: 150, '@media(max-width: 767px)': { marginBottom: 75 }}},

@@ -8,11 +8,12 @@ const TextWrap = styled('div', {
   position: 'relative',
   maxWidth: 800,
   width: '100%',
+  color: '$textSecondary',
 
   // For the spacing automation of text that lives within the container
 
   '> *:not(:last-child)': {
-    margin: '0 auto 32px !important'
+    margin: '0 auto 24px !important'
   },
 
   // For the automation of the links within the text component

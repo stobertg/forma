@@ -4,7 +4,7 @@ import { styled } from '@theme'
 // For the master container of the Navigation of the documation site
 // This sits in a fixed position on the left side of the page and contains all of the links that make up DS
 
-const NavContain = styled('div', {
+const NavContain = styled('section', {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -27,9 +27,7 @@ export const NavWrap = ({
   
   return(
 
-    <NavContain>
-      { children }
-    </NavContain>
+    <NavContain>{ children }</NavContain>
     
   )
 }

@@ -6,6 +6,10 @@ export const lightThemeColors = {
   brandSecondary: '$white200',
   brandTertiary: '$white50',
 
+  // Border Colors
+
+  border: '$indigo100',
+
   // Background colors 
 
   bgPrimary: '$white50',
