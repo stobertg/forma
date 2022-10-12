@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
+import { ReadingBar } from '@components'
 
 const StageWrap = styled('section', {
   display: 'flex',
@@ -28,6 +29,7 @@ export const Stage = ({ children }: StageProps) => {
   return (
 
     <StageWrap>
+      <ReadingBar />
       <StageContent>{ children }</StageContent>
     </StageWrap>
     

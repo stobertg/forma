@@ -97,7 +97,7 @@ export const NavLinks = ({
       <List>
         { links.map(( link, i ) => (
 
-          <li>
+          <li key={`link-${ i }`}>
             <Link href={ link.href }>
               <a>
                 <span><Heading size="l0" title={ link.title } /></span>

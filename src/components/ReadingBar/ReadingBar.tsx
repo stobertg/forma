@@ -9,9 +9,9 @@ const Bar = styled('div', {
   top: 0,
   left: 0,
   width: '100vw',
-  height: 10,
+  height: 2,
   padding: '0 !important',
-  background: 'linear-gradient( 90deg, rgba(26, 204, 108, 1) 0%, rgba(6, 170, 89, 1) 100%, rgba(6, 170, 89, 1) 100% )',
+  background: '$bgPrimary',
   zIndex: 9999
 })
 

@@ -7,7 +7,8 @@ export const globalStyle = {
     boxSizing: 'border-box',
     fontFamily: '$sansSerif',
     color: 'inherit',
-    fontSmoothing: 'antialiased',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale'
   },
 
   body: {
