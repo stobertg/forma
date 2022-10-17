@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <SiteWrap>
         <LeftNav 
           links={[
-            { href: '/', title: 'Button' },
+            { href: '/', title: 'Product Hero' },
             { href: '/', title: 'Chip' },
             { href: '/', title: 'Colors' },
             { href: '/', title: 'Icon' },

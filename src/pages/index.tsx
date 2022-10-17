@@ -33,12 +33,10 @@ const Home: NextPage = () => {
           defaultTab={ 1 }
           triggers={[
             { title: 'Light Theme' },
-            // { title: 'Dark Theme' },
             { title: 'All Colors' }
           ]}
           tabContent={[
             { content: <ColorSwatchesLight /> },
-            // { content: 'this is three content' },
             { content: <ColorSwatchList /> }
           ]}
         />
