@@ -18,6 +18,10 @@ export const Typeface = [
   {
     fontFamily: 'Labil-Regular-Italic',
     src: 'local("Labil-Regular-Italic"), url("/fonts/LabilGrotesk-RegularItalic.woff2")',
+  },
+  {
+    fontFamily: 'code',
+    src: 'local("Labil-Regular-Italic"), url("/fonts/SourceCodePro-Regular.ttf")',
   }
 ]
 
@@ -26,7 +30,7 @@ export const fonts = {
   sansSerifItalic: 'Labil-Regular-Italic',
   sansSerifBold: 'Labil-Medium',
   serif: 'Source Serif 4',
-  code: 'Source Code Pro'
+  code: 'code'
 }
 
 export const fontSizes = {

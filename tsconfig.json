@@ -18,6 +18,7 @@
     "paths": {
       "@components": ["src/components"],
       "@email": ["src/components/Email/Components"],
+      "@codeColors": ["src/components/Code/Colors"],
       "@contracts": ["src/contracts"],
       "@forms/*": ["src/forms/*"],
       "@gql": ["src/gql"],

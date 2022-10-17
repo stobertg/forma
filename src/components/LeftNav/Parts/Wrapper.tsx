@@ -8,7 +8,7 @@ const NavContain = styled('section', {
   position: 'fixed',
   top: 0,
   left: 0,
-  width: 300,
+  width: 250,
   height: '100vh',
   background: '$bgSecondary'
 })

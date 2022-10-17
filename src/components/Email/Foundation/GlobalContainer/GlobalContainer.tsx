@@ -6,7 +6,7 @@ const TableStyles = {
   maxWidth: 560,
   width: '100%',
   margin: '0 auto',
-  backgroundColor: '#fdf9f4'
+  backgroundColor: '#fff5e5'
 }
 
 // -------------- Typescript declarations -------------- //
@@ -26,7 +26,7 @@ export const GlobalContainer = ({
   
   return(
 
-    <table style={{ ...TableStyles, paddingBottom: 32 }}>
+    <table style={{ ...TableStyles }}>
       <Tbody>
         { children }
         <Footer {...{ withoutFooter }} />

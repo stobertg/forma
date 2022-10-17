@@ -6,7 +6,7 @@ const StageWrap = styled('section', {
   display: 'flex',
   alignItems: 'center',
   position: 'relative',
-  width: 'calc( 100vw - 300px )'
+  width: 'calc( 100vw - 250px )'
 })
 
 const StageContent = styled('div', {

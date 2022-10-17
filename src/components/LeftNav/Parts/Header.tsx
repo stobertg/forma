@@ -30,7 +30,7 @@ export const NavHeader = () => {
     <NavHeaderWrap>
       <NavHeaderContent>
         <Logo variant="logo-full" />
-        <Input height="small" id="search" label="Search" type="text" />
+        {/* <Input height="small" id="search" label="Search" type="text" /> */}
       </NavHeaderContent>
     </NavHeaderWrap>
     

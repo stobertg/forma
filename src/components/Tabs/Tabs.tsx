@@ -105,12 +105,22 @@ export const Tabs = ({
     <TabsWrap defaultValue={ `tab${ defaultTab ? defaultTab : 1 }` }>
       <TabsList aria-label="Manage your account">
         { triggers.map(( trigger, i ) => (
-          <TabsTrigger key={ `trigger-${ i }`} value={`tab${ i + 1 }`}><Heading bold size="l1" title={ trigger.title } /></TabsTrigger>
+          <TabsTrigger 
+            key={ `trigger-${ i }`} 
+            value={`tab${ i + 1 }`}
+          >
+            <Heading bold size="l1" title={ trigger.title } />
+          </TabsTrigger>
         ))}
       </TabsList>
       
       { tabContent.map(( content, i ) => (
-        <TabsContent key={`tab-${ i }`} value={`tab${ i + 1 }`}>{ content.content }</TabsContent>
+        <TabsContent 
+          key={`tab-${ i }`} 
+          value={`tab${ i + 1 }`}
+        >
+          { content.content }
+        </TabsContent>
       ))}
     </TabsWrap>
     

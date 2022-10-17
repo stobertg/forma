@@ -30,7 +30,6 @@ interface ProductHeroProps {
   spacingTop?: 'large' | 'medium' | 'small'
   sideSpacing?: 'small' | 'medium'
   image: string
-  imageAlt: string
   deal?: string
   title: string
   buttonTitle: string
@@ -43,7 +42,6 @@ export const ProductHero = ({
     spacingTop,
     sideSpacing,
     image,
-    imageAlt,
     deal,
     title,
     buttonTitle
@@ -54,7 +52,7 @@ export const ProductHero = ({
     <Tr {...{ spacingTop, sideSpacing }}>
       <div style={ ProductStyles }>
         <div style={ ProductContent }>
-          <div style={ productWidth == 'small' ? ProductImage : ProductImageFull }><Image src={ image } alt={ imageAlt } /></div>
+          <div style={ productWidth == 'small' ? ProductImage : ProductImageFull }><Image src={ image } alt={ title } /></div>
           <Chip spacing="medium" title={ deal } />
           <Heading spacing="small" bold size="medium" {...{ title }} />
           <Button spacing="small" variant="primary" title={ buttonTitle } />
