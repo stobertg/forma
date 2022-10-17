@@ -27,7 +27,7 @@ export const Primary = () => (
   <SiteContainer blockSpacing="l3">
     <Block width="small">
       <Text fontSize="l1">
-        <Heading bold="heavy" size="l7" title="Ross Ulbricht&apos;s The Growth Collection" />
+        <Heading bold size="l7" title="Ross Ulbricht&apos;s The Growth Collection" />
         <p>Earlier this year in April, we bought Ross Ulbricht&apos;s second collection “The Growth Collection” at auction.</p>
 
         <p>

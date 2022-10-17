@@ -9,6 +9,7 @@ const TextWrap = styled('div', {
   maxWidth: 800,
   width: '100%',
   color: '$textSecondary',
+  lineHeight: 1.3,
 
   // For the spacing automation of text that lives within the container
 
@@ -38,7 +39,7 @@ const TextWrap = styled('div', {
     // By default the text is 16px and these change the text sizes to be larger
 
     fontSize: {
-      l0: {},
+      l0: { fontSize: '$s0', lineHeight: 1.3 },
       l1: { fontSize: '$s1', lineHeight: 1.5 }
     },
 

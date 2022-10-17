@@ -6,20 +6,35 @@ import { styled } from '@theme'
 // And the dontaion amount to the far right. This card is currently a static component
 
 const ChipWrap = styled('div', {
+  display: 'inline-flex',
   position: 'relative',
-  width: '100%',
   padding: '12px 24px 12px 20px',
   background: '$orange100',
   borderRadius: '$r2',
   fontFamily: '$sansSerif',
-  fontSize: '$s0'
+  fontSize: '$s0',
+
+  variants: {
+    text: { 
+      allCaps: { textTransform: 'uppercase' } 
+    },
+
+    size: {
+      small: { padding: '8px 12px', fontSize: 12 }
+    },
+
+    bgColor: {
+      gray: { background: '$border' },
+      orange: { background: '$orange100' }
+    }
+  }
 })
 
 // For the content to be centered within the master container
 // This holds the rank, image, and name on the left, and the donation amount on the right
 
 const ChipContent = styled('div', {
-  display: 'flex',
+  display: 'inline-flex',
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -30,19 +45,25 @@ const ChipContent = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ChipProps {
+  size?: 'small'
+  bgColor?: 'gray' | 'orange'
+  text?: 'allCaps'
   children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Chip = ({
+    bgColor,
+    text,
+    size,
     children
   }: ChipProps ) => {
   
   return(
 
-    <ChipWrap>
-      <ChipContent>{ children }</ChipContent>
+    <ChipWrap {...{ size, bgColor, text }}>
+      <ChipContent><strong>{ children }</strong></ChipContent>
     </ChipWrap>
     
   )

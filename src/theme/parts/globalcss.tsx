@@ -20,7 +20,10 @@ export const globalStyle = {
     color: '$textPrimary'
   },
 
-  a: { textDecoration: 'none' },
+  a: { 
+    textDecoration: 'none',
+    color: '$textLink'
+  },
 
   button: { cursor: 'pointer' },
 

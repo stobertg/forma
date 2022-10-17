@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             { href: '/', title: 'List' },
             { href: '/', title: 'Logo' },
             { href: '/', title: 'Menu Button' },
+            { href: '/', title: 'Chip' },
           ]}
         />
         <Stage><Component {...pageProps} /></Stage>

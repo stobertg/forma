@@ -21,7 +21,13 @@ const TabsList = styled( TabsPrimitive.List, {
   display: 'flex',
   position: 'relative',
   width: '100%',
-  borderBottom: '1px solid $border'
+  borderBottom: '1px solid $border',
+
+  variants: {
+    border: {
+      noBorder: { borderBottom: 'none' }
+    }
+  }
 })
 
 // For the indivudual shared stying of the tab triggers within the master container
@@ -71,17 +77,38 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
     color: '$textPrimary',
     pointerEvents: 'none',
     '&:after': { opacity: 1 }
+  },
+
+  variants: {
+    tabSize: {
+      tiny: { '*': { fontSize: '$s0' }},
+      small: { '*': { fontSize: 'initial' }}
+    }
   }
 })
 
 const TabsContent = styled( TabsPrimitive.Content, {
   flexGrow: 1,
-  padding: '20px 0',
+  padding: '75px 0',
   backgroundColor: 'white',
   borderBottomLeftRadius: 6,
   borderBottomRightRadius: 6,
   outline: 'none',
   '&:focus': { boxShadow: `0 0 0 2px black` },
+
+  variants: {
+    bgColor: {
+      primary: { background: '$brandPrimary' },
+      secondary: { background: '$brandSecondary' },
+      tertiary: { background: '$brandTertiary' }
+    },
+
+    width: {
+      small: {},
+      medium: {},
+      large: { width: '90%', margin: '32px auto', borderRadius: '$r2' }
+    }
+  }
 })
   
 // -------------- Typescript declarations -------------- //
@@ -90,6 +117,10 @@ interface TabsProps {
   triggers: { title: string }[]
   tabContent: { content: React.ReactNode }[]
   defaultTab?: number
+  bgColor?: 'primary' | 'secondary' | 'tertiary'
+  border?: 'noBorder'
+  tabSize?: 'tiny' | 'small'
+  contentWidth?: 'small' | 'medium' | 'large'
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -97,15 +128,20 @@ interface TabsProps {
 export const Tabs = ({ 
     triggers,
     tabContent,
-    defaultTab
+    defaultTab,
+    bgColor,
+    border,
+    tabSize,
+    contentWidth
   }: TabsProps) => {
   return (
 
 
     <TabsWrap defaultValue={ `tab${ defaultTab ? defaultTab : 1 }` }>
-      <TabsList aria-label="Manage your account">
+      <TabsList aria-label="Manage your account" {...{ border }}>
         { triggers.map(( trigger, i ) => (
           <TabsTrigger 
+            {...{ tabSize }}
             key={ `trigger-${ i }`} 
             value={`tab${ i + 1 }`}
           >
@@ -116,8 +152,10 @@ export const Tabs = ({
       
       { tabContent.map(( content, i ) => (
         <TabsContent 
+          {...{ bgColor }}
           key={`tab-${ i }`} 
           value={`tab${ i + 1 }`}
+          width={ contentWidth }
         >
           { content.content }
         </TabsContent>

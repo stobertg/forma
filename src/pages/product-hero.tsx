@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     
     <SiteContainer blockSpacing="l1">
-      <Block width="medium" blockItemSpacing='l0'>
+      <Block blockItemSpacing='l0'>
         <BlockItem><Heading bold size="l6" title="Product Hero" /></BlockItem>
 
         <BlockItem>
@@ -23,6 +23,9 @@ const Home: NextPage = () => {
       <Block blockItemSpacing="l1">
         <BlockItem>
           <ComponentStage
+            tabSize="small"
+            border="noBorder"
+            bgColor="secondary"
             tabs={[
               { title: 'Default (Full-width image)' },
               { title: 'PNG image' }
@@ -54,15 +57,11 @@ const Home: NextPage = () => {
               }
             ]}
           >
-            
           </ComponentStage>
         </BlockItem>
 
-        
-
         <BlockItem>
           <Code>
-       
             &lt;<CodeGreen>ProductHero</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>sideSpacing</CodeBlue>=<CodeOrange>"small"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>productWidth</CodeBlue>=<CodeOrange>"small"</CodeOrange>
@@ -74,7 +73,6 @@ const Home: NextPage = () => {
           </Code>
         </BlockItem>
       </Block>
-
     </SiteContainer>
 
   )

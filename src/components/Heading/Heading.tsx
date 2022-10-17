@@ -28,6 +28,7 @@ const HeadingWrap = styled('div', {
     // For the support of different colors that the heading can be
 
     color: {
+      gray: { color: '$textSecondary' },
       white: { color: '$white' },
       purple: { color: '$majorelleBlue' }
     },
@@ -42,7 +43,7 @@ const HeadingWrap = styled('div', {
 
 interface HeadingProps {
   size?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4' | 'l5' | 'l6' | 'l7'
-  color?: 'white' | 'purple'
+  color?: 'gray' | 'white' | 'purple'
   title: any
   bold?: boolean
   font?: 'code'

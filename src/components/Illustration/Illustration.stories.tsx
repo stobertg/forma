@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Card } from '@components'
+import { Illustration } from '@components'
 
 const story = {
-  title: 'modules/Card',
-  component: Card,
+  title: 'modules/Illustration',
+  component: Illustration,
   layout: 'fullscreen',
   argTypes: {}
 }
@@ -12,6 +12,6 @@ export default story
 
 export const Primary = () => (
 
-  <Card>This is some content</Card>
+  <Illustration image="account-childcare" />
   
 )

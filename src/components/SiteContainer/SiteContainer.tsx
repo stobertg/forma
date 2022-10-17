@@ -11,7 +11,7 @@ const SiteWrap = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  minHeight: '100vh'
+  minHeight: 'calc( 100vh - 200px )'
 })
 
 // For all of the content within the site
