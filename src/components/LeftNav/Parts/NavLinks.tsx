@@ -6,6 +6,9 @@ import { List, Heading, Icon } from '@components'
 // For the container of the links within the left nav
 
 const NavLinksWrap = styled('nav', {
+  position: 'relative',
+  width: '100%',
+  padding: '50px 0',
 
   // For the header of the nav links block
 
@@ -78,6 +81,7 @@ const NavLinksWrap = styled('nav', {
 // -------------- Typescript declarations -------------- //
 
 export interface LeftNavProps {
+  title: string
   links: {
     title: string
     href: string
@@ -87,13 +91,14 @@ export interface LeftNavProps {
 // ---------- This is the end of declarations ---------- //
 
 export const NavLinks = ({
+    title,
     links
   }: LeftNavProps ) => {
   
   return(
 
     <NavLinksWrap>
-      <div><Heading bold size="l1" title="Email" /></div>
+      <div><Heading bold size="l1" title={ title } /></div>
       <List>
         { links.map(( link, i ) => (
 

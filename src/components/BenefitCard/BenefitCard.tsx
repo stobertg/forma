@@ -70,6 +70,14 @@ interface BenefitCardProps {
   title: string
   chipTitle?: string
   text: string
+  rightItems?: {
+    title: string
+    subtitle: string
+  }[]
+  links: {
+    href: string
+    title: string
+  }[]
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -78,6 +86,8 @@ export const BenefitCard = ({
     illustration,
     title,
     text,
+    rightItems,
+    links,
     chipTitle
   }: BenefitCardProps ) => {
   
@@ -97,23 +107,23 @@ export const BenefitCard = ({
             <Text fontSize="l0">{ text }</Text>
 
             <LinkContainer>
-              <a href="/">View Account</a>
-              <a href="/">What&apos;s Eligible</a>
+              { links.map(( link, i ) => (
+                <a href={ link.href }>{ link.title }</a>
+              ))}
             </LinkContainer>
           </ContentLeftText>
         </ContentLeft>
 
-        <ContentRight>
-          <div>
-            <Heading title="999.99" />
-            <Heading color="gray" size="l0" title="available balace" />
-          </div>
-
-          <div>
-            <Heading title="mm/dd/yyyy" />
-            <Heading color="gray" size="l0" title="new funds added" />
-          </div>
-        </ContentRight>
+        { rightItems ? (
+          <ContentRight>
+            { rightItems.map(( item, i ) => (
+              <div key={`item-${ i }`}>
+                <Heading title={ item.title } />
+                <Heading color="gray" size="l0" title={ item.subtitle } />
+              </div>
+            ))}
+          </ContentRight>
+        ) : null }
       </ContentWrap>
     </Card>
     

@@ -5,16 +5,18 @@ const CodeWrap = styled('div', {
   position: 'relative',
   width: '100%',
   borderRadius: '$r2',
-  background: '#000',
-  color: '$gray300'
+  background: '$white100',
+  color: '$gray300',
+  fontSize: '$s0'
 })
 
 const CodeContent = styled('div', {
   position: 'relative',
-  width: '95%',
+  width: '98%',
   margin: '0 auto',
-  padding: '50px 32px',
-  lineHeight: 1.5,
+  padding: '32px 24px',
+  lineHeight: 1.4,
+  whiteSpace: 'nowrap',
   
   '*': {
     fontFamily: '$code'

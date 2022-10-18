@@ -9,9 +9,9 @@ const Bar = styled('div', {
   top: 0,
   left: 0,
   width: '100vw',
-  height: 2,
+  height: 4,
   padding: '0 !important',
-  background: '$bgPrimary',
+  background: '$bgTertiary',
   zIndex: 9999
 })
 

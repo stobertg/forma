@@ -6,7 +6,6 @@ import { LogoFull, LogoMark, WordMark } from './Variants/'
 const LogoWrap = styled('div', {
   display: 'inline-flex',
   position: 'relative',
-  width: '100%',
   height: 32,
 
   img: {

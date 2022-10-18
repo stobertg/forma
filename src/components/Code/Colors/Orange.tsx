@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@theme'
 
 const ColorWrap = styled('span', {
-  color: '$peach200'
+  color: '$peach800'
 })
 
 // -------------- Typescript declarations -------------- //

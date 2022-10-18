@@ -20,7 +20,7 @@ export const LeftNav = ({
 
     <NavWrap>
       <NavHeader />
-      <NavLinks {...{ links }} />
+      <NavLinks title="Components" {...{ links }} />
     </NavWrap>
     
   )
