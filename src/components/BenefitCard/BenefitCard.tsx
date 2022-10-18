@@ -101,14 +101,14 @@ export const BenefitCard = ({
           <ContentLeftText>
             <ContentHeader>
               <Heading bold size="l1" title={ title } />
-              <Chip size="small" text="allCaps" bgColor="gray">{ chipTitle }</Chip>
+              <Chip size="small" text="allCaps" bgColor="gray" title={ chipTitle } />
             </ContentHeader>
 
             <Text fontSize="l0">{ text }</Text>
 
             <LinkContainer>
               { links.map(( link, i ) => (
-                <a href={ link.href }>{ link.title }</a>
+                <a key={`link-${ i }`} href={ link.href }>{ link.title }</a>
               ))}
             </LinkContainer>
           </ContentLeftText>

@@ -1,18 +1,31 @@
 import React from 'react'
 import { styled } from '@theme'
-import { List, Heading, Chip } from '@components'
+import { List } from '@components'
 
-const SourceWrap = styled('div', {
+// For the master container of the source links buttons on the top right of each of the documentation pages
+// This holds the optional links to Figma, Storybook, and GitHub
+
+const SourceWrap = styled('a', {
   display: 'inline-flex',
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
   minHeight: 36,
   padding: 4,
-  background: '$white50',
+  border: '1px solid $border',
   borderRadius: '$r1',
-  border: '1px solid $border'
+  background: '$white50',
+  color: '$textPrimary',
+  transition: '$s1',
+
+  '&:hover': { 
+    color: '$textPrimary', 
+    borderColor: '$textLink' 
+  }
 })
+
+// For the container of the image that sits on the left of the container. This displays the logo of the service the link is pointing to
+// This holds the logo in the center of the container within the light peach background color
 
 const SourceImage = styled('div', {
   display: 'flex',
@@ -24,10 +37,14 @@ const SourceImage = styled('div', {
   background: '$peach200',
   borderRadius: 12,
 
-  img: {
-    height: '50%'
-  }
+  // For the height of the image within the container
+  // This allows for all the icons within the container to observe the same height and keeps the icons similar
+
+  img: { height: '50%' }
 })
+
+// For the container of the text to the right of the icon
+// This displays the text that the file is associated with
 
 const SourceText = styled('div', {
   position: 'relative',
@@ -38,44 +55,36 @@ const SourceText = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface SourceFileProps {
-
+  figmaLink?: string
+  storybookLink?: string
+  githubLink?: string
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const SourceFile = ({
-
+    figmaLink, // Optional - for the link to the Figma file
+    storybookLink, // Optional - for the link to the Storybook
+    githubLink // Optional - for the link to the Github
   }: SourceFileProps ) => {
+
+  const Base = ({ href, title }:any) => {
+    return(
+      <li key={`item-${ title }`}>
+        <SourceWrap {...{ href }} target="_blank">
+          <SourceImage><img src={`/global/sources/${ title }.svg`} alt={`${ title } Logo`} /></SourceImage>
+          <SourceText>{ title }</SourceText>
+        </SourceWrap>
+      </li>
+    )
+  }
   
   return(
 
     <List direction="horizontal" spacing="l1r">
-      <li>
-        <SourceWrap>
-          <SourceImage><img src="/global/sources/figma.svg" alt="Figma Logo" /></SourceImage>
-          <SourceText>
-            <div>Figma</div>
-          </SourceText>
-        </SourceWrap>
-      </li>
-
-      <li>
-        <SourceWrap>
-          <SourceImage><img src="/global/sources/storybook.svg" alt="Storybook Logo" /></SourceImage>
-          <SourceText>
-            <div>Storybook</div>
-          </SourceText>
-        </SourceWrap>
-      </li>
-
-      <li>
-        <SourceWrap>
-          <SourceImage><img src="/global/sources/github.svg" alt="Figma Logo" /></SourceImage>
-          <SourceText>
-            <div>Github</div>
-          </SourceText>
-        </SourceWrap>
-      </li>
+      { figmaLink ? ( <Base href={ figmaLink } title="figma" /> ) : null}
+      { storybookLink ? ( <Base href={ storybookLink } title="Storybook" /> ) : null }
+      { githubLink ? ( <Base href={ githubLink } title="Github" /> ) : null }
     </List>
     
   )

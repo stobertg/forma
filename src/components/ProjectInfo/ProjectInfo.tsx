@@ -29,6 +29,9 @@ const IntroContent = styled('div', {
 
 interface ProjectInfoProps {
   title: string
+  figmaLink?: string
+  storybookLink?: string
+  githubLink?: string 
   children?: React.ReactNode
 }
 
@@ -36,6 +39,9 @@ interface ProjectInfoProps {
 
 export const ProjectInfo = ({
     title,
+    figmaLink,
+    storybookLink,
+    githubLink,
     children
   }: ProjectInfoProps ) => {
   
@@ -44,8 +50,9 @@ export const ProjectInfo = ({
     <IntroWrap>
       <IntroHeader>
         <Heading size="l0" color="gray" title="Last Updated: 10.04.2022" />
-        <SourceFile />
+        <SourceFile {...{ figmaLink, storybookLink, githubLink }} />
       </IntroHeader>
+
       <IntroContent>
         <Heading bold size="l4" title={ title } />
         { children ? ( <Text>{ children }</Text> ) : null }

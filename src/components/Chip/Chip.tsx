@@ -48,7 +48,7 @@ interface ChipProps {
   size?: 'small'
   bgColor?: 'gray' | 'orange'
   text?: 'allCaps'
-  children: React.ReactNode
+  title: any
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -57,13 +57,13 @@ export const Chip = ({
     bgColor,
     text,
     size,
-    children
+    title
   }: ChipProps ) => {
   
   return(
 
     <ChipWrap {...{ size, bgColor, text }}>
-      <ChipContent><strong>{ children }</strong></ChipContent>
+      <ChipContent><strong>{ title }</strong></ChipContent>
     </ChipWrap>
     
   )

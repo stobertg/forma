@@ -23,8 +23,8 @@ export const LeftNav = ({
       <NavLinks 
         title="Components" 
         links={[
-          { href: '/', title: 'Benefit Card' },
-          { href: '/', title: 'Chip' },
+          { href: '/components/benefit-card', title: 'Benefit Card' },
+          { href: '/components/chip', title: 'Chip' },
           { href: '/', title: 'Templates' },
           { href: '/', title: 'Upload Card' },
           { href: '/', title: 'Breadcrumbs' },
