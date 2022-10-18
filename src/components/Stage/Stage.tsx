@@ -15,7 +15,7 @@ const StageContent = styled('div', {
   width: '100%',
   minHeight: 'calc( 100vh - 200px )',
   margin: '0 auto',
-  padding: '100px 0'
+  padding: '50px 0'
 })
 
 // -------------- Typescript declarations -------------- //

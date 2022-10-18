@@ -7,7 +7,15 @@ const IntroWrap = styled('section', {
 })
 
 const IntroHeader = styled('header', {
-
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+  marginBottom: 50,
+  paddingBottom: 24,
+  borderBottom: '1px solid $border'
 })
 
 const IntroContent = styled('div', {

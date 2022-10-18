@@ -11,6 +11,10 @@ export const globalStyle = {
     MozOsxFontSmoothing: 'grayscale'
   },
 
+  img: {
+    width: '100%'
+  },
+
   body: {
     padding: 0,
     margin: 0,

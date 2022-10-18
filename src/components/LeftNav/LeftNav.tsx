@@ -4,7 +4,7 @@ import { NavWrap, NavHeader, NavLinks } from './Parts'
 // -------------- Typescript declarations -------------- //
 
 export interface LeftNavProps {
-  links: {
+  links?: {
     title: string
     href: string
   }[]
@@ -20,7 +20,35 @@ export const LeftNav = ({
 
     <NavWrap>
       <NavHeader />
-      <NavLinks title="Components" {...{ links }} />
+      <NavLinks 
+        title="Components" 
+        links={[
+          { href: '/', title: 'Benefit Card' },
+          { href: '/', title: 'Chip' },
+          { href: '/', title: 'Templates' },
+          { href: '/', title: 'Upload Card' },
+          { href: '/', title: 'Breadcrumbs' },
+          { href: '/', title: 'Autocomplete' },
+          { href: '/', title: 'Buttons' },
+          { href: '/', title: 'Banners' },
+          { href: '/', title: 'Modal' },
+        ]} 
+      />
+
+      <NavLinks 
+        title="Emails" 
+        links={[
+          { href: '/', title: 'Product Hero' },
+          { href: '/', title: 'Chip' },
+          { href: '/', title: 'Colors' },
+          { href: '/', title: 'Icon' },
+          { href: '/', title: 'Image' },
+          { href: '/', title: 'List' },
+          { href: '/', title: 'Logo' },
+          { href: '/', title: 'Menu Button' },
+          { href: '/', title: 'Chip' },
+        ]} 
+      />
     </NavWrap>
     
   )
