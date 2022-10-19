@@ -98,14 +98,14 @@ export const NavLinks = ({
   return(
 
     <NavLinksWrap>
-      <div><Heading bold size="l1" title={ title } /></div>
+      <div><Heading bold size="l2" title={ title } /></div>
       <List>
         { links.map(( link, i ) => (
 
           <li key={`link-${ i }`}>
             <Link href={ link.href }>
               <a>
-                <span><Heading size="l0" title={ link.title } /></span>
+                <span><Heading size="l1" title={ link.title } /></span>
                 <Icon size="l0" icon="arrow-right" />
               </a>
             </Link>

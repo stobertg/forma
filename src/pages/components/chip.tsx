@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, List, ProjectInfo, Chip, Code } from '@components'
+import { SiteContainer, Block, BlockItem, List, ProjectInfo, Chip, StageBlocks, StageBlockRow, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,14 +23,26 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <List spacing="l1">
-            <li><Chip text="allCaps" title="Save 10%" /></li>
-            <li><Chip size="small" title="Save 10%" /></li>
-            <li><Chip size="small" text="allCaps" title="Save 10%" /></li>
-            <li><Chip bgColor="gray" title="Program Status" /></li>
-            <li><Chip size="small" bgColor="gray" title="Program Status" /></li>
-            <li><Chip size="small" bgColor="gray" text="allCaps" title="Program Status" /></li>
-          </List>
+          <StageBlocks 
+            columns="3"
+            titles={[
+              { title: 'Default' },
+              { title: 'All Caps' },
+              { title: 'Small' },
+            ]}
+          >
+            <StageBlockRow>
+              <div><Chip bgColor="gray" title="Callout" /></div>
+              <div><Chip text="allCaps" bgColor="gray" title="Callout" /></div>
+              <div><Chip size="small" bgColor="gray" title="Callout" /></div>
+            </StageBlockRow>
+
+            <StageBlockRow>
+              <div><Chip title="Callout" /></div>
+              <div><Chip text="allCaps" title="Callout" /></div>
+              <div><Chip size="small" title="Callout" /></div>
+            </StageBlockRow>
+          </StageBlocks>
         </BlockItem>
 
         <BlockItem>
@@ -39,7 +51,7 @@ const Page: NextPage = () => {
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"small"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bgColor</CodeBlue>=<CodeOrange>"gray" | "orange"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>"allCaps"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Program Status"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Callout"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

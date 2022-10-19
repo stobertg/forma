@@ -49,7 +49,7 @@ const SourceImage = styled('div', {
 const SourceText = styled('div', {
   position: 'relative',
   margin: '0 16px 0 12px',
-  fontSize: 12
+  fontSize: '$s0'
 })
 
 // -------------- Typescript declarations -------------- //
@@ -82,7 +82,7 @@ export const SourceFile = ({
   return(
 
     <List direction="horizontal" spacing="l1r">
-      { figmaLink ? ( <Base href={ figmaLink } title="figma" /> ) : null}
+      { figmaLink ? ( <Base href={ figmaLink } title="Figma" /> ) : null}
       { storybookLink ? ( <Base href={ storybookLink } title="Storybook" /> ) : null }
       { githubLink ? ( <Base href={ githubLink } title="Github" /> ) : null }
     </List>

@@ -73,7 +73,7 @@ export const Swatch = ({
         </SwatchColor>
         <Heading bold title={ title } />
       </SwatchTitle>
-      <SwatchHsl><Heading size="l0" title={ hexCode } /></SwatchHsl>
+      <SwatchHsl><Heading size="l1" title={ hexCode } /></SwatchHsl>
     </SwatchWrap>
 
   )

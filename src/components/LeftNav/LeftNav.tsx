@@ -20,6 +20,16 @@ export const LeftNav = ({
 
     <NavWrap>
       <NavHeader />
+
+      <NavLinks 
+        title="Brand" 
+        links={[
+          { href: '/', title: 'Colors' },
+          { href: '/', title: 'Logo' },
+          { href: '/', title: 'Typography' }
+        ]} 
+      />
+
       <NavLinks 
         title="Components" 
         links={[

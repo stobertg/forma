@@ -34,12 +34,15 @@ export const fonts = {
 }
 
 export const fontSizes = {
-  s0: '0.875rem', // 14px
-  s1: '1.125rem', // 18px
-  s2: '1.25rem', // 20px
-  s3: '1.5rem', // 24px
-  s4: '1.75rem', // 28px
-  s5: '2rem', // 32px
-  s6: '2.5rem', // 40px
-  s7: '4.625rem' // 52px
+  s0: '0.75rem', // 12px
+  s1: '0.875rem', // 14px
+  s2: '1.0625rem', // 17px
+  s3: '1.375rem', // 22px
+  s4: '1.5rem', // 24px
+  s5: '1.75rem', // 28px
+  s6: '2rem', // 32px
+  s7: '2.25rem', // 36px
+  s8: '2.75rem', // 44px
+  s9: '3.5rem', // 56px
+  s10: '4rem' // 64px
 }

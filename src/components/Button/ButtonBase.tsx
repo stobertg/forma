@@ -122,7 +122,7 @@ const Button = styled('div', {
 
     size: {
       l0: { 
-        fontSize: '$s0', 
+        fontSize: '$s1', 
         height: '44px !important',
         minWidth: 'auto !important',
         padding: '0 24px'

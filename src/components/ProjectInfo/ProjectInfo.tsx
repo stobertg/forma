@@ -49,7 +49,7 @@ export const ProjectInfo = ({
 
     <IntroWrap>
       <IntroHeader>
-        <Heading size="l0" color="gray" title="Last Updated: 10.04.2022" />
+        <Heading size="l1" color="gray" title="Last Updated: 10.04.2022" />
         <SourceFile {...{ figmaLink, storybookLink, githubLink }} />
       </IntroHeader>
 

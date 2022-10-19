@@ -59,7 +59,7 @@ const LinkContainer = styled('div', {
 
   a: {
     marginRight: 32,
-    fontSize: '$s0'
+    fontSize: '$s1'
   }
 })
 

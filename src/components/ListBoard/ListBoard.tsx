@@ -37,7 +37,7 @@ const LessonDue = styled('div', {
   borderRadius: '$pill',
   background: '#222328',
   fontFamily: '$sansSerif',
-  fontSize: '$s0'
+  fontSize: '$s1'
 })
 
 const BoardHeader = styled('header', {

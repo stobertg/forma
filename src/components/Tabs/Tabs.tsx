@@ -81,7 +81,7 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
 
   variants: {
     tabSize: {
-      tiny: { '*': { fontSize: '$s0' }},
+      tiny: { '*': { fontSize: '$s1' }},
       small: { '*': { fontSize: 'initial' }}
     }
   }

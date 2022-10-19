@@ -10,8 +10,13 @@ const StageBlockTitles = styled('div', {
   marginBottom: 20,
   textAlign: 'center',
 
-  '> *': {
-    width: '20%'
+  variants: {
+    columns: {
+      5: { '> *': { width: '20%' }},
+      4: { '> *': { width: '25%' }},
+      3: { '> *': { width: '33.33%' }},
+      2: { '> *': { width: '50%' }}
+    }
   }
 })
 
@@ -25,39 +30,42 @@ const StageBlocksWrap = styled('div', {
   '> *': {
     minHeight: 100,
     '&:not(:last-child)': { borderBottom: '1px solid $border' }
-  }
-})
+  },
 
-const StageBlockRow = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  position: 'relative',
-  width: '100%',
-
-  '> *': {
-    width: '20%',
-    minHeight: 100,
-    '&:not(:last-child)': { borderRight: '1px solid $border' }
+  variants: {
+    columns: {
+      5: { '> * > *': { width: '20%' }},
+      4: { '> * > *': { width: '25%' }},
+      3: { '> * > *': { width: '33.33%' }},
+      2: { '> * > *': { width: '50%' }}
+    }
   }
 })
 
 interface StageBlocksProps {
+  titles?: {
+    title: string
+  }[]
   children: React.ReactNode
+  columns: '2' | '3' | '4' | '5'
 } 
 
 // ---------- This is the end of declarations ---------- //
 
-export const StageBlocks = ({ children }:StageBlocksProps) => {
+export const StageBlocks = ({ titles, columns, children }:StageBlocksProps) => {
   
   return(
 
     <>
-      <StageBlocks>
-          <StageBlockTitles>
-            { titles.map(( title, i ) => ( <Heading bold size="l0" color="gray" title="Default" /> ))}
-          </StageBlockTitles>
-        { children }
-      </StageBlocks>
+      { titles ? (
+        <StageBlockTitles {...{ columns }}>
+          { titles.map(( title, i ) => ( 
+            <Heading key={`title-${ i }`} bold size="l0" color="gray" title={ title.title } /> 
+          ))}
+        </StageBlockTitles>
+      ) : null }
+
+      <StageBlocksWrap {...{ columns }}>{ children }</StageBlocksWrap>
     </>
     
   )

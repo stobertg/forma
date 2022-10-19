@@ -7,7 +7,7 @@ const CodeWrap = styled('div', {
   borderRadius: '$r2',
   background: '$white100',
   color: '$gray300',
-  fontSize: '$s0'
+  fontSize: '$s1'
 })
 
 const CodeContent = styled('div', {

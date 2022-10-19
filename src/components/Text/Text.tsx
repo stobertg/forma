@@ -39,7 +39,7 @@ const TextWrap = styled('div', {
     // By default the text is 16px and these change the text sizes to be larger
 
     fontSize: {
-      l0: { fontSize: '$s0', lineHeight: 1.3 },
+      l0: { fontSize: '$s1', lineHeight: 1.3 },
       l1: { fontSize: '$s1', lineHeight: 1.5 }
     },
 
