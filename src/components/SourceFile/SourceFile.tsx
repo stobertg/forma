@@ -49,7 +49,8 @@ const SourceImage = styled('div', {
 const SourceText = styled('div', {
   position: 'relative',
   margin: '0 16px 0 12px',
-  fontSize: '$s0'
+  fontSize: '$s0',
+  textTransform: 'capitalize'
 })
 
 // -------------- Typescript declarations -------------- //
@@ -58,6 +59,7 @@ interface SourceFileProps {
   figmaLink?: string
   storybookLink?: string
   githubLink?: string
+  googleDriveLink?: string
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -65,7 +67,8 @@ interface SourceFileProps {
 export const SourceFile = ({
     figmaLink, // Optional - for the link to the Figma file
     storybookLink, // Optional - for the link to the Storybook
-    githubLink // Optional - for the link to the Github
+    githubLink, // Optional - for the link to the Github
+    googleDriveLink
   }: SourceFileProps ) => {
 
   const Base = ({ href, title }:any) => {
@@ -82,9 +85,10 @@ export const SourceFile = ({
   return(
 
     <List direction="horizontal" spacing="l1r">
-      { figmaLink ? ( <Base href={ figmaLink } title="Figma" /> ) : null}
-      { storybookLink ? ( <Base href={ storybookLink } title="Storybook" /> ) : null }
-      { githubLink ? ( <Base href={ githubLink } title="Github" /> ) : null }
+      { figmaLink ? ( <Base href={ figmaLink } title="figma" /> ) : null}
+      { storybookLink ? ( <Base href={ storybookLink } title="storybook" /> ) : null }
+      { githubLink ? ( <Base href={ githubLink } title="github" /> ) : null }
+      { googleDriveLink ? ( <Base href={ googleDriveLink } title="drive" /> ) : null }
     </List>
     
   )

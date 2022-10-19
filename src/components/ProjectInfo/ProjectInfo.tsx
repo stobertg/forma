@@ -32,6 +32,7 @@ interface ProjectInfoProps {
   figmaLink?: string
   storybookLink?: string
   githubLink?: string 
+  googleDriveLink?: string
   children?: React.ReactNode
 }
 
@@ -42,6 +43,7 @@ export const ProjectInfo = ({
     figmaLink,
     storybookLink,
     githubLink,
+    googleDriveLink,
     children
   }: ProjectInfoProps ) => {
   
@@ -50,7 +52,7 @@ export const ProjectInfo = ({
     <IntroWrap>
       <IntroHeader>
         <Heading size="l1" color="gray" title="Last Updated: 10.04.2022" />
-        <SourceFile {...{ figmaLink, storybookLink, githubLink }} />
+        <SourceFile {...{ figmaLink, storybookLink, githubLink, googleDriveLink }} />
       </IntroHeader>
 
       <IntroContent>
