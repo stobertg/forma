@@ -43,7 +43,7 @@ export const Primary = () => (
 
 export const Secondary = () => (
   <Button 
-    variant="outline"
+    variant="secondary"
     icon="give"
     title="Action"
   />

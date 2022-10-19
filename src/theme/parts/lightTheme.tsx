@@ -18,7 +18,7 @@ export const lightThemeColors = {
   bgDivider: '$red700',
   bgDark: '$peach800',
   bgInformation: '$green800',
-  bgWarning: '$blue500',
+  bgWarning: '$peach200',
   bgNegative: '$blue700',
   bgPositive: '$white50',
 
@@ -26,8 +26,10 @@ export const lightThemeColors = {
 
   buttonPrimary: '$blue500',
   buttonHover: '$blue600',
-  ButtonDisabled: '$indigo100',
+  buttonSecondaryHover: '$blue100',
+  buttonDisabled: '$indigo100',
   buttonDanger: '$red700',
+  buttonDangerHover: '$red800',
   buttonLink: '$white50',
 
   // Icon colors

@@ -23,15 +23,15 @@ export const LeftNav = ({
       <NavLinks 
         title="Components" 
         links={[
-          { href: '/components/benefit-card', title: 'Benefit Card' },
-          { href: '/components/chip', title: 'Chip' },
-          { href: '/', title: 'Templates' },
-          { href: '/', title: 'Upload Card' },
-          { href: '/', title: 'Breadcrumbs' },
           { href: '/', title: 'Autocomplete' },
-          { href: '/', title: 'Buttons' },
           { href: '/', title: 'Banners' },
+          { href: '/components/benefit-card', title: 'Benefit Card' },
+          { href: '/components/button', title: 'Button' },
+          { href: '/', title: 'Breadcrumbs' },
+          { href: '/components/chip', title: 'Chip' },
           { href: '/', title: 'Modal' },
+          { href: '/', title: 'Templates' },
+          { href: '/', title: 'Upload Card' }
         ]} 
       />
 

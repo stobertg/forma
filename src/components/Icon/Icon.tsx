@@ -69,16 +69,13 @@ interface IconProps {
 export const Icon = ({
     size,
     background,
-    icon,
-    iconAlt
+    icon
   }: IconProps ) => {
   
     return(
 
-     <IconWrap {...{ size, background }}>
-        { iconAlt ? ( <img src={`/icons/${ iconAlt }.svg`} alt="FreeRossIcon" /> ) 
-        : ( <svg><use xlinkHref={ `/global/icons/icons.svg#${ icon }` } xlinkTitle={ icon } /></svg> )
-        }
+      <IconWrap {...{ size, background }}>
+        <svg><use xlinkHref={ `/global/icons/icons.svg#${ icon }` } xlinkTitle={ icon } /></svg>
       </IconWrap>
      
     )

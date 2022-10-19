@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Heading, Text, BenefitCard, Code } from '@components'
+import { SiteContainer, Block, BlockItem, List, ProjectInfo, Chip, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,29 +23,23 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <BenefitCard 
-            illustration="account-custom"
-            title="Benefit Program Name"
-            chipTitle="Program Status"
-            text="Add one to three lines of text to describe the purpose and usage of this benefit program."
-            links={[
-              { href: '/', title: "View Account" },
-              { href: '/', title: "What's Eligible" }
-            ]}
-            rightItems={[
-              { title: '$999.99', subtitle: 'available balace' },
-              { title: 'mm/dd/yyyy', subtitle: 'new funds added' }
-            ]}
-          />
+          <List spacing="l1">
+            <li><Chip text="allCaps" title="Save 10%" /></li>
+            <li><Chip size="small" title="Save 10%" /></li>
+            <li><Chip size="small" text="allCaps" title="Save 10%" /></li>
+            <li><Chip bgColor="gray" title="Program Status" /></li>
+            <li><Chip size="small" bgColor="gray" title="Program Status" /></li>
+            <li><Chip size="small" bgColor="gray" text="allCaps" title="Program Status" /></li>
+          </List>
         </BlockItem>
 
         <BlockItem>
           <Code>
-            &lt;<CodeGreen>BenefitCard</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>illustration</CodeBlue>=<CodeOrange>"account-custom"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Benefit Program Name"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>chipTitle</CodeBlue>=<CodeOrange>"Program Status"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>"Add one to three lines of text to describe the purpose and usage of this benefit program."</CodeOrange>
+            &lt;<CodeGreen>Chip</CodeGreen>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"small"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bgColor</CodeBlue>=<CodeOrange>"gray" | "orange"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>"allCaps"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Program Status"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

@@ -32,17 +32,18 @@ import { ButtonBase } from './ButtonBase'
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
-  variant?: 'disabled' | 'primary' | 'tint' | 'success' | 'outline' | 'icon' | 'iconOutline' | 'noStyle'
-  size?: 'l0Icon' | 'l0'
+  variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
+  size?: 'l0'
+  title?: any
+  icon?: any
+  iconPlacement?: 'right'
+  children?: React.ReactNode
+  notBold?: boolean
+  type?: 'submit'
   href?: string
   target?: '_blank'
   pageLink?: string
-  title?: any
-  icon?: any
-  iconPlacement?: 'left' | 'right'
-  children?: React.ReactNode
   onClick?: React.MouseEventHandler<HTMLButtonElement>
-  notBold?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -51,10 +52,10 @@ export const Button = ({
     variant, // Supporting the different visual treatments of the button
     href, // Supporting links that take users to an external website - wraps in <a> tag
     target, // Supporting the href link to be opened in a new tab/window
+    icon,
     pageLink, // Supprting Next/Link to tak the user to another page within the site - wraps in <Link> tag
     onClick, // Supporting standalone button clicks that provide an interaction on the current page - wraps in <button> tag
     title, // Support for the title of a button, only not used if icon only
-    icon, // Support for the icon to be within the button - can be standalone or left/right of text
     iconPlacement, // Supporting the icon placement to be on the left or right side of the container
     size, // Supporting the small version of the button
     children, // For customization of a button as fallabck for compnents needed to be witin a button (ie a whole card is a button)
@@ -70,9 +71,21 @@ export const Button = ({
         // This is because below, we follow Next JS page links that will take users to an internal link
         // An example of using the href tag is to take the user to a twitter profile that was called out in a blog post
         
-        <a href={ href } target={ target }>
-          <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
-        </a>
+        <>
+          { pageLink ? (
+
+            <Link href={ href }>
+              <a><ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} /></a>
+            </Link>
+
+          ) : (
+
+            <a href={ href } target={ target }>
+              <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
+            </a>
+
+          )}
+        </>
 
       ) : onClick ? (
 

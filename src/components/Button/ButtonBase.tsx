@@ -12,11 +12,6 @@ const ButtonWrap = styled('div', {
   position: 'relative',
   cursor: 'pointer',
   transition: '$s1',
-  fontFamily: '$sansSerifBold',
-
-  strong: {
-    fontFamily: '$sansSerifBlack',
-  },
 
   // For the interaction when a button is clicked - provides a scale down until released
   // This is universal for all buttons to give the user feedback that they clicked the button
@@ -36,7 +31,8 @@ const Button = styled('div', {
   alignItems: 'center',
   position: 'relative',
   padding: '16px 20px',
-  borderRadius: '$r1',
+  borderRadius: '$r0',
+  color: '$textLink',
   transition: '$s1',
   userSelect: 'none',
 
@@ -45,7 +41,7 @@ const Button = styled('div', {
   // Meaning it doesn't look link a tradtional button
 
   '&:hover': { 
-    background: '$gray200'
+    background: '$buttonSecondaryHover'
   },
 
   // Here we auto mate the spacing for the contents within the button base
@@ -53,7 +49,7 @@ const Button = styled('div', {
   // This also works in reverse where the title is on the left and an icon is on the right
 
   '> *:not(:last-child)': {
-    marginRight: 8
+    marginRight: 4
   },
 
   // For the variants of the button
@@ -66,81 +62,47 @@ const Button = styled('div', {
       // This contains the solid background color
 
       primary: {
-        height: 56,
-        minWidth: 120,
-        padding: '0 32px',
+        height: 48,
+        minWidth: 100,
         background: '$buttonPrimary',
-        color: '$white',
-        borderRadius: '$pill',
+        color: '$white50',
       
         // For the hover effect of the primary button
         // This makes the button pure black and places a dropshadow
 
         '&:hover': {
-          background: '$pureBlack',
-          boxShadow: '0 2px 10px rgba( 0, 0, 0, 0.4 )'
+          background: '$buttonHover',
         }
       },
 
-      tint: {
-        height: 56,
-        minWidth: 120,
-        padding: '0 32px',
-        background: '$lavender',
-        color: '$majorelleBlue',
-        borderRadius: '$pill',
-      },
-
-      // For the secondary button used throughout the site
-      // This is the button that has the outline on the outside
-
-      outline: {
-        height: 56,
-        minWidth: 120,
-        padding: '0 32px',
-        border: '1px solid $iris',
-        borderRadius: '$pill',
-
-        // For the hover effect of the primary button
-        // This makes the button contain a dropshadow
+      secondary: {
+        height: 48,
+        minWidth: 100,
+        background: '$white50',
+        color: '$buttonPrimary',
+        border: '1px solid $buttonPrimary',
 
         '&:hover': {
-          background: '$white',
-          boxShadow: '0 2px 10px rgba( 0, 0, 0, 0.4 )'
+          background: '$buttonSecondaryHover'
         }
       },
 
-      success: {
-        background: '#20281c',
-        color: '$green'
-      },
+      danger: {
+        height: 48,
+        minWidth: 100,
+        background: '$buttonDanger',
+        color: '$white50',
 
-      // For the icon only button, where no text is present
-      // This holds the icon in the center of the container, which is a outlined circle
-
-      icon: {
-        minWidth: 36,
-        padding: 0,
-        width: 36,
-        height: 36,
-        borderRadius: '50%',
-      },
-
-      iconOutline: {
-        minWidth: 56,
-        padding: 0,
-        width: 56,
-        height: 56,
-        borderRadius: '50%',
-        border: '1px solid $iris',
-      },
-
-      noStyle: {
-        padding: 0
+        '&:hover': {
+          background: '$buttonDangerHover'
+        }
       },
 
       disabled: {
-        background: '$gray700',
+        height: 48,
+        minWidth: 100,
+        background: '$buttonDisabled',
+        color: '$textDisabled',
         pointerEvents: 'none'
       }
     },
@@ -149,7 +111,6 @@ const Button = styled('div', {
     // Most icons will be on the left of the text, but icons such as arrows for a button to act as a dropdown will be on the right
 
     iconPlacement: {
-      left: {},
       right: { 
         flexDirection: 'row-reverse',
         '> *:not(:last-child)': { margin: '0 0 0 8px' },
@@ -160,19 +121,6 @@ const Button = styled('div', {
     // At the moment, the component only supports a small version of the button
 
     size: {
-      l0Icon: {
-        maxWidth: 20,
-        width: 20,
-        maxHeight: 20,
-        height: 20,
-        padding: 0,
-        background: '$pureBlack',
-
-        svg: {
-          width: '50%'
-        }
-      },
-
       l0: { 
         fontSize: '$s0', 
         height: '44px !important',
@@ -186,11 +134,11 @@ const Button = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
-  variant?: 'disabled' | 'primary' | 'tint' | 'success' | 'outline' | 'icon' | 'iconOutline' | 'noStyle'
-  size?: 'l0Icon' | 'l0'
+  variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
+  size?: 'l0'
   title?: any
   icon?: any
-  iconPlacement?: 'left' | 'right'
+  iconPlacement?: 'right'
   children?: React.ReactNode
   notBold?: boolean
   type?: 'submit'
@@ -214,7 +162,7 @@ export const ButtonBase = ({
     <ButtonWrap style={{ pointerEvents: variant == 'disabled' ? 'none' : 'auto' }}>
       { title || icon ? (
         <Button {...{ variant, iconPlacement, size, type }}>
-          { icon ? ( <Icon icon={ icon } size="l0" /> ) : null }
+          { icon ? ( <Icon {...{ icon }} size="l0" /> ) : null }
           { title ? ( 
             <>
               { notBold 
