@@ -26,6 +26,7 @@ const StageBlocksWrap = styled('div', {
   position: 'relative',
   border: '1px solid $border',
   borderRadius: '$r1',
+  overflow: 'hidden',
 
   '> *': {
     minHeight: 100,

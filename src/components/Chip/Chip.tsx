@@ -8,11 +8,12 @@ import { styled } from '@theme'
 const ChipWrap = styled('div', {
   display: 'inline-flex',
   position: 'relative',
-  padding: '12px 24px 12px 20px',
+  padding: '8px 16px',
   background: '$bgWarning',
   borderRadius: '$r2',
   fontFamily: '$sansSerif',
   fontSize: '$s1',
+  letterSpacing: 1,
 
   variants: {
     text: { 

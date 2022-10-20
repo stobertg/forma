@@ -11,6 +11,7 @@ const Page: NextPage = () => {
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
+          googleDriveLink="https://drive.google.com/drive/folders/1NoTQOCPERXz85jRc7O0DHiR6wEz36TUl"
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 

@@ -49,7 +49,7 @@ const Button = styled('div', {
   // This also works in reverse where the title is on the left and an icon is on the right
 
   '> *:not(:last-child)': {
-    marginRight: 4
+    marginRight: 8
   },
 
   // For the variants of the button
@@ -114,6 +114,7 @@ const Button = styled('div', {
       right: { 
         flexDirection: 'row-reverse',
         '> *:not(:last-child)': { margin: '0 0 0 8px' },
+        '*': { paddingRight: 0 }
       }
     },
 
@@ -129,6 +130,11 @@ const Button = styled('div', {
       },
     }
   }
+})
+
+const ButtonIcon = styled('div', {
+
+  '+ *': { paddingRight: 4 }
 })
 
 // -------------- Typescript declarations -------------- //
@@ -162,7 +168,7 @@ export const ButtonBase = ({
     <ButtonWrap style={{ pointerEvents: variant == 'disabled' ? 'none' : 'auto' }}>
       { title || icon ? (
         <Button {...{ variant, iconPlacement, size, type }}>
-          { icon ? ( <Icon {...{ icon }} size="l0" /> ) : null }
+          { icon ? ( <ButtonIcon><Icon {...{ icon }} size="l0" /></ButtonIcon> ) : null }
           { title ? ( 
             <>
               { notBold 

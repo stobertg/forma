@@ -15,8 +15,9 @@ const LogoWrap = styled('div', {
 
   variants: {
     size: {
-      l0: { height: 32 },
-      l1: { height: 50 }
+      l0: { height: 24 },
+      l1: { height: 32 },
+      l2: { height: 50 }
     }
   }
 })
@@ -25,26 +26,49 @@ const LogoWrap = styled('div', {
 
 interface LogoProps {
   variant?: 'logo-mark' | 'logo-full' | 'word-mark'
+  color?: 'light' | 'dark'
   size?: 'l0' | 'l1'
+  homeLink?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Logo = ({
     variant,
-    size
+    color,
+    size,
+    homeLink
   }: LogoProps ) => {
   
   return(
 
-    <LogoWrap {...{ size }}>
-      { 
-        variant == 'logo-mark' ? <LogoMark /> : 
-        variant == 'logo-full' ? <LogoFull /> : 
-        variant == 'word-mark' ? <WordMark /> : 
-        <LogoFull /> 
-      }
-    </LogoWrap>
+    <>
+      { homeLink ? (
+
+        <Link href="/">
+          <a>
+            <LogoWrap {...{ size }}>
+              { 
+                variant == 'logo-mark' ? <LogoMark {...{ color }} /> : 
+                variant == 'word-mark' ? <WordMark {...{ color }} /> : 
+                <LogoFull {...{ color }} /> 
+              }
+            </LogoWrap>
+          </a>
+        </Link>
+
+      ) : (
+        
+        <LogoWrap {...{ size }}>
+          { 
+            variant == 'logo-mark' ? <LogoMark {...{ color }} /> : 
+            variant == 'word-mark' ? <WordMark {...{ color }} /> : 
+            <LogoFull {...{ color }} /> 
+          }
+        </LogoWrap>
+
+      )}
+    </>
 
   )
 }

@@ -15,20 +15,28 @@ const RowWrap = styled('div', {
     height: '100%',
     minHeight: 100,
     '&:not(:last-child)': { borderRight: '1px solid $border' }
+  },
+
+  variants: {
+    bgColor: {
+      light: { background: '$brandSecondary' },
+      dark: { background: '$brandPrimary' }
+    }
   }
 })
 
 interface StageBlockRowProps {
+  bgColor?: 'light' | 'dark'
   children: React.ReactNode
 } 
 
 // ---------- This is the end of declarations ---------- //
 
-export const StageBlockRow = ({ children }:StageBlockRowProps) => {
+export const StageBlockRow = ({ bgColor, children }:StageBlockRowProps) => {
   
   return(
 
-    <RowWrap>{ children }</RowWrap>
+    <RowWrap {...{ bgColor }}>{ children }</RowWrap>
     
   )
 }

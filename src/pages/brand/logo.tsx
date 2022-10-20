@@ -12,7 +12,7 @@ const Page: NextPage = () => {
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
-          googleDriveLink="/"
+          googleDriveLink="https://drive.google.com/drive/folders/113ligu4NyP0C80rioDAxVBe4VoLCR69f"
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 
@@ -36,19 +36,19 @@ const Page: NextPage = () => {
             <StageBlockRow>
               <div><Logo /></div>
               <div><Logo variant="logo-mark" /></div>
-              <div><Logo variant="word-mark" /></div>
+              <div><Logo color="dark" size="l0" variant="word-mark" /></div>
             </StageBlockRow>
 
             <StageBlockRow>
-              <div><Button icon="config" title="Action" /></div>
-              <div><Button icon="plus-circle" variant="primary" title="Action" /></div>
-              <div><Button icon="plus-circle" variant="secondary" title="Action" /></div>
+              <div><Logo color="dark" /></div>
+              <div><Logo color="dark" variant="logo-mark" /></div>
+              <div><Logo color="dark" size="l0" variant="word-mark" /></div>
             </StageBlockRow>
 
-            <StageBlockRow>
-              <div><Button iconPlacement="right" icon="config" title="Action" /></div>
-              <div><Button iconPlacement="right" icon="plus-circle" variant="primary" title="Action" /></div>
-              <div><Button iconPlacement="right" icon="plus-circle" variant="secondary" title="Action" /></div>
+            <StageBlockRow bgColor="dark">
+              <div><Logo color="light" /></div>
+              <div><Logo color="light" variant="logo-mark" /></div>
+              <div><Logo color="light" size="l0" variant="word-mark" /></div>
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>
@@ -56,9 +56,8 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Logo</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Action"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>icon</CodeBlue>=<CodeOrange>"icon-name"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>iconPlacement</CodeBlue>=<CodeOrange>"right"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange> "logo-mark" | "word-mark"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

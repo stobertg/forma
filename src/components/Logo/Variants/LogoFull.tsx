@@ -1,9 +1,36 @@
 import React from 'react'
+import { styled } from '@theme'
+import { LogoMark } from './LogoMark'
+import { WordMark } from './WordMark'
 
-export const LogoFull = () => {
+const LogoWrap = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  height: '100%',
+
+  '> *:first-child': {
+    height: '100%'
+  },
+
+  '> *:not(:first-child)': {
+    marginLeft: 12,
+    height: '70%'
+  }
+})
+
+interface LogoProps {
+  color?: 'light' | 'dark'
+}
+
+export const LogoFull = ({ color }:LogoProps) => {
   return(
 
-    <img src="/global/logo/logo-full.svg" />
+    <LogoWrap>
+      <LogoMark {...{ color }} />
+      <WordMark {...{ color }} />
+    </LogoWrap>
 
   )
 }

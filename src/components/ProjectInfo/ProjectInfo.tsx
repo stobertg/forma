@@ -56,7 +56,7 @@ export const ProjectInfo = ({
       </IntroHeader>
 
       <IntroContent>
-        <Heading bold size="l4" title={ title } />
+        <Heading bold size="l5" title={ title } />
         { children ? ( <Text>{ children }</Text> ) : null }
       </IntroContent>
     </IntroWrap>

@@ -5,15 +5,24 @@ const WordWrap = styled('div', {
   display: 'inline-flex',
   position: 'relative',
 
-  svg: {
-    fill: '$white50'
+  svg: { fill: '$brandPrimary' },
+
+  variants: {
+    color: {
+      light: { svg: { fill: '$brandSecondary' }},
+      dark: { svg: { fill: '$brandPrimary' }}
+    }
   }
 })
 
-export const WordMark = () => {
+interface WordMarkProps {
+  color?: 'light' | 'dark'
+}
+
+export const WordMark = ({ color }:WordMarkProps) => {
   return(
 
-    <WordWrap>
+    <WordWrap {...{ color }}>
       <svg viewBox="0 0 439.1 116.1">
         <path d="M41.5,0C25.9,0,14.2,12.1,14.2,28.1v5H0v17.1h14.2v63.6h21.3V50.2h16.2V33.1H35.5v-5c0-6.9,3.3-10.3,9.9-10.3 c1.9,0,3.8,0.2,5.7,0.6l1.3,0.3V1.2L51.6,1C48.3,0.3,44.9-0.1,41.5,0z"/>
         <path d="M98.4,30.8c-24.4,0-42.8,18.4-42.8,42.8s18.4,42.6,42.8,42.6s42.9-18.3,42.9-42.6S122.8,30.8,98.4,30.8z M119.6,73.5c0,14.5-8.5,24.2-21.3,24.2c-12.5,0-21.3-10-21.3-24.2s8.7-24.3,21.3-24.3S119.6,59.2,119.6,73.5z"/>
