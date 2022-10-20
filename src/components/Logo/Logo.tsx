@@ -27,6 +27,7 @@ const LogoWrap = styled('div', {
 interface LogoProps {
   variant?: 'logo-mark' | 'logo-full' | 'word-mark'
   color?: 'light' | 'dark'
+  wordMarkColor?: 'light' | 'dark'
   size?: 'l0' | 'l1'
   homeLink?: boolean
 }
@@ -36,6 +37,7 @@ interface LogoProps {
 export const Logo = ({
     variant,
     color,
+    wordMarkColor,
     size,
     homeLink
   }: LogoProps ) => {
@@ -51,7 +53,7 @@ export const Logo = ({
               { 
                 variant == 'logo-mark' ? <LogoMark {...{ color }} /> : 
                 variant == 'word-mark' ? <WordMark {...{ color }} /> : 
-                <LogoFull {...{ color }} /> 
+                <LogoFull {...{ color, wordMarkColor }} /> 
               }
             </LogoWrap>
           </a>
@@ -63,7 +65,7 @@ export const Logo = ({
           { 
             variant == 'logo-mark' ? <LogoMark {...{ color }} /> : 
             variant == 'word-mark' ? <WordMark {...{ color }} /> : 
-            <LogoFull {...{ color }} /> 
+            <LogoFull {...{ color, wordMarkColor }} /> 
           }
         </LogoWrap>
 

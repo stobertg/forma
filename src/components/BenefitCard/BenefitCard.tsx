@@ -100,7 +100,7 @@ export const BenefitCard = ({
 
           <ContentLeftText>
             <ContentHeader>
-              <Heading bold size="l2" title={ title } />
+              <Heading bold size="l3" title={ title } />
               <Chip size="small" text="allCaps" bgColor="gray" title={ chipTitle } />
             </ContentHeader>
 

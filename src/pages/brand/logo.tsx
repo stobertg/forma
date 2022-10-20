@@ -46,6 +46,12 @@ const Page: NextPage = () => {
             </StageBlockRow>
 
             <StageBlockRow bgColor="dark">
+              <div><Logo wordMarkColor="light" /></div>
+              <div><Logo variant="logo-mark" /></div>
+              <div><Logo color="light" size="l0" variant="word-mark" /></div>
+            </StageBlockRow>
+
+            <StageBlockRow bgColor="dark">
               <div><Logo color="light" /></div>
               <div><Logo color="light" variant="logo-mark" /></div>
               <div><Logo color="light" size="l0" variant="word-mark" /></div>
@@ -56,8 +62,11 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Logo</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange> "logo-mark" | "word-mark"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>homeLink</CodeBlue>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>"logo-mark" | "word-mark"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

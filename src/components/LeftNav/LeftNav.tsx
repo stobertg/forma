@@ -26,7 +26,8 @@ export const LeftNav = ({
         links={[
           { href: '/', title: 'Colors' },
           { href: '/brand/logo', title: 'Logo' },
-          { href: '/brand/typeface', title: 'Typeface' }
+          { href: '/brand/typeface', title: 'Typeface' },
+          { href: '/brand/font-sizes', title: 'Font Sizes' }
         ]} 
       />
 

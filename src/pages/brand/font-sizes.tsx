@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Heading, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, List, Heading, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -8,11 +8,10 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Typeface - Labil Grotesk"
+          title="Font Sizes"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
-          googleDriveLink="https://drive.google.com/drive/folders/1NoTQOCPERXz85jRc7O0DHiR6wEz36TUl"
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 
@@ -23,19 +22,23 @@ const Page: NextPage = () => {
       </Block>
 
       <Block blockItemSpacing="l0">
-        <Heading bold size="l7" title="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
-        <Heading bold size="l7" title="abcdefghijklmnopqrstuvwxyz" />
-        <Heading bold size="l7" title="1234567890" />
-      </Block>
+        <BlockItem>
+          <List spacing="l1">
+            <li><Heading size="l10" title="Labil Grotesk 64px" /></li>
+            <li><Heading size="l9" title="Labil Grotesk 56px" /></li>
+            <li><Heading size="l8" title="Labil Grotesk 44px" /></li>
+            <li><Heading size="l7" title="Labil Grotesk 36px" /></li>
+            <li><Heading size="l6" title="Labil Grotesk 28px" /></li>
+            <li><Heading size="l5" title="Labil Grotesk 24px" /></li>
+            <li><Heading size="l4" title="Labil Grotesk 22px" /></li>
+            <li><Heading size="l3" title="Labil Grotesk 18px" /></li>
+            <li><Heading size="l2" title="Labil Grotesk 17px" /></li>
+            <li><Heading size="l1" title="Labil Grotesk 14px" /></li>
+            <li><Heading size="l0" title="Labil Grotesk 12px" /></li>
+          </List>
+        </BlockItem>
 
-      <Block blockItemSpacing="l0">
-        <Heading size="l7" title="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
-        <Heading size="l7" title="abcdefghijklmnopqrstuvwxyz" />
-        <Heading size="l7" title="1234567890" />
-      </Block>
-      
-      <Block>
-      <BlockItem>
+        <BlockItem>
           <Code>
             &lt;<CodeGreen>Heading</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bold</CodeBlue>

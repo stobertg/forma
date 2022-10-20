@@ -22,14 +22,15 @@ const LogoWrap = styled('div', {
 
 interface LogoProps {
   color?: 'light' | 'dark'
+  wordMarkColor?: 'light' | 'dark'
 }
 
-export const LogoFull = ({ color }:LogoProps) => {
+export const LogoFull = ({ color, wordMarkColor }:LogoProps) => {
   return(
 
     <LogoWrap>
       <LogoMark {...{ color }} />
-      <WordMark {...{ color }} />
+      <WordMark color={ color || wordMarkColor } />
     </LogoWrap>
 
   )

@@ -40,7 +40,7 @@ const ChipContent = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   position: 'relative',
-  width: '100%',
+  width: '100%'
 })
 
 // -------------- Typescript declarations -------------- //
