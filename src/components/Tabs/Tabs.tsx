@@ -2,7 +2,6 @@ import React from 'react'
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 import { styled } from '@theme'
 import { Heading } from '@components'
-import { Content } from '@radix-ui/react-select';
 
 // For the master container of the tabs
 // this contains the tab triggers on the top and the content click below the tabs
@@ -89,7 +88,7 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
 
 const TabsContent = styled( TabsPrimitive.Content, {
   flexGrow: 1,
-  padding: '75px 0',
+  padding: '32px 0',
   backgroundColor: 'white',
   borderBottomLeftRadius: 6,
   borderBottomRightRadius: 6,
@@ -145,7 +144,7 @@ export const Tabs = ({
             key={ `trigger-${ i }`} 
             value={`tab${ i + 1 }`}
           >
-            <Heading bold size="l1" title={ trigger.title } />
+            <Heading size="l2" title={ trigger.title } />
           </TabsTrigger>
         ))}
       </TabsList>

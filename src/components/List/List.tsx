@@ -26,8 +26,9 @@ const ListWrap = styled('div', {
     decoration: {
       dividers: { 
         '> ul > li': { 
-          borderBottom: '1px solid $gunMetal',
-          '&:first-child': { borderTop: '1px solid $gunMetal' }
+          padding: '16px 0',
+          borderBottom: '1px solid $border',
+          '&:first-child': { borderTop: '1px solid $border' }
         }
       }
     },

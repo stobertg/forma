@@ -24,18 +24,7 @@ const LogoContain = styled('div', {
   justifyContent: 'center',
   position: 'relative',
   width: '60%',
-  margin: '0 auto',
-
-  svg: {
-    display: 'inline-flex',
-    width: '100%',
-    marginLeft: 12
-  },
-
-  '> div': {
-    display: 'inline-flex',
-    alignItems: 'center'
-  }
+  margin: '0 auto'
 })
 
 const NavHeaderContent = styled('div', {
@@ -61,7 +50,7 @@ export const NavHeader = () => {
     <NavHeaderWrap>
       <NavHeaderContent>
         <NavHeaderImg><img src="/illustration/why-switch.png" /></NavHeaderImg>
-        <LogoContain><div><Logo variant="logo-mark" /><WordMark /></div></LogoContain>
+        <LogoContain><Logo wordMarkColor="light" /></LogoContain>
         {/* <Input height="small" id="search" label="Search" type="text" /> */}
       </NavHeaderContent>
     </NavHeaderWrap>

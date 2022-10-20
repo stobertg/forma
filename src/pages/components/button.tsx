@@ -26,7 +26,7 @@ const Page: NextPage = () => {
           <StageBlocks
             columns="5"
             titles={[
-              { title: 'Default' },
+              { title: 'Text' },
               { title: 'Primary' },
               { title: 'Secondary' },
               { title: 'Danger' },

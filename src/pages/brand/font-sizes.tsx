@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, List, Heading, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, List, Heading, Chip, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,8 +23,8 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <List spacing="l1">
-            <li><Heading size="l10" title="Labil Grotesk 64px" /></li>
+          <List spacing="l1" decoration="dividers">
+            <li><Heading size="l10" title="Labil Grotesk 64px" /> <Chip title="$s10" /></li>
             <li><Heading size="l9" title="Labil Grotesk 56px" /></li>
             <li><Heading size="l8" title="Labil Grotesk 44px" /></li>
             <li><Heading size="l7" title="Labil Grotesk 36px" /></li>
@@ -44,8 +44,7 @@ const Page: NextPage = () => {
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bold</CodeBlue>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Title"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2" | "l3" | "l4" | "l5" | "l6" | "l7" | "l8" | "l9" | "l10"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"white" | "gray" | "indigo"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>
