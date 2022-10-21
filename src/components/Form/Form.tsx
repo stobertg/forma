@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm, useController, UseControllerProps } from "react-hook-form"
 import { styled } from '@theme'
 // import { Input, Heading, Text, Textarea, InputCheckbox, InputSelect, Button } from '@components'
-import { Heading, Text, Button } from '@components'
+import { Heading, Text, Button, Input } from '@components'
 
 type FormValues = {
   select: "",
@@ -10,15 +10,15 @@ type FormValues = {
   ello: ""
 }
 
-const Input = ( props: UseControllerProps<FormValues> ) => {
-  const { field, fieldState } = useController( props )
+// const Input = ( props: UseControllerProps<FormValues> ) => {
+//   const { field, fieldState } = useController( props )
 
-  return(
+//   return(
 
-    <><input { ...field } placeholder={ props.name } /></>
+//     <><input { ...field } placeholder={ props.name } /></>
 
-  )
-}
+//   )
+// }
 
 // For the master container of the form component
 // This holds the option title and intro on the top and the form fields below
@@ -108,9 +108,9 @@ export const Form = ({
       </FormHeader>
 
       <FormContent onSubmit={ handleSubmit(onSubmit) }>
-        <Input control={ control } name="name" rules={{ required: true }} />
+        <Input label="Full name" control={ control } name="name" rules={{ required: true }} />
+        <Input label="Title" control={ control } name="title" rules={{ required: true }} />
         <Button variant="primary" type="submit" title="submit" />
-        <input type="submit" value="submit" />
       </FormContent>
 
       {/* <FormContent onSubmit={ handleSubmit(onSubmit) }>
