@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, List, Heading, Chip, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, List, Form, Heading, Chip, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -22,6 +22,9 @@ const Page: NextPage = () => {
       </Block>
 
       <Block blockItemSpacing="l0">
+        <BlockItem>
+          <Form />
+        </BlockItem>
         <BlockItem>
           <List spacing="l1" decoration="dividers">
             <li><Heading size="l10" title="Labil Grotesk 64px" /> <Chip title="$s10" /></li>

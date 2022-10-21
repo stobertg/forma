@@ -133,7 +133,6 @@ const Button = styled('div', {
 })
 
 const ButtonIcon = styled('div', {
-
   '+ *': { paddingRight: 4 }
 })
 
@@ -178,6 +177,7 @@ export const ButtonBase = ({
             </>
           ) : null }
         </Button>
+
       ) : ( <Button {...{ variant, size }}>{ children }</Button> )}
     </ButtonWrap>
 

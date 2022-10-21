@@ -74,7 +74,7 @@ interface ButtonContainerProps {
   width?: 'fullWidth'
   children?: React.ReactNode
   buttons?: {
-    variant?: 'primary' | 'outline' | 'icon' 
+    variant?: 'primary' | 'secondary' | 'danger' | 'disabled'
     title?: string
     icon?: string
     iconPlacement?: 'left' | 'right'

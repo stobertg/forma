@@ -1,7 +1,24 @@
 import React from 'react'
-import { useForm } from "react-hook-form"
+import { useForm, useController, UseControllerProps } from "react-hook-form"
 import { styled } from '@theme'
-import { Input, Heading, Text, Textarea, InputCheckbox, InputSelect, Button } from '@components'
+// import { Input, Heading, Text, Textarea, InputCheckbox, InputSelect, Button } from '@components'
+import { Heading, Text, Button } from '@components'
+
+type FormValues = {
+  select: "",
+  name: "",
+  ello: ""
+}
+
+const Input = ( props: UseControllerProps<FormValues> ) => {
+  const { field, fieldState } = useController( props )
+
+  return(
+
+    <><input { ...field } placeholder={ props.name } /></>
+
+  )
+}
 
 // For the master container of the form component
 // This holds the option title and intro on the top and the form fields below
@@ -73,8 +90,14 @@ export const Form = ({
     descp
   }: FormProps ) => {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = ( data:any ) => console.log(data);
+  const { handleSubmit, control } = useForm<FormValues>({
+    defaultValues: {
+      name: ""
+    },
+    mode: "onChange"
+  })
+  
+  const onSubmit = ( data:FormValues ) => alert(JSON.stringify(data));
   
   return(
 
@@ -85,9 +108,16 @@ export const Form = ({
       </FormHeader>
 
       <FormContent onSubmit={ handleSubmit(onSubmit) }>
-        <Input id="name" type="text" label="Full name" />
-        <Input inputSize="small" id="emamil" type="text" label="Email" />
-        <Input id="website" type="text" label="Website" />
+        <Input control={ control } name="name" rules={{ required: true }} />
+        <Button variant="primary" type="submit" title="submit" />
+        <input type="submit" value="submit" />
+      </FormContent>
+
+      {/* <FormContent onSubmit={ handleSubmit(onSubmit) }>
+        <input {...register("ello")} />
+        <Input {...register("name")} name="name" label="Full name" />
+        <Input inputSize="small" name="emamil" type="text" label="Email" />
+        <Input name="website" type="text" label="Website" />
         <InputSelect 
           category="Contact reason"
           placeholder="I want to ..."
@@ -106,8 +136,9 @@ export const Form = ({
             { id: 'terms', label: <>I consent to the <a href="http://tylerstober.com">Terms &amp; Conditions</a> and <a href="http://tylerstober.com">Privacy Policy</a></> }
           ]}
         />
+        <input type="submit" value="submit" />
         <Button variant="primary" title="Submit" />
-      </FormContent>
+      </FormContent> */}
     </FormContain>
     
   )

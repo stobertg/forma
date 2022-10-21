@@ -49,17 +49,18 @@ interface ButtonProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Button = ({
+    notBold, // Supporting if the text in the button is bold
     variant, // Supporting the different visual treatments of the button
-    href, // Supporting links that take users to an external website - wraps in <a> tag
-    target, // Supporting the href link to be opened in a new tab/window
-    icon,
-    pageLink, // Supprting Next/Link to tak the user to another page within the site - wraps in <Link> tag
-    onClick, // Supporting standalone button clicks that provide an interaction on the current page - wraps in <button> tag
     title, // Support for the title of a button, only not used if icon only
+    icon, // Supporting the icons with the button - can either be on the right of the left of the text
     iconPlacement, // Supporting the icon placement to be on the left or right side of the container
     size, // Supporting the small version of the button
-    children, // For customization of a button as fallabck for compnents needed to be witin a button (ie a whole card is a button)
-    notBold
+    pageLink, // Supprting Next/Link to tak the user to another page within the site - wraps in <Link> tag
+    href, // Supporting links that take users to an external website - wraps in <a> tag
+    target, // Supporting the href link to be opened in a new tab/window ( _blank )
+    onClick, // Supporting standalone button clicks that provide an interaction on the current page - wraps in <button> tag
+    type, // This is to support Form submits, Text, Number Inputs, ect
+    children // For customization of a button as fallabck for compnents needed to be witin a button (ie a whole card is a button)
   }: ButtonProps ) => {
   
   return(
@@ -94,7 +95,15 @@ export const Button = ({
         // An example of this would be clicking on a button that opens up a dialog window with futher actions
 
         <button onClick={ onClick }>
-          <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
+          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold }} />
+        </button>
+
+        // Here we add support for Form submit buttons
+
+      ) : type == "submit" ? (
+        
+        <button type="submit">
+          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold }} />
         </button>
 
       ) : (
