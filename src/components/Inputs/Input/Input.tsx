@@ -3,94 +3,6 @@
 // import { styled } from '@theme'
 // import { useForm } from 'react-hook-form'
 
-
-// // For the container of the input field
-// // This holds just the input field and the label - here we dictate the visual style for the input field
-
-// const InputContain = styled('div', {
-//   display: 'flex',
-//   alignItems: 'center',
-//   position: 'relative',
-//   width: '100%',
-//   height: 64,
-//   padding: '0 24px',
-//   border: '1px solid $inputBorder',
-//   borderRadius: '$r2',
-//   transition: '$s1',
-//   fontFamily: '$sansSerif',
-
-//   // For the different height structures that are supported for the input
-//   // This is based on the context that the input needs to be used in. For example, in the left nav, the search field
-//   // looks too weird when it has the normal height and needs to be reduced
-
-//   variants: {
-//     height: {
-//       small: { height: 44 }
-//     }
-//   },
-
-//   // For the label of the input field
-//   // This sits in the center of the container and then animates up and shrinks to the top of the container
-
-//   label: {
-//     position: 'relative',
-//     width: '100%',
-//     textAlign: 'left',
-//     transition: '$s1',
-//     transformOrigin: 'left center',
-//     userSelect: 'none',
-//     zIndex: 1
-//   },
-
-//   button: {
-//     height: '100%',
-
-//     '> div': {
-//       height: '100%',
-//       borderRadius: '0 $pill $pill 0',
-//     },
-//   },
-
-//   // When an input is focused into, we animate a few things
-//   // We need to change the border color as an active indicator, as well as move and shrink the label to the top left
-
-//   '&:focus-within': {
-//     borderColor: '$white',
-
-//     // Animate the label to the top left, shrink it, and change the color
-
-//     label: {
-//       color: '$moss',
-//       transform: 'translateY( -12px ) scale( 0.8 )',
-//     },
-//   },
-
-//   // Here we reset the input field, and dictate the sizing, position, and spacing within it
-//   // This is so the whole container can be clicked and the user can start typing
-//   // This is because the <input /> semantic itself has no visible styling, and the parent container holds the styling
-//   // So that the label can visually work within the input field
-
-//   input: {
-//     position: 'absolute',
-//     top: 0,
-//     left: 0,
-//     width: '100%',
-//     height: '100%',
-//     padding: '16px 24px 0',
-//     background: 'none',
-//     border: 'none',
-//     outline: 'none',
-//     color: 'inherit',
-//     fontWeight: 500,
-//     fontSize: '1rem',
-//     fontFamily: '$sansSerifBlack',
-
-//     '& + div': {
-//       height: '100%',
-//     },
-//   }
-// })
-
 // // -------------- Typescript declarations -------------- //
 
 // interface InputProps {
@@ -177,7 +89,7 @@
 //   )
 // }
 
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@theme'
 import { useController, UseControllerProps } from "react-hook-form"
 
@@ -186,6 +98,7 @@ import { useController, UseControllerProps } from "react-hook-form"
 
 const InputContent = styled('div', {
   display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
   position: 'relative',
   width: '100%',
@@ -242,6 +155,7 @@ const InputContain = styled('div', {
     textAlign: 'left',
     transition: '$s1',
     transformOrigin: 'left center',
+    pointerEvents: 'none',
     userSelect: 'none',
     zIndex: 1
   },
@@ -285,27 +199,54 @@ const InputContain = styled('div', {
     border: 'none',
     outline: 'none',
     color: 'inherit',
-    fontWeight: 500,
-    fontSize: '1rem',
-    fontFamily: '$sansSerifBlack',
-
-    '& + div': {
-      height: '100%',
-    },
+    fontSize: '$s2',
+    fontWeight: 500
   }
 })
 
-type FormValues = {}
+const InputStatus = styled('div', {
 
-export const Input = ( props: UseControllerProps<FormValues> ) => {
+})
+
+interface InputProps {
+  label: string
+  inputSize?: 'small'
+  value: any
+  initialValue: any
+}
+
+
+export const Input = ( props: UseControllerProps&InputProps ) => {
   const { field, fieldState } = useController( props )
+  const [ active, setActive ] = useState( field.value )
+  const [ value, setValue ] = useState( props.value || props.initialValue)
 
   return(
 
-    <InputContent>
+    // This is the content that does into the thing that we wwere talking about before
+    <InputContent
+      inputSize={ props.inputSize }
+      state={ value ? 'active' : 'inactive' }
+    >
       <InputContain>
-        <input { ...field } placeholder={ props.name } />
+        <input 
+          { ...field } 
+          id={ props.name } 
+          value={ field.value || props.initialValue }
+          onChange={(event) => {
+            field.onChange( parseInt( event.target.value )) 
+            setValue( event.target.value ) 
+          }}
+          onBlur={( event ) => event.preventDefault()}
+        />
+        <label htmlFor={ props.name }>{ props.label }</label>
       </InputContain>
+
+      {/* <InputStatus>
+        {fieldState.isTouched && "Touched"}
+        {fieldState.isDirty && "Dirty"}
+        {fieldState.invalid ? "invalid" : "valid"}
+      </InputStatus> */}
     </InputContent>
 
   )
