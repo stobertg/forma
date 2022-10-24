@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { SiteContainer, Block, InputSelect } from '@components'
 
 const story = {
-  title: 'forms/InputSelect',
+  title: 'forms/Select',
   component: InputSelect,
   layout: 'fullscreen',
   argTypes: {
@@ -12,11 +12,11 @@ const story = {
     // disabled: { control: 'boolean' },
     // level: {
     //   options: [0, 1, 2],
-    //   control: { type: 'Inputselect' },
+    //   control: { type: 'select' },
     // },
     // glyph: {
     //   options: { '— none —': undefined, ...glyphKey },
-    //   control: { type: 'Inputselect' },
+    //   control: { type: 'select' },
     // },
   }
 }
@@ -27,14 +27,13 @@ export const Primary = () => (
   <SiteContainer>
     <Block width="tiny">
       <InputSelect 
-        category="Contact reason"
-        placeholder="I want to ..."
+        category="Category"
+        placeholder="Hello"
         options={[
-          { title: 'Lend' },
-          { title: 'Borrow' },
-          { title: 'Launch a pool' },
-          { title: 'Make a press enquiry' },
-          { title: 'Other' }
+          { title: 'Option One' },
+          { title: 'Option Two' },
+          { title: 'Option Three' },
+          { title: 'Option Four' },
         ]}
       />
     </Block>

@@ -19,8 +19,8 @@ export const lightThemeColors = {
   bgDark: '$peach800',
   bgInformation: '$green800',
   bgWarning: '$peach200',
-  bgNegative: '$blue700',
-  bgPositive: '$white50',
+  bgNegative: '$red200',
+  bgPositive: '$green200',
 
   // Button Colors
 

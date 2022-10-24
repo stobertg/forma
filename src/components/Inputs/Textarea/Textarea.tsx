@@ -32,19 +32,21 @@ const TextArea = styled('textarea', {
 // -------------- Typescript declarations -------------- //
 
 interface TextareaProps {
-
+  name: string
+  placeholder?: string
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Textarea = ({
-
+    name,
+    placeholder
   }: TextareaProps ) => {
   
   return(
 
     <TextContain>
-      <TextArea placeholder="Message..."></TextArea>
+      <TextArea {...{ name }} placeholder={ placeholder ? placeholder : 'Message...' }></TextArea>
     </TextContain>
 
   )

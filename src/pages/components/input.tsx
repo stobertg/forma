@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, List, Form, Heading, Chip, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, Form, Input, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Font Sizes"
+          title="Input"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
@@ -23,19 +23,11 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <List spacing="l1" decoration="dividers">
-            <li><Heading size="l10" title="Labil Grotesk 64px" /> <Chip title="$s10" /></li>
-            <li><Heading size="l9" title="Labil Grotesk 56px" /></li>
-            <li><Heading size="l8" title="Labil Grotesk 44px" /></li>
-            <li><Heading size="l7" title="Labil Grotesk 36px" /></li>
-            <li><Heading size="l6" title="Labil Grotesk 28px" /></li>
-            <li><Heading size="l5" title="Labil Grotesk 24px" /></li>
-            <li><Heading size="l4" title="Labil Grotesk 22px" /></li>
-            <li><Heading size="l3" title="Labil Grotesk 18px" /></li>
-            <li><Heading size="l2" title="Labil Grotesk 17px" /></li>
-            <li><Heading size="l1" title="Labil Grotesk 14px" /></li>
-            <li><Heading size="l0" title="Labil Grotesk 12px" /></li>
-          </List>
+
+          <Form>
+            <Input label="Label" name="name" />
+          </Form>
+
         </BlockItem>
 
         <BlockItem>

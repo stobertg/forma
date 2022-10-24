@@ -41,11 +41,9 @@ export const LeftNav = ({
         <NavLinks 
           title="Components" 
           links={[
-            { href: '/', title: 'Autocomplete' },
-            { href: '/', title: 'Banners' },
             { href: '/components/button', title: 'Button' },
-            { href: '/', title: 'Breadcrumbs' },
             { href: '/components/chip', title: 'Chip' },
+            { href: '/components/input', title: 'Input' },
             { href: '/components/tabs', title: 'Tabs' },
           ]} 
         />

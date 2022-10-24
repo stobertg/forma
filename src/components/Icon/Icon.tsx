@@ -1,6 +1,11 @@
 import React from 'react'
 import { styled } from '@theme'
 
+const withBg = {
+  color: '$textPrimary',
+  svg: { width: '60%' }
+}
+
 // For the master container of the icons
 // Icons are used in various parts of the size, such as buttons, steps, static, ect
 
@@ -11,6 +16,7 @@ const IconWrap = styled('span', {
   position: 'relative',
   width: 30,
   height: 30,
+  borderRadius: '50%',
   pointerEvents: 'none',
 
   // For the size of the svg to sit in the center of the container
@@ -27,30 +33,25 @@ const IconWrap = styled('span', {
 
   variants: {
     size: {
-      l0: { width: 16, height: 16},
-      l1: {},
-      l2: { width: 50, height: 50 }
+      l0: { width: 16, height: 16 },
+      l1: { width: 24, height: 24 },
+      l2: { width: 40, height: 40 },
+      l3: { width: 52, height: 52 }
     },
 
     // For the changes of the background of the icon
     // Here the icon can sit in different types on containers, such as aa solid or outlined background
 
-    background: {
-      circle: {
-        background: '$black',
-        color: '$white',
-        borderRadius: '50%',
-        svg: { width: '50%' }
-      },
-
-      outline: {
-        minWidth: 50,
-        width: 50,
-        minHeight: 50,
-        height: 50,
-        borderRadius: '50%',
-        border: '2px solid $black'
-      }
+    bgColor: {
+      primary: { background: '$bgPrimary', ...withBg },
+      secondary: { background: '$bgSecondary', ...withBg },
+      tertiary: { background: '$bgTertiary', ...withBg },
+      divider: { background: '$bgDivider', ...withBg },
+      dark: { background: '$bgDark', ...withBg },
+      information: { background: '$bgInformation', ...withBg },
+      warning: { background: '$bgWarning', ...withBg },
+      negative: { background: '$bgNegative', ...withBg },
+      positive: { background: '$bgPositive', ...withBg }
     }
   }
 })
@@ -58,8 +59,8 @@ const IconWrap = styled('span', {
 // -------------- Typescript declarations -------------- //
 
 interface IconProps {
-  size?: 'l0' | 'l1' | 'l2'
-  background?: 'circle' | 'outline'
+  size?: 'l0' | 'l1' | 'l2' | 'l3'
+  bgColor?: 'primary' | 'secondary' | 'tertiary' | 'divider' | 'dark' | 'information' | 'warning' | 'negative' | 'positive'
   icon?: string
   iconAlt?: string
 }
@@ -68,13 +69,13 @@ interface IconProps {
 
 export const Icon = ({
     size,
-    background,
+    bgColor,
     icon
   }: IconProps ) => {
   
     return(
 
-      <IconWrap {...{ size, background }}>
+      <IconWrap {...{ size, bgColor }}>
         <svg><use xlinkHref={ `/global/icons/icons.svg#${ icon }` } xlinkTitle={ icon } /></svg>
       </IconWrap>
      
