@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Modal, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Modal, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,7 +23,30 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <Modal>This is some content</Modal>
+          <StageBlocks
+            columns="5"
+            titles={[
+              { title: 'Default' },
+              { title: 'Small' },
+              { title: 'Medium' },
+              { title: 'Large' },
+              { title: 'Full Screen' }
+            ]}
+          >
+
+            <StageBlockRow>
+              <div>
+                <Modal 
+                  triggerTitle="Modal"
+                  title="Edit Profile"
+                  descp="Allow payment of $999.99 to Enyinnaya Chinedu to be processed in payment batch #T0728, and unflag employee?"
+                  actionButtonTitle="Modal"
+                >
+                  This is some content
+                </Modal>
+              </div>
+            </StageBlockRow>
+          </StageBlocks>
         </BlockItem>
 
         <BlockItem>

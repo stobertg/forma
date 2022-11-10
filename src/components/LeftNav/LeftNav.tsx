@@ -4,6 +4,8 @@ import { NavWrap, NavHeader, NavLinks } from './Parts'
 
 const NavLinkWrap = styled('div', {
   position: 'relative',
+  height: '100%',
+  paddingBottom: 50,
   overflow: 'scroll'
 })
 
@@ -57,6 +59,13 @@ export const LeftNav = ({
             { href: '/modules/modal', title: 'Modal' },
             { href: '/', title: 'Templates' },
             { href: '/', title: 'Upload Card' }
+          ]} 
+        />
+
+        <NavLinks 
+          title="Foundation" 
+          links={[
+            { href: '/foundation/site-header', title: 'Site Header' },
           ]} 
         />
 

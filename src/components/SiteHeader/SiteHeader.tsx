@@ -1,53 +1,38 @@
 import React, { useState } from 'react'
 import { styled } from '@theme'
-import { Logo, Button, List } from '@components'
+import { Logo, ButtonContainer, List } from '@components'
 
-// For the master container of the header
-// This holds a relative position 
-
-const Header = styled('header', {
-  position: 'absolute',
-  width: '100vw',
-  zIndex: 9000
-})
-
-// For the container of the objects on the side of the nav container
-// This holds the items to be equal width, so that the Avatars can be placed dead center of the container
-
-const Side = styled('div', {
-  display: 'inline-flex',
+const HeaderWrap = styled('header', {
   position: 'relative',
-  width: '20%'
+  width: '100%'
 })
-
-const Middle = styled('div', {
-  display: 'flex',
-  justifyContent: 'center'
-})
-
-// For the container for all of the content within the nav container
-// This holds the logo on the left, headshots in the center, and the menu button on the right
 
 const Nav = styled('nav', {
   display: 'flex',
+  flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
   position: 'relative',
-  width: '92%',
+  width: '100%',
   margin: '0 auto',
-  padding: '32px 0',
 
-  '> div:nth-child( 2 )': {
-    maxWidth: 930,
-    width: '100%',
-    overflow: 'scroll'
-  },
+  // Align the last buttons on the right to be aligned to the right side of the container
 
-  // Here we align the menu button to the right of the container
-
-  '> div:last-child': {
+  '> *:last-child > *': {
     justifyContent: 'flex-end'
   }
+})  
+
+const NavMiddle = styled('div', {
+  position: 'relative',
+  width: '70%'
+})
+
+const NavSide = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  position: 'relative',
+  width: '30%'
 })
 
 // ---------- This is the end of declarations ---------- //
@@ -55,23 +40,27 @@ const Nav = styled('nav', {
 export const SiteHeader = () => {
   return(
 
-    <Header>
+    <HeaderWrap>
       <Nav>
-        <Side><Logo /></Side>
-        <Middle>
-          <List direction="horizontal">
-            <li><Button notBold size="l0" title="Research" /></li>
-            <li><Button notBold size="l0" title="Investment solutions" /></li>
-            <li><Button notBold size="l0" title="Contact" /></li>
-          </List>
-        </Middle>
-        <Side>
-          <Button size="l0" variant="tint" title="Client Portal" />
-          <Button size="l0Icon" variant="iconOutline" icon="sun" />
-          <Button size="l0Icon" variant="iconOutline" icon="moon" />
-        </Side>
+        <NavSide><Logo size="l0" /></NavSide>
+
+        <List direction="horizontal" spacing="l2r">
+          <li><a href="/">Products</a></li>
+          <li><a href="/">Platform</a></li>
+          <li><a href="/">Resources</a></li>
+          <li><a href="/">Customers</a></li>
+        </List>
+
+        <NavSide>
+          <ButtonContainer 
+            buttons={[
+              { size: 'l0', title: 'Log in' },
+              { size: 'l0', variant: 'primary', title: 'Book a Demo' }
+            ]}
+          />
+        </NavSide>
       </Nav>
-    </Header>
+    </HeaderWrap>
 
   )
 }

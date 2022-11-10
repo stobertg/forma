@@ -12,6 +12,7 @@ const ButtonWrap = styled('div', {
   position: 'relative',
   cursor: 'pointer',
   transition: '$s1',
+  fontSize: '1rem',
 
   // For the interaction when a button is clicked - provides a scale down until released
   // This is universal for all buttons to give the user feedback that they clicked the button

@@ -32,7 +32,7 @@ const ButtonWrap = styled('div', {
   // Here we automate the spcaing between the buttons, excluding the last button in the container
   // By defualt, the layout is horizontal, and the spacing is automated to the right of the button
 
-  '> div:not(:last-child)': {
+  '> *:not(:last-child)': {
     marginRight: 8
   },
 
@@ -75,6 +75,7 @@ interface ButtonContainerProps {
   children?: React.ReactNode
   buttons?: {
     variant?: 'primary' | 'secondary' | 'danger' | 'disabled'
+    size?: 'l0'
     title?: string
     icon?: string
     iconPlacement?: 'left' | 'right'
@@ -103,6 +104,7 @@ export const ButtonContainer = ({
 
           <Button 
             key={`button-${ i }`}
+            size={ button.size }
             variant={ button.variant }
             title={ button.title }
             icon={ button.icon }
