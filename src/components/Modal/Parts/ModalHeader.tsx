@@ -29,7 +29,7 @@ const HeaderWrap = styled('header', {
 
 interface HeaderProps {
   title: string | number
-  descp?: string | number
+  descp?: string | number | React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //

@@ -49,10 +49,10 @@ const ModalMain = styled( DialogPrimitive.Content, {
 
   variants: {
     width: {
-      small: {},
-      medium: {},
-      large: {},
-      fullWidth: {}
+      small: { maxWidth: 400 },
+      medium: { maxWidth: 800 },
+      large: { maxWidth: 1024 },
+      fullWidth: { width: '100vw', height: '100vh' }
     }
   }
 })
@@ -73,19 +73,21 @@ const CloseModal = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ModalProps {
+  width?: 'small' | 'medium' | 'large' | 'fullWidth'
   children: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const ModalWrap = ({
+    width,
     children
   }:ModalProps ) => {
   
   return(
 
     <ModalMaster>
-      <ModalMain>
+      <ModalMain {...{ width }}>
         <ModalContent>{ children }</ModalContent>
         <DialogPrimitive.Close asChild>
           <CloseModal><Button icon="close" /></CloseModal>

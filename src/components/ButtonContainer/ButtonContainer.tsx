@@ -54,6 +54,11 @@ const ButtonWrap = styled('div', {
       }
     },
 
+    alignment: {
+      center: { justifyContent: 'flex-end' },
+      right: { justifyContent: 'flex-end' }
+    },
+
     // Because the button container displays buttons inline by default, we add support here
     // For instances where buttons need to extend the full width of the container
     // An example of this is the button container used in the leaderboard card
@@ -70,6 +75,7 @@ const ButtonWrap = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ButtonContainerProps {
+  alignment?: 'center' | 'right'
   direction?: 'vertical'
   width?: 'fullWidth'
   children?: React.ReactNode
@@ -88,6 +94,7 @@ interface ButtonContainerProps {
 // ---------- This is the end of declarations ---------- //
 
 export const ButtonContainer = ({
+    alignment,
     buttons, // Required - Buttons to be delcared within the container
     direction, // Optional - Supports the vertical layout of buttons
     width, // Optional - Make the horizontal buttons full-width if the design supports one
@@ -96,7 +103,7 @@ export const ButtonContainer = ({
   
   return(
 
-    <ButtonWrap {...{ direction, width }}>
+    <ButtonWrap {...{ direction, width, alignment }}>
 
       { buttons ? (
         <>

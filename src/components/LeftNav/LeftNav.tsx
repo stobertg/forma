@@ -54,8 +54,7 @@ export const LeftNav = ({
           title="Modules" 
           links={[
             { href: '/components/benefit-card', title: 'Benefit Card' },
-            { href: '/', title: 'Breadcrumbs' },
-            { href: '/components/chip', title: 'Chip' },
+            { href: '/modules/callout', title: 'Callout' },
             { href: '/modules/modal', title: 'Modal' },
             { href: '/', title: 'Templates' },
             { href: '/', title: 'Upload Card' }

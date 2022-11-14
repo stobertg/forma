@@ -15,7 +15,7 @@ export const DefaultHorizontal = () => (
   <ButtonContainer 
     buttons={[
       { variant: 'primary', title: 'Action' },
-      { variant: 'outline', title: 'Secondary action' }
+      { variant: 'secondary', title: 'Secondary action' }
     ]}
   />
   
@@ -27,7 +27,7 @@ export const Vertical = () => (
     direction="vertical"
     buttons={[
       { variant: 'primary', title: 'Action' },
-      { variant: 'outline', title: 'Secondary action' }
+      { variant: 'secondary', title: 'Secondary action' }
     ]}
   />
   

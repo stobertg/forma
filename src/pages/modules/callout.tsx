@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Modal, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Callout, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -24,66 +24,31 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <StageBlocks
-            columns="4"
             titles={[
               { title: 'Default' },
-              { title: 'Small' },
-              { title: 'Medium' },
-              { title: 'Large' }
+              { title: 'Success' },
+              { title: 'Warning' },
+              { title: 'Error' }
             ]}
           >
+            <Callout  
+              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+            />
 
-            <StageBlockRow>
-              <div>
-                <Modal 
-                  triggerTitle="Modal"
-                  title="Edit Profile"
-                  descp={ <>Allow payment of <strong>$999.99</strong> to <strong>Enyinnaya Chinedu</strong> to be processed in payment batch #T0728, and unflag employee?</> }
-                  actionButtonTitle="Modal"
-                >
-                  This is some content
-                </Modal>
-              </div>
+            <Callout  
+              status="success"
+              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+            />
 
-              <div>
-                <Modal 
-                  triggerTitle="Modal"
-                  triggerButtonVariant="primary"
-                  title="Edit Profile"
-                  descp={ <>Allow payment of <strong>$999.99</strong> to <strong>Enyinnaya Chinedu</strong> to be processed in payment batch #T0728, and unflag employee?</> }
-                  actionButtonTitle="Modal"
-                  width="small"
-                >
-                  This is some content
-                </Modal>
-              </div>
+            <Callout  
+              status="warning"
+              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+            />
 
-              <div>
-                <Modal 
-                  triggerTitle="Modal"
-                  triggerButtonVariant="secondary"
-                  title="Edit Profile"
-                  descp="Allow payment of $999.99 to Enyinnaya Chinedu to be processed in payment batch #T0728, and unflag employee?"
-                  actionButtonTitle="Modal"
-                  width="medium"
-                >
-                  This is some content
-                </Modal>
-              </div>
-
-              <div>
-                <Modal 
-                  triggerTitle="Modal"
-                  triggerButtonVariant="danger"
-                  title="Edit Profile"
-                  descp="Allow payment of $999.99 to Enyinnaya Chinedu to be processed in payment batch #T0728, and unflag employee?"
-                  actionButtonTitle="Modal"
-                  width="large"
-                >
-                  This is some content
-                </Modal>
-              </div>
-            </StageBlockRow>
+            <Callout 
+              status="error" 
+              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+            />
           </StageBlocks>
         </BlockItem>
 

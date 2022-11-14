@@ -2,20 +2,39 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
 
-const StageBlockTitles = styled('div', {
+const StageWrap = styled('section', {
   display: 'flex',
   flexDirection: 'row',
   position: 'relative',
   width: '100%',
+
+  variants: {
+    columns: {
+      5: { flexDirection: 'column' },
+      4: { flexDirection: 'column' },
+      3: { flexDirection: 'column' },
+      2: { flexDirection: 'column' }
+    }
+  }
+})
+
+// For the master container of the Block Titles
+
+const StageBlockTitles = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  position: 'relative',
+  width: '10%',
   marginBottom: 20,
   textAlign: 'center',
 
   variants: {
     columns: {
-      5: { '> *': { width: '20%' }},
-      4: { '> *': { width: '25%' }},
-      3: { '> *': { width: '33.33%' }},
-      2: { '> *': { width: '50%' }}
+      5: { width: '100%', flexDirection: 'row', '> *': { width: '20%' }},
+      4: { width: '100%', flexDirection: 'row', '> *': { width: '25%' }},
+      3: { width: '100%', flexDirection: 'row', '> *': { width: '33.33%' }},
+      2: { width: '100%', flexDirection: 'row', '> *': { width: '50%' }}
     }
   }
 })
@@ -35,10 +54,10 @@ const StageBlocksWrap = styled('div', {
 
   variants: {
     columns: {
-      5: { '> * > *': { width: '20%' }},
-      4: { '> * > *': { width: '25%' }},
-      3: { '> * > *': { width: '33.33%' }},
-      2: { '> * > *': { width: '50%' }}
+      5: { '> * > *': { flexDirection: 'row', width: '20%' }},
+      4: { '> * > *': { flexDirection: 'row', width: '25%' }},
+      3: { '> * > *': { flexDirection: 'row', width: '33.33%' }},
+      2: { '> * > *': { flexDirection: 'row', width: '50%' }}
     }
   }
 })
@@ -48,7 +67,7 @@ interface StageBlocksProps {
     title: string
   }[]
   children: React.ReactNode
-  columns: '2' | '3' | '4' | '5'
+  columns?: '2' | '3' | '4' | '5'
 } 
 
 // ---------- This is the end of declarations ---------- //
@@ -57,7 +76,7 @@ export const StageBlocks = ({ titles, columns, children }:StageBlocksProps) => {
   
   return(
 
-    <>
+    <StageWrap {...{ columns }}>
       { titles ? (
         <StageBlockTitles {...{ columns }}>
           { titles.map(( title, i ) => ( 
@@ -67,7 +86,7 @@ export const StageBlocks = ({ titles, columns, children }:StageBlocksProps) => {
       ) : null }
 
       <StageBlocksWrap {...{ columns }}>{ children }</StageBlocksWrap>
-    </>
+    </StageWrap>
     
   )
 }

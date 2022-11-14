@@ -33,10 +33,10 @@ const IconWrap = styled('span', {
 
   variants: {
     size: {
-      l0: { width: 16, height: 16 },
-      l1: { width: 24, height: 24 },
-      l2: { width: 40, height: 40 },
-      l3: { width: 52, height: 52 }
+      l0: { minWidth: 16, width: 16, minHeight: 16, height: 16 },
+      l1: { minWidth: 24, width: 24, minHeight: 24, height: 24 },
+      l2: { minWidth: 40, width: 40, minHeight: 40, height: 40 },
+      l3: { minWidth: 52, width: 52, minHeight: 52, height: 52 }
     },
 
     // For the changes of the background of the icon

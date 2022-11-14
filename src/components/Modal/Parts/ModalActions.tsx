@@ -20,8 +20,6 @@ const ActionsWrap = styled('div', {
 
 interface ButtonProps {
 	actionButtonTitle: string
-	href?: string
-	pageLink?: string
   actionButtonHref?: string
   actionButtonPageLink?: string
   actionButtonOnClick?: React.MouseEventHandler<HTMLButtonElement>
@@ -39,7 +37,7 @@ export const ModalActions = ({
 	return(
 
 		<ActionsWrap>
-			<ButtonContainer>
+			<ButtonContainer alignment="right">
 				<DialogPrimitive.Close asChild><Button variant="secondary" title="Cancel" /></DialogPrimitive.Close>
 				<Button
           variant="primary"
