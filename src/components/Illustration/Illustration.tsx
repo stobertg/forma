@@ -9,8 +9,8 @@ const IllusWrap = styled('div', {
 
   variants: {
     size: {
-      l0: {},
-      l1: { width: 72, height: 72 },
+      l0: { minWidth: 54, width: 54, height: 54 },
+      l1: { minWidth: 72, width: 72, height: 72 },
       l2: {},
       l3: {}
     }
@@ -20,7 +20,7 @@ const IllusWrap = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface IllustrationProps {
-  image: string
+  image: any
   size?: 'l0' | 'l1' | 'l2' | 'l3'
 }
 

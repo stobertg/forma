@@ -2,6 +2,37 @@ import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, SiteHeader, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
+import { styled } from '@theme'
+import { Illustration, Heading } from '@components'
+
+const LinksWrap = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)',
+  gap: 40,
+  position: 'relative',
+  width: '100%',
+
+})
+
+const LinkWrap = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+
+  '> *:not(:last-child)': {
+    marginRight: 12
+  }
+})
+
+const LinkText = styled('div', {
+
+  '> *:not(:last-child)': {
+    marginBottom: 4
+  }
+})
+
 const Page: NextPage = () => {
   return (
     
@@ -23,7 +54,33 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <SiteHeader />
+          {/* <SiteHeader /> */}
+
+          <LinksWrap>
+            <LinkWrap>
+              <Illustration size="l0" image="account-teambuilding" />
+              <LinkText>
+                <Heading size="l2" bold title="Forma Research" />
+                <Heading size="l1" color="gray" title="Lorem ipsum sit dolor emit" />
+              </LinkText>
+            </LinkWrap>
+
+            <LinkWrap>
+              <Illustration size="l0" image="account-workathome" />
+              <LinkText>
+                <Heading size="l2" bold title="Events & Webinars" />
+                <Heading size="l1" color="gray" title="Lorem ipsum sit dolor" />
+              </LinkText>
+            </LinkWrap>
+
+            <LinkWrap>
+              <Illustration size="l0" image="account-learning" />
+              <LinkText>
+                <Heading size="l2" bold title="Blog" />
+                <Heading size="l1" color="gray" title="Lorem ipsum sit dolor" />
+              </LinkText>
+            </LinkWrap>
+          </LinksWrap>
         </BlockItem>
 
         <BlockItem>

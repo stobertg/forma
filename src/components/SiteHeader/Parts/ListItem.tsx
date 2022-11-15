@@ -1,6 +1,19 @@
 import React from 'react'
+import { styled } from '@theme'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-import { Heading, Button } from '@components'
+import { Heading, Button, Illustration } from '@components'
+
+const LinkWrap = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  width: '100%',
+  color: '$textPrimary',
+
+  '> *:not(:last-child)': {
+    marginRight: 12
+  }
+})
 
 // const ListItem = React.forwardRef(({ children, title, ...props }, forwardedRef) => (
 //   <li>
@@ -14,6 +27,7 @@ import { Heading, Button } from '@components'
 // ))
 
 interface ListProps {
+  illustration?: string
   title: string
   descp?: string
   href?: string
@@ -22,6 +36,7 @@ interface ListProps {
 }
 
 export const ListItem = ({ 
+    illustration,
     title,
     descp,
     href,
@@ -34,8 +49,13 @@ export const ListItem = ({
     <li>
       <NavigationMenu.Link asChild>
         <Button {...{ href, onClick, pageLink }}>
-          <Heading {...{ title }} />
-          <Heading title={ descp } />
+          <LinkWrap>
+            <Illustration size="l0" image={ illustration } />
+            <div>
+              <Heading bold {...{ title }} />
+              <Heading size="l1" title={ descp } />
+            </div>
+          </LinkWrap>
         </Button>
       </NavigationMenu.Link>
     </li>
