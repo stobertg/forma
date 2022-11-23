@@ -12,7 +12,7 @@ const ButtonStyles = {
 
 const ButtonPrimary = {
   ...ButtonStyles,
-  backgroundColor: '#150050',
+  backgroundColor: '#4967E5',
   color: '#fff'
 }
 

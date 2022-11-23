@@ -1,1 +1,4 @@
-export const darkThemeColors = {}
+export const darkThemeColors = {
+
+    bgPrimary: '$indigo60',
+}

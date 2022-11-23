@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, Heading, Text, ColorSwatch, Tabs } from '@components'
 import { ColorSwatchList } from '../components/ColorSwatch/ColorSwatchList'
-import { ColorSwatchesLight } from 'src/components/ColorSwatch/Parts/lightTheme'
+import { ColorSwatchesLight } from '../components/ColorSwatch/Parts/lightTheme'
 
 const Home: NextPage = () => {
   return (

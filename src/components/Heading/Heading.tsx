@@ -16,7 +16,7 @@ const HeadingWrap = styled('div', {
   variants: {
     size: {
       l0: { fontSize: '$s0' },
-      l1: { fontSize: '$s1' },
+      l1: { fontSize: '$s1', lineHeight: 1.2 },
       l2: { fontSize: '$s2' },
       l3: { fontSize: '$s3', lineHeight: 1.3 },
       l4: { fontSize: '$s4', lineHeight: 1.3 },
@@ -36,6 +36,10 @@ const HeadingWrap = styled('div', {
       purple: { color: '$majorelleBlue' }
     },
 
+    alignment: {
+      center: { textAlign: 'center' }
+    },
+
     font: {
       code: { fontFamily: '$code' }
     }
@@ -47,6 +51,7 @@ const HeadingWrap = styled('div', {
 interface HeadingProps {
   size?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4' | 'l5' | 'l6' | 'l7' | 'l8' | 'l9' | 'l10'
   color?: 'gray' | 'white' | 'purple'
+  alignment?: 'center'
   title: any
   bold?: boolean
   font?: 'code'
@@ -56,6 +61,7 @@ interface HeadingProps {
 
 export const Heading = ({
     size,
+    alignment,
     font,
     color,
     title,
@@ -64,7 +70,7 @@ export const Heading = ({
   
   return(
     
-    <HeadingWrap {...{ size, color }}>
+    <HeadingWrap {...{ size, color, alignment }}>
       { font == 'code' 
         ? ( <span style={{ fontFamily: 'Source Code Pro' }}>{ title }</span> ) 
         : ( <>{ bold ? ( <strong>{ title }</strong> ) : ( <>{ title }</> )}</> )

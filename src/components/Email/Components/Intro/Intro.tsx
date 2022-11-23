@@ -8,7 +8,7 @@ const IntroStyle = {
 const IntroHasBg = {
   ...IntroStyle,
   color: '#fff',
-  borderRadius: 32
+  // borderRadius: 32
 }
 
 const IntroContent = {

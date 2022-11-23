@@ -1,16 +1,12 @@
 import React from 'react'
 import { Spacing } from '@email'
 
-const HeadingStyle = { fontFamily: 'Labil Grotesk', fontSize: 16 }
-const HeadingLarge = { ...HeadingStyle, fontSize: 44 }
-const HeadingMedium = { ...HeadingStyle, fontSize: 24, lineHeight: 1.2 }
-const HeadingSmall = { ...HeadingStyle, fontSize: 18 }
-const HeadingTiny = { ...HeadingStyle, fontSize: 14 }
-
 // -------------- Typescript declarations -------------- //
 
 interface HeadingProps {
+  color?: 'gray'
   spacing?: 'small' | 'medium' | 'large'
+  alignment?: 'center'
   title: string | React.ReactNode
   size?: 'small' | 'medium' | 'large' | 'tiny'
   bold?: boolean
@@ -21,7 +17,9 @@ interface HeadingProps {
 export const Heading = ({
     title,
     size,
+    alignment,
     bold,
+    color,
     spacing
   }: HeadingProps ) => {
   
@@ -29,15 +27,24 @@ export const Heading = ({
 
     <Spacing {...{ spacing }}>
       <div
-        style={
-          size == 'large' ? HeadingLarge :
-          size == 'medium' ? HeadingMedium :
-          size == 'small' ? HeadingSmall :
-          size == 'tiny' ? HeadingTiny :
-          HeadingStyle
-        }
+        style={{
+          fontFamily: 'Labil Grotesk',
+          fontSize: size == 'large' ? 44 : size == 'medium' ? 24 : size == 'small' ? 18 : size == 'tiny' ? 14 : 16,
+          lineHeight: size == 'large' ? 1 : size == 'medium' ? 1.2 : size == 'small' ? 1.5 : size == 'tiny' ? 1.5 : 1,
+          textAlign: alignment == 'center' ? 'center' : 'initial',
+          color: color == 'gray' ? '#67677C' : '#150050'
+        }}
       >
-        { bold ? ( <><strong>{ title }</strong></> ) : <>{ title }</> }
+        { bold ? ( 
+          <strong>{ title }</strong>
+        ) : (
+
+          <span style={{
+            color: color == 'gray' ? '#67677C' : '#150050'
+          }}>
+            { title }
+          </span> 
+        )}
       </div>
     </Spacing>
     

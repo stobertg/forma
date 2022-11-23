@@ -10,7 +10,7 @@ const story = {
 
 export default story
 
-export const l0 = () => ( <heading size="l1" bold title="This is the title" /> )
+export const l0 = () => ( <Heading size="l1" bold title="This is the title" /> )
 export const l1 = () => ( <Heading size="l1" bold title="This is the title" /> )
 export const l2 = () => ( <Heading size="l2" bold title="This is the title" /> )
 export const l3 = () => ( <Heading size="l3" bold title="This is the title" /> )

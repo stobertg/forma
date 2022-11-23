@@ -55,8 +55,8 @@ export const LeftNav = ({
           links={[
             { href: '/components/benefit-card', title: 'Benefit Card' },
             { href: '/modules/callout', title: 'Callout' },
-            { href: '/modules/modal', title: 'Modal' },
-            { href: '/', title: 'Templates' },
+            { href: '/modules/dropdown', title: 'Dropdown' },
+            { href: '/modules/modal', title: 'Modal' },            
             { href: '/', title: 'Upload Card' }
           ]} 
         />
@@ -65,6 +65,7 @@ export const LeftNav = ({
           title="Foundation" 
           links={[
             { href: '/foundation/site-header', title: 'Site Header' },
+            { href: '/foundation/user-header', title: 'User Header' },
           ]} 
         />
 
