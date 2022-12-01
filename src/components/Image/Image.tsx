@@ -80,7 +80,7 @@ export const Image = ({
       { image ? (
         <img src={ image } alt={ alt } />
       ) : ( 
-        <img src="/locations/edinburugh.jpg" alt="Gather Platform" /> 
+        <img src="/illustration/girl-waving.png" alt="Forma" /> 
       )}
     </ImageWrap>
     

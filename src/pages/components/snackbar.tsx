@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, StageBlocks, StageBlockRow, ProjectInfo, Card, Code } from '@components'
+import { SiteContainer, Block, BlockItem, StageBlocks, StageBlockRow, ProjectInfo, Code, Snackbar } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -24,7 +24,7 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <StageBlocks 
-            columns="3"
+            columns="2"
             titles={[
               { title: 'Default' },
               { title: 'All Caps' },
@@ -33,28 +33,11 @@ const Page: NextPage = () => {
           >
             <StageBlockRow>
               <div>
-                <Card 
-                  bgColor="white200" 
-                  title="Nothing out of pocket"
-                  subTitle="Employees can choose how to use their benefits and spend anywhere Visa is accepted."
-                  image="/illustration/girl-waving.png"
-                />
+                <Snackbar />
               </div>
 
               <div>
-                <Card 
-                  bgColor="cyan100"
-                  title="Automated approval"
-                  subTitle="Most eligible payments smartly auto-adjudicate without receipts. For corner cases when a receipt is required, employees can quickly submit through desktop or mobile." 
-                />
-              </div>
-
-              <div>
-                <Card 
-                  bgColor="pink100" 
-                  title="Virtual and physical cards"
-                  subTitle="Employees can have a Forma Card mailed to them, use a virtual card online and with mobile wallets, or both."
-                />
+                <Snackbar />
               </div>
             </StageBlockRow>
           </StageBlocks>

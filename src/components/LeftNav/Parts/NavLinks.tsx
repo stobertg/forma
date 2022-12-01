@@ -8,7 +8,7 @@ import { List, Heading, Icon } from '@components'
 const NavLinksWrap = styled('nav', {
   position: 'relative',
   width: '100%',
-  padding: '50px 0 0',
+  padding: '32px 0 0',
 
   // For the header of the nav links block
 

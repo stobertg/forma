@@ -44,9 +44,11 @@ export const LeftNav = ({
           title="Components" 
           links={[
             { href: '/components/button', title: 'Button' },
-            { href: '/components/card', title: 'Card' },
+            { href: '/components/card', title: 'Card Templates' },
             { href: '/components/chip', title: 'Chip' },
+            { href: '/components/icons', title: 'Icons' },
             { href: '/components/input', title: 'Input' },
+            { href: '/components/snackbar', title: 'Snackbar' },
             { href: '/components/tabs', title: 'Tabs' },
           ]} 
         />

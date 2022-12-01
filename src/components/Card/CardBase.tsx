@@ -53,6 +53,8 @@ const CardImage = styled('div', {
 interface CardProps {
   title?: string
   subTitle?: string
+  image?: string
+  imageAlt?: string
   bgColor?: 'white200' | 'cyan100' | 'pink100'
   children?: React.ReactNode
 }
@@ -62,6 +64,8 @@ interface CardProps {
 export const CardBase = ({ 
     title,
     subTitle,
+    image,
+    imageAlt,
     bgColor,
     children
   }:CardProps) => {
@@ -80,7 +84,7 @@ export const CardBase = ({
             </CardHeading>
 
             <CardImage>
-              <Image image="/illustration/girl-waving.png" alt="Forma Illustration" />
+              <Image {...{ image }} alt={ imageAlt ? imageAlt : "Forma Illustration" } />
             </CardImage>
           </>
         )}

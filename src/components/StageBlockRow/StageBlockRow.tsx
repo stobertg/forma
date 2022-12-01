@@ -14,6 +14,7 @@ const RowWrap = styled('div', {
     width: '20%',
     height: '100%',
     minHeight: 100,
+    padding: '20px',
     '&:not(:last-child)': { borderRight: '1px solid $border' }
   },
 
