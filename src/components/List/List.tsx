@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Button, Icon } from '@components'
 
 // For the master container of the list component
 // This container supports the list for custom, bullets, numbers, and alphabetical list layouts 
@@ -56,10 +57,22 @@ const ListWrap = styled('div', {
       l0: { li: { padding: '4px 0' }},
       l1: { li: { padding: '8px 0' }},
       l1r: { 'li:not(:last-child)': { marginRight: 12 }},
-      l2: {},
+      l2: { li: { padding: '12px 0' }},
       l2r: { 'li:not(:last-child)': { marginRight: 20 }},
       l3: { li: { padding: '20px 0' } }
     }
+  }
+})
+
+const LiWithIcon = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+
+  '> *:not(:last-child)': {
+    marginRight: 12
   }
 })
 
@@ -67,7 +80,10 @@ const ListWrap = styled('div', {
 
 export interface ListProps {
   listItems?: {
-    id: number
+    href?: string
+    pageLink?: string
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
+    icon?: string
     title: string
   }[]
   decoration?: 'dividers'
@@ -98,7 +114,9 @@ export const List = ({
 
             <ol>
               { listItems.map(( item: any, i ) => (
-                <li key={ `item${ i }` }>{ item.title }</li>
+                <li key={ `item${ i }` }>
+                  { item.title }
+                </li>
               ))}
             </ol>
 
@@ -106,7 +124,41 @@ export const List = ({
 
             <ul>
               { listItems.map(( item: any, i ) => (
-                <li key={ `item${ i }` }>{ item.title }</li>
+                <>
+                  { item.href || item.pageLink || item.onClick ? (
+
+                    <li key={ `item${ i }` }>
+                      <Button
+                        href={ item.href }
+                        pageLink={ item.pageLink }
+                        onClick={ item.onClick }
+                      >
+                        { item.icon ? 
+
+                          // Here we add support for the icon wihtin the list items
+                          // This will always be on the left of the container
+
+                          ( <LiWithIcon><Icon size="l0" icon={ item.icon } /><span>{ item.title }</span></LiWithIcon> ) : 
+                          ( <>{ item.title }</> )
+                        }
+                      </Button>
+                    </li>
+
+                  ) : (
+
+                    <li key={ `item${ i }` }>
+                      { item.icon ? 
+
+                        // Here we add support for the icon wihtin the list items
+                        // This will always be on the left of the container
+
+                        ( <LiWithIcon><Icon size="l1" icon={ item.icon } /><span>{ item.title }</span></LiWithIcon> ) : 
+                        ( <>{ item.title }</> )
+                      }
+                    </li>
+
+                  )}
+                </>
               ))}
             </ul>
 

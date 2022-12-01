@@ -11,9 +11,17 @@ const CardWrap = styled('div', {
   flexDirection: 'column',
   position: 'relative',
   width: '100%',
-  padding: '24px 0',
-  borderRadius: '$r2',
-  border: '1px solid $border'
+  maxWidth: 325,
+  padding: '32px 0',
+  borderRadius: '$r1',
+
+  variants: {
+    bgColor: {
+      white200: { backgroundColor: '$white200' },
+      cyan100: { backgroundColor: '$cyan100' },
+      pink100: { backgroundColor: '$pink100' }
+    }
+  }
 })
 
 // For the content of the card - for the instance of a premade card
@@ -21,25 +29,62 @@ const CardWrap = styled('div', {
 
 const CardContent = styled('div', {
   position: 'relative',
-  width: '100%'
+  width: '80%',
+  margin: '0 auto'
+})
+
+const CardHeading = styled('div', {
+  position: 'relative',
+  width: '100%',
+
+  '> *:not(:last-child)': {
+    marginBottom: 12
+  }
+})
+
+const CardImage = styled('div', {
+  position: 'relative',
+  width: '90%',
+  margin: '50px auto 0'
 })
 
 // -------------- Typescript declarations -------------- //
 
 interface CardProps {
-  children: React.ReactNode
+  title?: string
+  subTitle?: string
+  bgColor?: 'white200' | 'cyan100' | 'pink100'
+  children?: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const CardBase = ({ 
+    title,
+    subTitle,
+    bgColor,
     children
   }:CardProps) => {
   
   return(
 
-    <CardWrap>
-      <CardContent>{ children }</CardContent>
+    <CardWrap {...{ bgColor }}>
+      <CardContent>
+        { children ? (
+          <>{ children }</>
+        ) : (
+          <>
+            <CardHeading>
+              <Heading size="l3" {...{ title }} />
+              <Heading size="l1" color="gray" title={ subTitle } />
+            </CardHeading>
+
+            <CardImage>
+              <Image image="/illustration/girl-waving.png" alt="Forma Illustration" />
+            </CardImage>
+          </>
+        )}
+      </CardContent>
     </CardWrap>
       
   )

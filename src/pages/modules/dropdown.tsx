@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Dropdown, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
+import { DropdownBase } from 'src/components/Dropdown/Parts'
 
 const Page: NextPage = () => {
   return (
@@ -27,10 +28,13 @@ const Page: NextPage = () => {
             columns="2"
             titles={[
               { title: 'Default' },
-              { title: 'Success' }
+              { title: 'Dropdown' }
             ]}
           >
-            <Dropdown />
+            <StageBlockRow>
+              <div><Dropdown /></div>
+              <div><DropdownBase /></div>
+            </StageBlockRow>
           </StageBlocks>
         </BlockItem>
 

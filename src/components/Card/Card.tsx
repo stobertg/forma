@@ -19,16 +19,22 @@ import { Button } from '@components'
 // -------------- Typescript declarations -------------- //
 
 interface CardProps {
+  title?: string
+  subTitle?: string
   href?: string
   pageLink?: string
-  children: React.ReactNode
+  bgColor?: 'white200' | 'cyan100' | 'pink100'
+  children?: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Card = ({
+    title,
+    subTitle,
     href, // Optional - If the button is clickable, take the user to an external website
     pageLink, // Optional - If the button is clickable and takes the user to an internal page
+    bgColor,
     children
   }: CardProps ) => {
   
@@ -41,7 +47,7 @@ export const Card = ({
         // To an external site, outside of the FreeRossDAO, such as Snapshot - opens a new window
 
         <Button {...{ href }} target="_blank">
-          <CardBase>{ children }</CardBase>
+          <CardBase {...{ title, subTitle, bgColor }}>{ children }</CardBase>
         </Button>
       
       ) : pageLink ? (
@@ -50,7 +56,7 @@ export const Card = ({
         // page that is within the FreeRossDAO site, such as a Blog Post
 
         <Button {...{ pageLink }}>
-          <CardBase>{ children }</CardBase>
+          <CardBase {...{ title, subTitle, bgColor }}>{ children }</CardBase>
         </Button>
 
       ) : (
@@ -60,7 +66,7 @@ export const Card = ({
         // This could be something such as Snapshot card, where only one spot of the card should be clickable
         // Or a static card used for presentation, although in most cases, the card is clickable
 
-        <CardBase>{ children }</CardBase>
+        <CardBase {...{ title, subTitle, bgColor }}>{ children }</CardBase>
 
       )}
     </>

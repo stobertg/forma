@@ -66,26 +66,26 @@ export const Button = ({
   return(
 
     <>
-      { href ? (
+      { pageLink ? (
+
+        <Link href={ pageLink }>
+          <a><ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} /></a>
+        </Link>
+
+        ) : href ? (
 
         // Here we are adding support that should only be used as a link to an external site
         // This is because below, we follow Next JS page links that will take users to an internal link
         // An example of using the href tag is to take the user to a twitter profile that was called out in a blog post
         
         <>
-          { pageLink ? (
-
-            <Link href={ href }>
-              <a><ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} /></a>
-            </Link>
-
-          ) : (
+           (
 
             <a href={ href } target={ target }>
               <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
             </a>
 
-          )}
+          )
         </>
 
       ) : onClick ? (
