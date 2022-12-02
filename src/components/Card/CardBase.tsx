@@ -11,11 +11,14 @@ const CardWrap = styled('div', {
   flexDirection: 'column',
   position: 'relative',
   width: '100%',
-  maxWidth: 325,
   padding: '32px 0',
   borderRadius: '$r1',
 
   variants: {
+    border: {
+      true: { border: '1px solid $border' }
+    },
+
     bgColor: {
       white200: { backgroundColor: '$white200' },
       cyan100: { backgroundColor: '$cyan100' },
@@ -56,6 +59,7 @@ interface CardProps {
   image?: string
   imageAlt?: string
   bgColor?: 'white200' | 'cyan100' | 'pink100'
+  border?: boolean
   children?: React.ReactNode
 }
 
@@ -67,12 +71,13 @@ export const CardBase = ({
     image,
     imageAlt,
     bgColor,
+    border,
     children
   }:CardProps) => {
   
   return(
 
-    <CardWrap {...{ bgColor }}>
+    <CardWrap {...{ bgColor, border }}>
       <CardContent>
         { children ? (
           <>{ children }</>

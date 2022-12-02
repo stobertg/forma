@@ -13,24 +13,26 @@ const DropdownTrigger = styled(DropdownMenu.Trigger, {
   position: 'relative',
 
   // For the spacing 
+
+  '> *:not(:last-child)': {
+    marginRight: 8
+  }
 })
 
 interface DropdownProps {
-
+  trigger: string | React.ReactNode
 }
 
-export const Dropdown = ({}:DropdownProps) => {
+export const Dropdown = ({ 
+    trigger 
+  }:DropdownProps) => {
+
   return(
 
     <DropdownWrap>
       <DropdownTrigger>
-        <Avatar 
-          nameHidden
-          image="/people/christine.png"
-          name="Christine Dailey"
-        />
-
-        <Icon size="l1" icon="caret-down" />
+        <span>{ trigger }</span>
+        <Icon size="l0" icon="chevron-down" />
       </DropdownTrigger>
     </DropdownWrap>
       

@@ -42,7 +42,7 @@ const Button = styled('div', {
   // Meaning it doesn't look link a tradtional button
 
   '&:hover': { 
-    background: '$buttonSecondaryHover'
+    background: '$defaultButtonHover'
   },
 
   // Here we auto mate the spacing for the contents within the button base

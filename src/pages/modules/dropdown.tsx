@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Dropdown, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Dropdown, Avatar, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
 import { DropdownBase } from 'src/components/Dropdown/Parts'
 
@@ -25,15 +25,86 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <StageBlocks
-            columns="2"
+            columns="3"
             titles={[
-              { title: 'Default' },
-              { title: 'Dropdown' }
+              { title: 'With text' },
+              { title: 'With image' },
+              { title: 'With text and image' }
             ]}
           >
             <StageBlockRow>
-              <div><Dropdown /></div>
-              <div><DropdownBase /></div>
+              <div>
+                <Dropdown 
+                  trigger="Trigger"
+                />
+              </div>
+
+              <div>
+                <Dropdown 
+                  trigger={ <Avatar nameHidden image="/people/christine.png" name="Christine Dailey" /> }
+                />
+              </div>
+
+              <div>
+                <Dropdown 
+                  trigger={ <Avatar image="/people/christine.png" name="Christine Dailey" /> }
+                />
+              </div>
+            </StageBlockRow>
+          </StageBlocks>
+        </BlockItem>
+
+        <BlockItem>
+          <StageBlocks
+            columns="3"
+            titles={[
+              { title: 'Default' },
+              { title: 'With Icons' },
+              { title: 'With Categories' }
+            ]}
+          >
+            <StageBlockRow align="top">
+              <div>
+                <DropdownBase 
+                  listItems={[
+                    { pageLink: '/', title: 'List item 1' },
+                    { pageLink: '/', title: 'List item 2' },
+                    { pageLink: '/', title: 'List item 3' },
+                    { pageLink: '/', title: 'List item 4' },
+                    { pageLink: '/', title: 'List item 5' },
+                  ]}
+                />
+              </div>
+
+              <div>
+                <DropdownBase 
+                  listItems={[
+                    { pageLink: '/', icon: 'settings', title: 'Settings' },
+                    { pageLink: '/', icon: 'timer', title: 'History' },
+                    { pageLink: '/', icon: 'documents', title: 'Program Policy' },
+                    { pageLink: '/', icon: 'help', title: 'Help & Support' },
+                    { pageLink: '/', icon: 'exit', title: 'Sign Out' },
+                  ]}
+                />
+              </div>
+
+              <div>
+                <DropdownBase 
+                  menu={[
+                    { pageLink: '/', icon: 'store', title: 'Store' },
+                    { pageLink: '/', icon: 'wallet', title: 'Account' },
+                    { pageLink: '/', icon: 'transactions', title: 'Claim' }
+                  ]}
+
+                  listItems={[
+                    { pageLink: '/', icon: 'settings', title: 'Settings' },
+                    { pageLink: '/', icon: 'timer', title: 'History' },
+                    { pageLink: '/', icon: 'documents', title: 'Program Policy' },
+                    { pageLink: '/', icon: 'help', title: 'Help & Support' },
+                    { pageLink: '/', icon: 'exit', title: 'Sign Out' },
+                  ]}
+                />
+              </div>
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>

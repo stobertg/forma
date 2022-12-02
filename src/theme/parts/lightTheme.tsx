@@ -25,6 +25,7 @@ export const lightThemeColors = {
   // Button Colors
 
   buttonPrimary: '$blue500',
+  defaultButtonHover: '$indigo50',
   buttonHover: '$blue600',
   buttonSecondaryHover: '$blue100',
   buttonDisabled: '$indigo100',

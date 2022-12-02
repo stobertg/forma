@@ -26,6 +26,7 @@ interface CardProps {
   href?: string
   pageLink?: string
   bgColor?: 'white200' | 'cyan100' | 'pink100'
+  border?: boolean
   children?: React.ReactNode
 }
 
@@ -39,6 +40,7 @@ export const Card = ({
     href, // Optional - If the button is clickable, take the user to an external website
     pageLink, // Optional - If the button is clickable and takes the user to an internal page
     bgColor,
+    border,
     children
   }: CardProps ) => {
   
@@ -51,7 +53,7 @@ export const Card = ({
         // To an external site, outside of the FreeRossDAO, such as Snapshot - opens a new window
 
         <Button {...{ href }} target="_blank">
-          <CardBase {...{ title, subTitle, image, imageAlt, bgColor }}>{ children }</CardBase>
+          <CardBase {...{ title, subTitle, image, imageAlt, bgColor, border }}>{ children }</CardBase>
         </Button>
       
       ) : pageLink ? (
@@ -60,7 +62,7 @@ export const Card = ({
         // page that is within the FreeRossDAO site, such as a Blog Post
 
         <Button {...{ pageLink }}>
-          <CardBase {...{ title, subTitle, image, imageAlt, bgColor }}>{ children }</CardBase>
+          <CardBase {...{ title, subTitle, image, imageAlt, bgColor, border }}>{ children }</CardBase>
         </Button>
 
       ) : (
@@ -70,7 +72,7 @@ export const Card = ({
         // This could be something such as Snapshot card, where only one spot of the card should be clickable
         // Or a static card used for presentation, although in most cases, the card is clickable
 
-        <CardBase {...{ title, subTitle, image, imageAlt, bgColor }}>{ children }</CardBase>
+        <CardBase {...{ title, subTitle, image, imageAlt, bgColor, border }}>{ children }</CardBase>
 
       )}
     </>

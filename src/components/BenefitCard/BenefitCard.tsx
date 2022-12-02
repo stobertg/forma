@@ -93,7 +93,7 @@ export const BenefitCard = ({
   
   return(
 
-    <Card>  
+    <Card border>  
       <ContentWrap>
         <ContentLeft>
           <Illustration size="l1" image={ illustration ? illustration : 'account-wellness' } />

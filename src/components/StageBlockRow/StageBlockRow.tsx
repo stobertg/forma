@@ -22,22 +22,27 @@ const RowWrap = styled('div', {
     bgColor: {
       light: { background: '$brandSecondary' },
       dark: { background: '$brandPrimary' }
+    },
+
+    align: {
+      top: { '> *': { alignItems: 'flex-start' }}
     }
   }
 })
 
 interface StageBlockRowProps {
+  align?: 'top'
   bgColor?: 'light' | 'dark'
   children: React.ReactNode
 } 
 
 // ---------- This is the end of declarations ---------- //
 
-export const StageBlockRow = ({ bgColor, children }:StageBlockRowProps) => {
+export const StageBlockRow = ({ align, bgColor, children }:StageBlockRowProps) => {
   
   return(
 
-    <RowWrap {...{ bgColor }}>{ children }</RowWrap>
+    <RowWrap {...{ align, bgColor }}>{ children }</RowWrap>
     
   )
 }

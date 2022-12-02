@@ -8,6 +8,8 @@ const story = {
 }
 export default story
 export const Primary = () => ( 
-  <Dropdown />
+  <Dropdown 
+    trigger="Trigger"
+  />
 )
 

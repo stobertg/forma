@@ -50,6 +50,7 @@ export const LeftNav = ({
             { href: '/components/input', title: 'Input' },
             { href: '/components/snackbar', title: 'Snackbar' },
             { href: '/components/tabs', title: 'Tabs' },
+            { href: '/components/tooltip', title: 'Tooltip' },
           ]} 
         />
 
