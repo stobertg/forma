@@ -43,10 +43,12 @@ export const LeftNav = ({
         <NavLinks 
           title="Components" 
           links={[
+            { href: '/components/banner', title: 'Banner' },
             { href: '/components/button', title: 'Button' },
             { href: '/components/card', title: 'Card Templates' },
             { href: '/components/chip', title: 'Chip' },
             { href: '/components/icons', title: 'Icons' },
+            { href: '/components/illustrations', title: 'Illustrations' },
             { href: '/components/input', title: 'Input' },
             { href: '/components/snackbar', title: 'Snackbar' },
             { href: '/components/tabs', title: 'Tabs' },
@@ -60,6 +62,7 @@ export const LeftNav = ({
             { href: '/components/benefit-card', title: 'Benefit Card' },
             { href: '/modules/callout', title: 'Callout' },
             { href: '/modules/dropdown', title: 'Dropdown' },
+            { href: '/modules/menu', title: 'Menu' },
             { href: '/modules/modal', title: 'Modal' },            
             { href: '/', title: 'Upload Card' }
           ]} 

@@ -30,6 +30,13 @@ const StageBlockTitles = styled('div', {
   textAlign: 'center',
 
   variants: {
+    rows: {
+      2: { },
+      3: {},
+      4: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '25%' }},
+      5: {}
+    },
+
     columns: {
       5: { width: '100%', flexDirection: 'row', '> *': { width: '20%' }},
       4: { width: '100%', flexDirection: 'row', '> *': { width: '25%' }},
@@ -42,6 +49,7 @@ const StageBlockTitles = styled('div', {
 const StageBlocksWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  flex: 1,
   position: 'relative',
   border: '1px solid $border',
   borderRadius: '$r1',
@@ -68,17 +76,18 @@ interface StageBlocksProps {
   }[]
   children: React.ReactNode
   columns?: '2' | '3' | '4' | '5'
+  rows?: '2' | '3' | '4' | '5'
 } 
 
 // ---------- This is the end of declarations ---------- //
 
-export const StageBlocks = ({ titles, columns, children }:StageBlocksProps) => {
+export const StageBlocks = ({ titles, rows, columns, children }:StageBlocksProps) => {
   
   return(
 
     <StageWrap {...{ columns }}>
       { titles ? (
-        <StageBlockTitles {...{ columns }}>
+        <StageBlockTitles {...{ rows, columns }}>
           { titles.map(( title, i ) => ( 
             <Heading key={`title-${ i }`} bold size="l0" color="gray" title={ title.title } /> 
           ))}

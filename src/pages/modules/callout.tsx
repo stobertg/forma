@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Callout, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockColumn, Callout, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Modal"
+          title="Callouts"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
@@ -24,6 +24,7 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <StageBlocks
+            rows="4"
             titles={[
               { title: 'Default' },
               { title: 'Success' },
@@ -31,24 +32,34 @@ const Page: NextPage = () => {
               { title: 'Error' }
             ]}
           >
-            <Callout  
-              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
-            />
+            <StageBlockColumn>
+              <div>
+                <Callout  
+                  descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+                />
+              </div>
 
-            <Callout  
-              status="success"
-              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
-            />
+              <div>
+                <Callout  
+                  status="success"
+                  descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+                />
+              </div>
 
-            <Callout  
-              status="warning"
-              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
-            />
+              <div>
+                <Callout  
+                  status="warning"
+                  descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+                />
+              </div>
 
-            <Callout 
-              status="error" 
-              descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
-            />
+              <div>
+                <Callout 
+                  status="error" 
+                  descp="An attempt was made to perform an operation that is not permitted: More than 10% employees are being terminated."
+                />
+              </div>
+            </StageBlockColumn>
           </StageBlocks>
         </BlockItem>
 

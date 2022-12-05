@@ -106,6 +106,7 @@ interface AvatarProps {
   name?: string
   userName?: string
   cryptoAddress?: any
+  firstNameOnly?: boolean
   nameHidden?: boolean
 }
 
@@ -118,6 +119,7 @@ export const Avatar = ({
     userName, // Optional - Supporting the username of the user
     cryptoAddress, // Optional - Supporting the user to be identified by their crypto address
     size, // Optional - For the size of the image container of the user
+    firstNameOnly,
     nameHidden // Optional - If the name needs to be hidden and only the image is present
   }:AvatarProps) => {
 
@@ -131,17 +133,24 @@ export const Avatar = ({
       <AvatarImage>
         <Image src={ image } alt={ imageAlt } />
         <AvatarFallback delayMs={600}>
-          { name ? ( <strong>{ firstName?.[0] }{ lastName?.[0] }</strong> ) 
-          : userName ? ( <Heading title={ userName[0] } bold /> ) 
+          { name ? ( <span>{ firstName?.[0] }{ lastName?.[0] }</span> ) 
+          : userName ? ( <Heading title={ userName[0] } /> ) 
           : ( <>{ cryptoAddress[0] }</> )
           }
         </AvatarFallback>
       </AvatarImage>
 
-      { nameHidden ? null : (
+      { firstNameOnly ? (
         <AvatarName>
-          { name ? ( <strong>{ firstName } { lastName }</strong> ) 
-          : userName ? ( <Heading title={ userName } bold /> ) 
+          { name ? ( <span>{ firstName }</span> ) 
+          : userName ? ( <Heading title={ userName } /> ) 
+          : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
+          }
+        </AvatarName> 
+      ) : nameHidden ? null : (
+        <AvatarName>
+          { name ? ( <span>{ firstName } { lastName }</span> ) 
+          : userName ? ( <Heading title={ userName } /> ) 
           : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
           }
         </AvatarName> 

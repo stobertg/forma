@@ -12,6 +12,11 @@ const DropdownWrap = styled('div', {
 
   '*': {
     width: '100%'  
+  },
+
+  '> *:not(:last-child)': {
+    paddingBottom: 8,
+    borderBottom: '1px solid $border'
   }
 })
 

@@ -9,7 +9,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Dropdown"
+          title="Menu"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
@@ -27,27 +27,51 @@ const Page: NextPage = () => {
           <StageBlocks
             columns="3"
             titles={[
-              { title: 'With text' },
-              { title: 'With image' },
-              { title: 'With text and image' }
+              { title: 'Default' },
+              { title: 'With Icons' },
+              { title: 'With Categories' }
             ]}
           >
-            <StageBlockRow>
+            <StageBlockRow align="top">
               <div>
-                <Dropdown 
-                  trigger="Trigger"
+                <DropdownBase 
+                  listItems={[
+                    { pageLink: '/', title: 'List item 1' },
+                    { pageLink: '/', title: 'List item 2' },
+                    { pageLink: '/', title: 'List item 3' },
+                    { pageLink: '/', title: 'List item 4' },
+                    { pageLink: '/', title: 'List item 5' },
+                  ]}
                 />
               </div>
 
               <div>
-                <Dropdown 
-                  trigger={ <Avatar nameHidden image="/people/christine.png" name="Christine Dailey" /> }
+                <DropdownBase 
+                  listItems={[
+                    { pageLink: '/', icon: 'settings', title: 'Settings' },
+                    { pageLink: '/', icon: 'timer', title: 'History' },
+                    { pageLink: '/', icon: 'documents', title: 'Program Policy' },
+                    { pageLink: '/', icon: 'help', title: 'Help & Support' },
+                    { pageLink: '/', icon: 'exit', title: 'Sign Out' },
+                  ]}
                 />
               </div>
 
               <div>
-                <Dropdown 
-                  trigger={ <Avatar firstNameOnly image="/people/christine.png" name="Christine Dailey" /> }
+                <DropdownBase 
+                  menu={[
+                    { pageLink: '/', icon: 'store', title: 'Store' },
+                    { pageLink: '/', icon: 'wallet', title: 'Account' },
+                    { pageLink: '/', icon: 'transactions', title: 'Claim' }
+                  ]}
+
+                  listItems={[
+                    { pageLink: '/', icon: 'settings', title: 'Settings' },
+                    { pageLink: '/', icon: 'timer', title: 'History' },
+                    { pageLink: '/', icon: 'documents', title: 'Program Policy' },
+                    { pageLink: '/', icon: 'help', title: 'Help & Support' },
+                    { pageLink: '/', icon: 'exit', title: 'Sign Out' },
+                  ]}
                 />
               </div>
             </StageBlockRow>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Logo, Avatar, ButtonContainer } from '@components'
+import { Logo, Avatar, Icon, Dropdown } from '@components'
 
 const HeaderWrap = styled('header', {
   position: 'relative',
@@ -20,30 +20,67 @@ const HeaderWrap = styled('header', {
   }
 })
 
+const HeaderLeft = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
 
+  // To automate the spacing on 
+
+  '> *:not(:last-child)': {
+    marginRight: 32
+  }
+})
+
+// For the styling of the links within the container
+// These are the links directly to the right of the forma logo
+
+const HeaderLinks = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  position: 'relative',
+
+  '> *:not(:last-child)': {
+    marginRight: 40
+  },
+
+  button: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    color: '$textSecondary',
+
+    '> *:not(:last-child)': {
+      marginRight: 8
+    }
+  }
+})
+
+// -------------- Typescript declarations -------------- //
 
 interface UserProps {
 
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const UserHeader = ({}:UserProps) => {
   return(
 
     <HeaderWrap>
       <nav>
-        <Logo size="l0" />
-        <ButtonContainer
-          buttons={[
-            { icon: 'store', title: 'Store' },
-            { icon: 'store', title: 'Accounts' },
-            { icon: 'store', title: 'Claims' }
-          ]}
-        />
+        <HeaderLeft>
+          <Logo size="l0" />
+          <HeaderLinks>
+            <button><Icon size="l0" icon="store" /><strong>Store</strong></button>
+            <button><Icon size="l0" icon="wallet" /><strong>Accounts</strong></button>
+            <button><Icon size="l0" icon="transactions" /><strong>Claims</strong></button>
+          </HeaderLinks>
+        </HeaderLeft>
 
-        <Avatar 
-          nameHidden
-          image="/people/christine.png" 
-          name="Christine Dailey" 
+        <Dropdown
+          trigger={ <Avatar nameHidden image="/people/christine.png" name="Christine Dailey" /> }
         />
       </nav>
     </HeaderWrap>

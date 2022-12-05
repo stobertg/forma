@@ -11,7 +11,7 @@ const IllusWrap = styled('div', {
     size: {
       l0: { minWidth: 54, width: 54, height: 54 },
       l1: { minWidth: 72, width: 72, height: 72 },
-      l2: {},
+      l2: { minWidth: 100, width: 100, height: 100 },
       l3: {}
     }
   }
@@ -34,7 +34,7 @@ export const Illustration = ({
   return(
 
     <IllusWrap {...{ size }}>
-      <img src={`/illustration/benefits/${ image }.svg`} alt={ image } />
+      <img src={`/illustration${ image }`} alt={ image } />
     </IllusWrap>
       
   )
