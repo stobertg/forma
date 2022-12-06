@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@theme'
 import { Icon, Heading, Button } from '@components'
 
@@ -12,9 +12,9 @@ const BannerWrap = styled('div', {
 
   variants: {
     status: {
-      info: {},
-      warning: {},
-      error: {}
+      info: { background: '$bgInformation' },
+      warning: { background: '$bgWarning' },
+      error: { background: '$bgNegative' }
     }
   }
 })
@@ -31,22 +31,37 @@ const BannerContent = styled('div', {
   }
 })
 
+const BannerClose = styled('div', {
+  position: 'absolute',
+  right: 4,
+
+  '*': {
+    color: '$textPrimary'
+  }
+})
+
 // -------------- Typescript declarations -------------- //
 
 interface BannerProps {
   status?: 'info' | 'warning' | 'error'
+  title: string | React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Banner = ({ status }:BannerProps) => {
+export const Banner = ({ title, status }:BannerProps) => {
+  const [ close, setClose ] = useState( false )
+  const closeBanner = () => { setClose( true )}
+
   return(
 
-    <BannerWrap {...{ status }}>
+    <BannerWrap {...{ status }} style={{ display: close ? 'none' : 'flex' }}>
       <BannerContent>
         <Icon size="l0" icon="exclamation" />
-        <Heading size="l1" title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> } />
+        <Heading size="l1" {...{ title }} />
       </BannerContent>
+
+      <BannerClose><Button onClick={ closeBanner } circle="l0" size="l0" icon="close" /></BannerClose>
     </BannerWrap>
 
   )

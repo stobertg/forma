@@ -43,7 +43,9 @@ export const LeftNav = ({
         <NavLinks 
           title="Components" 
           links={[
+            { href: '/components/accordion', title: 'Accordion' },
             { href: '/components/banner', title: 'Banner' },
+            { href: '/components/breadcrumbs', title: 'Breadcrumbs' },
             { href: '/components/button', title: 'Button' },
             { href: '/components/card', title: 'Card Templates' },
             { href: '/components/chip', title: 'Chip' },

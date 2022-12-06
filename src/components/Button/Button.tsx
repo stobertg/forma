@@ -32,6 +32,7 @@ import { ButtonBase } from './ButtonBase'
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
+  circle?: 'l0' | 'l1' | 'l2'
   variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
   size?: 'l0'
   title?: any
@@ -60,6 +61,7 @@ export const Button = ({
     target, // Supporting the href link to be opened in a new tab/window ( _blank )
     onClick, // Supporting standalone button clicks that provide an interaction on the current page - wraps in <button> tag
     type, // This is to support Form submits, Text, Number Inputs, ect
+    circle,
     children // For customization of a button as fallabck for compnents needed to be witin a button (ie a whole card is a button)
   }: ButtonProps ) => {
   
@@ -69,7 +71,7 @@ export const Button = ({
       { pageLink ? (
 
         <Link href={ pageLink }>
-          <a><ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} /></a>
+          <a><ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold, circle }} /></a>
         </Link>
 
         ) : href ? (
@@ -82,7 +84,7 @@ export const Button = ({
            (
 
             <a href={ href } target={ target }>
-              <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
+              <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold, circle }} />
             </a>
 
           )
@@ -95,7 +97,7 @@ export const Button = ({
         // An example of this would be clicking on a button that opens up a dialog window with futher actions
 
         <button onClick={ onClick }>
-          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold }} />
+          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold, circle }} />
         </button>
 
         // Here we add support for Form submit buttons
@@ -103,7 +105,7 @@ export const Button = ({
       ) : type == "submit" ? (
         
         <button type="submit">
-          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold }} />
+          <ButtonBase {...{ variant, size, title, icon, type, iconPlacement, children, notBold, circle }} />
         </button>
 
       ) : (
@@ -114,7 +116,7 @@ export const Button = ({
         // An example of the this is using a button within a card to show the affordance that the clicking on the card has an action
         // In all instances, this button without a click event will be encompassed with a parent container that is a button
 
-        <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold }} />
+        <ButtonBase {...{ variant, size, title, icon, iconPlacement, children, notBold, circle }} />
 
       )}
     </>

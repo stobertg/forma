@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, StageBlocks, StageBlockColumn, ProjectInfo, Banner, Code } from '@components'
+import { SiteContainer, Block, BlockItem, StageBlocks, StageBlockColumn, ProjectInfo, Accordion, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -8,8 +8,8 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Banners"
-          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7361%3A11097"
+          title="Accordion"
+          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=1768%3A6213&t=gmpAun8Hp21agt1Q-1"
           storybookLink="/"
           githubLink="/"
         >
@@ -24,40 +24,15 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
         <StageBlocks
-            rows="4"
+            columns="2"
             titles={[
               { title: 'Default' },
-              { title: 'Info' },
-              { title: 'Error' },
-              { title: 'Warning' }
+              { title: 'With complex children' }
             ]}
           >
             <StageBlockColumn>
               <div>
-                <Banner 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
-                />
-              </div>
-
-              <div>
-                <Banner 
-                  status="info" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
-                />
-              </div>
-
-              <div>
-                <Banner 
-                  status="warning" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
-                />
-              </div>
-
-              <div>
-                <Banner 
-                  status="error" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }  
-                />
+                <Accordion />
               </div>
             </StageBlockColumn>
           </StageBlocks>

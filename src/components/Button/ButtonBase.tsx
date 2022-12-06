@@ -57,6 +57,12 @@ const Button = styled('div', {
   // These can be three different types - either primary, outlined or only an icon
 
   variants: {
+    circle: {
+      l0: { maxWidth: 40, width: 40, maxHeight: 40, height: 40, padding: '0 !important', borderRadius: '50%', svg: { width: '90%' }},
+      l1: { maxWidth: 44, width: 44, maxHeight: 44, height: 44, padding: '0 !important', borderRadius: '50%', svg: { width: '90%' } },
+      l2: { maxWidth: 48, width: 48, maxHeight: 48, height: 48, padding: '0 !important', borderRadius: '50%', svg: { width: '90%' } }
+    },
+
     variant: {
 
       // For the primary button of the container that is the main button used throughout the site
@@ -140,6 +146,7 @@ const ButtonIcon = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
+  circle?: 'l0' | 'l1' | 'l2'
   variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
   size?: 'l0'
   title?: any
@@ -153,6 +160,7 @@ interface ButtonProps {
 // ---------- This is the end of declarations ---------- //
 
 export const ButtonBase = ({ 
+    circle,
     variant, // Optional - For the visual display of the button
     title, // Optional - For the title of the button
     icon, // Optional - for the icon within the button
@@ -167,7 +175,7 @@ export const ButtonBase = ({
 
     <ButtonWrap style={{ pointerEvents: variant == 'disabled' ? 'none' : 'auto' }}>
       { title || icon ? (
-        <Button {...{ variant, iconPlacement, size, type }}>
+        <Button {...{ variant, iconPlacement, size, type, circle }}>
           { icon ? ( <ButtonIcon><Icon {...{ icon }} size="l0" /></ButtonIcon> ) : null }
           { title ? ( 
             <>
