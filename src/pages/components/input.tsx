@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Form, Input, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, Input, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -24,9 +24,9 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
 
-          <Form>
+      
             <Input label="Label" name="name" />
-          </Form>
+  
 
         </BlockItem>
 

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Tabs, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, Tabs, StageBlocks, StageBlockColumn, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange, CodePurple, CodeYellow } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,38 +23,52 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <Tabs
-            defaultTab={ 1 }
-            triggers={[
-              { title: 'Tab One' },
-              { title: 'Tab Two' },
-              { title: 'Tab Three' },
-              { title: 'Tab Four' },
+          <StageBlocks
+            rows="2"
+            titles={[
+              { title: 'Default' },
+              { title: 'Small' }
             ]}
-            tabContent={[
-              { content: 'This is the content for Tab 1' },
-              { content: 'This is the content for Tab 2' },
-              { content: 'This is the content for Tab 3' },
-              { content: 'This is the content for Tab 4' }
-            ]}
-          />
+          >
+            <StageBlockColumn>
+              <div>
+                <Tabs
+                  defaultTab={ 1 }
+                  triggers={[
+                    { title: 'Tab One' },
+                    { title: 'Tab Two' },
+                    { title: 'Tab Three' },
+                    { title: 'Tab Four' },
+                  ]}
+                  tabContent={[
+                    { content: 'This is the content for Tab 1' },
+                    { content: 'This is the content for Tab 2' },
+                    { content: 'This is the content for Tab 3' },
+                    { content: 'This is the content for Tab 4' }
+                  ]}
+                />
+              </div>
 
-          <Tabs
-            tabSize="tiny"
-            defaultTab={ 1 }
-            triggers={[
-              { title: 'Tab One' },
-              { title: 'Tab Two' },
-              { title: 'Tab Three' },
-              { title: 'Tab Four' },
-            ]}
-            tabContent={[
-              { content: 'This is the content for Tab 1' },
-              { content: 'This is the content for Tab 2' },
-              { content: 'This is the content for Tab 3' },
-              { content: 'This is the content for Tab 4' }
-            ]}
-          />
+              <div>
+                <Tabs
+                  tabSize="tiny"
+                  defaultTab={ 1 }
+                  triggers={[
+                    { title: 'Tab One' },
+                    { title: 'Tab Two' },
+                    { title: 'Tab Three' },
+                    { title: 'Tab Four' },
+                  ]}
+                  tabContent={[
+                    { content: 'This is the content for Tab 1' },
+                    { content: 'This is the content for Tab 2' },
+                    { content: 'This is the content for Tab 3' },
+                    { content: 'This is the content for Tab 4' }
+                  ]}
+                />
+              </div>
+            </StageBlockColumn>
+          </StageBlocks>
         </BlockItem>
 
         <BlockItem>

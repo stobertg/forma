@@ -59,6 +59,16 @@ const Page: NextPage = () => {
         </BlockItem>
 
         <BlockItem>
+          <StageBlocks columns="5">
+            <StageBlockRow>
+              <Tooltip tooltipText="account-teambuilding"><div><Illustration size="l1" image="/girl-waving.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-transit"><div><Illustration size="l1" image="/snap.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/why-switch.png" /></div></Tooltip>
+            </StageBlockRow>
+          </StageBlocks>
+        </BlockItem>
+
+        <BlockItem>
           <Code>
             &lt;<CodeGreen>Icon</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2" | "l3"</CodeOrange>

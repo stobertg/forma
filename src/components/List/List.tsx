@@ -55,11 +55,13 @@ const ListWrap = styled('div', {
 
     spacing: {
       l0: { li: { padding: '4px 0' }},
+      l0r: { 'li:not(:last-child)': { marginRight: 8 }},
       l1: { li: { padding: '8px 0' }},
       l1r: { 'li:not(:last-child)': { marginRight: 12 }},
       l2: { li: { padding: '12px 0' }},
       l2r: { 'li:not(:last-child)': { marginRight: 20 }},
-      l3: { li: { padding: '20px 0' } }
+      l3: { li: { padding: '20px 0' } },
+      l3r: { 'li:not(:last-child)': { marginRight: 40 }},
     }
   }
 })
@@ -89,7 +91,7 @@ export interface ListProps {
   decoration?: 'dividers'
   direction?: 'vertical' | 'horizontal'
   listStyle?: 'numbered' | 'bulleted' | 'alphabetical'
-  spacing?: 'l0' | 'l1' | 'l1r' | 'l2' | 'l2r' | 'l3'
+  spacing?: 'l0' | 'l0r' | 'l1' | 'l1r' | 'l2' | 'l2r' | 'l3' | 'l3r'
   children?: React.ReactNode
 }
 

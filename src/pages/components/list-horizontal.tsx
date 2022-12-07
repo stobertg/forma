@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Tooltip, StageBlocks, StageBlockRow, List, Code, Avatar } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, StageBlockColumn, List, Code, Avatar } from '@components'
 import { CodeBlue, CodeGreen, CodePurple, CodeYellow, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,19 +23,18 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <StageBlocks 
-            columns="4"
+          <StageBlocks
+            rows="2"
             titles={[
               { title: 'Default' },
-              { title: 'Numbered' },
-              { title: 'Bulleted' },
-              { title: 'Alphabetical' }
+              { title: 'With icon' }
             ]}
           >
-            <StageBlockRow>
+            <StageBlockColumn>
               <div>
                 <List 
-                  spacing="l0"
+                  direction="horizontal"
+                  spacing="l3r"
                   listItems={[
                     { title: 'List item one' },
                     { title: 'List item two' },
@@ -48,63 +47,8 @@ const Page: NextPage = () => {
 
               <div>
                 <List 
-                  listStyle="numbered"
-                  spacing="l0"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  listStyle="bulleted"
-                  spacing="l0"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  listStyle="alphabetical"
-                  spacing="l0"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-            </StageBlockRow>
-          </StageBlocks>
-        </BlockItem>
-
-        <BlockItem>
-          <StageBlocks 
-            columns="4"
-            titles={[
-              { title: 'With icons' },
-              { title: 'With dividers' },
-              { title: 'With icon & dividers' },
-              { title: 'Custom' }
-            ]}
-          >
-            <StageBlockRow>
-              <div>
-                <List 
-                  spacing="l1"
+                  direction="horizontal"
+                  spacing="l3r"
                   listItems={[
                     { icon: 'documents', title: 'List item one' },
                     { icon: 'transactions', title: 'List item two' },
@@ -114,133 +58,14 @@ const Page: NextPage = () => {
                   ]}
                 />
               </div>
-
-              <div>
-                <List 
-                  decoration="dividers"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  spacing="l1"
-                  decoration="dividers"
-                  listItems={[
-                    { icon: 'documents', title: 'List item one' },
-                    { icon: 'transactions', title: 'List item two' },
-                    { icon: 'folder', title: 'List item three' },
-                    { icon: 'store', title: 'List item four' },
-                    { icon: 'wallet', title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List spacing="l1">
-                  <li>
-                    <Avatar
-                      image="/people/christine.png"
-                      name="Christine Daley"
-                    />
-                  </li>
-
-                  <li>
-                    <Avatar
-                      firstNameOnly
-                      image="/people/christine.png"
-                      name="Christine"
-                    />
-                  </li>
-
-                  <li>
-                    <Avatar
-                      image="/people/christine.png"
-                      name="Christine Daley"
-                    />
-                  </li>
-                </List>
-              </div>
-            </StageBlockRow>
-          </StageBlocks>
-        </BlockItem>
-
-        <BlockItem>
-          <StageBlocks 
-            columns="4"
-            titles={[
-              { title: 'Spacing default' },
-              { title: 'Spacing l0' },
-              { title: 'Spacing l1' },
-              { title: 'Spacing l2' }
-            ]}
-          >
-            <StageBlockRow>
-              <div>
-                <List 
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  spacing="l0"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  spacing="l1"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-
-              <div>
-                <List 
-                  spacing="l2"
-                  listItems={[
-                    { title: 'List item one' },
-                    { title: 'List item two' },
-                    { title: 'List item three' },
-                    { title: 'List item four' },
-                    { title: 'List item five' }
-                  ]}
-                />
-              </div>
-            </StageBlockRow>
+            </StageBlockColumn>
           </StageBlocks>
         </BlockItem>
 
         <BlockItem>
           <Code>
             &lt;<CodeGreen>List</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>listStyle</CodeBlue>=<CodeOrange>"bulleted" | "numbered" | "alphabetical"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0r" | "l1r" | "l2r"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>decoration</CodeBlue>=<CodeOrange>"dividers"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>listItems</CodeBlue>=<CodeBlue>&#123;</CodeBlue><CodeYellow>&#91;</CodeYellow>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'documents'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item one'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
@@ -255,8 +80,7 @@ const Page: NextPage = () => {
             <br/>// The attributes still remain the same, but custom list removes the need for "listItem"
 
             <br/><br/>&lt;<CodeGreen>List</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>listStyle</CodeBlue>=<CodeOrange>"bulleted" | "numbered" | "alphabetical"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0r" | "l1r" | "l2r"</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>decoration</CodeBlue>=<CodeOrange>"dividers"</CodeOrange>
             <br/>&gt;
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<CodeGreen>li</CodeGreen>&gt;<CodePurple>&#123;</CodePurple>&nbsp;&nbsp;<CodeBlue>children</CodeBlue>&nbsp;&nbsp;<CodePurple>&#125;</CodePurple>&lt;&#47;<CodeGreen>li</CodeGreen>&gt;
