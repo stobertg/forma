@@ -29,10 +29,10 @@ const TooltipWrap = styled(TooltipPrimitive.Root, {
 const TooltipContent = styled(TooltipPrimitive.Content, {
   padding: '10px 15px',
   fontSize: 15,
-  borderRadius: '$r1',
+  borderRadius: '$r0',
   lineHeight: 1,
   color: '$white50',
-  backgroundColor: '$brandPrimary',
+  backgroundColor: '$bgDark',
   boxShadow: '0 2px 10px rgba( 0, 0, 0, 0.3 )',
   userSelect: 'none',
   animationDuration: '300ms',
@@ -55,11 +55,12 @@ const TooltipTrigger = styled(TooltipPrimitive.Trigger, {
 })
 
 interface TooltipProps {
+  side?: 'top' | 'bottom' | 'right' | 'left'
   tooltipText: string
   children: React.ReactNode
 }
 
-export const Tooltip = ({ tooltipText, children }:TooltipProps) => {
+export const Tooltip = ({ tooltipText, side, children }:TooltipProps) => {
   return(
 
     <TooltipPrimitive.Provider delayDuration={ 100 }>
@@ -67,7 +68,7 @@ export const Tooltip = ({ tooltipText, children }:TooltipProps) => {
         <TooltipTrigger>{ children }</TooltipTrigger>
 
         <TooltipPrimitive.Portal>
-          <TooltipContent>
+          <TooltipContent {...{ side }}>
             { tooltipText }
             <TooltipArrow />
           </TooltipContent>

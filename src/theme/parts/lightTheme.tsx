@@ -16,7 +16,7 @@ export const lightThemeColors = {
   bgSecondary: '$indigo50',
   bgTertiary: '$indigo200',
   bgDivider: '$red700',
-  bgDark: '$peach800',
+  bgDark: '$indigo700',
   bgInformation: '$blue100',
   bgWarning: '$peach200',
   bgNegative: '$red200',

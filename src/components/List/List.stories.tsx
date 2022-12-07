@@ -25,11 +25,11 @@ export const Bulleted = () => (
     listStyle="bulleted"
     spacing="l0"
     listItems={[
-      { id: 0, title: 'This is list item one' },
-      { id: 1, title: 'This is list item two' },
-      { id: 2, title: 'This is list item three' },
-      { id: 3, title: 'This is list item four' },
-      { id: 4, title: 'This is list item five' }
+      { title: 'This is list item one' },
+      { title: 'This is list item two' },
+      { title: 'This is list item three' },
+      { title: 'This is list item four' },
+      { title: 'This is list item five' }
     ]}
   />
 )
@@ -39,11 +39,11 @@ export const Numbered = () => (
     listStyle="numbered"
     spacing="l0"
     listItems={[
-      { id: 0, title: 'This is list item one' },
-      { id: 1, title: 'This is list item two' },
-      { id: 2, title: 'This is list item three' },
-      { id: 3, title: 'This is list item four' },
-      { id: 4, title: 'This is list item five' }
+      { title: 'This is list item one' },
+      { title: 'This is list item two' },
+      { title: 'This is list item three' },
+      { title: 'This is list item four' },
+      { title: 'This is list item five' }
     ]}
   />
 )
@@ -53,11 +53,11 @@ export const Alphabetical = () => (
     listStyle="alphabetical"
     spacing="l0"
     listItems={[
-      { id: 0, title: 'This is list item one' },
-      { id: 1, title: 'This is list item two' },
-      { id: 2, title: 'This is list item three' },
-      { id: 3, title: 'This is list item four' },
-      { id: 4, title: 'This is list item five' }
+      { title: 'This is list item one' },
+      { title: 'This is list item two' },
+      { title: 'This is list item three' },
+      { title: 'This is list item four' },
+      { title: 'This is list item five' }
     ]}
   />
 )

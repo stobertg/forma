@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Tooltip, StageBlocks, StageBlockRow, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, Tooltip, StageBlocks, StageBlockRow, Avatar, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -24,27 +24,61 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <StageBlocks 
-            columns="3"
+            columns="4"
             titles={[
-              { title: 'Default' },
-              { title: 'All Caps' },
-              { title: 'Small' },
+              { title: 'Top' },
+              { title: 'Right' },
+              { title: 'Bottom' },
+              { title: 'left' }
             ]}
           >
             <StageBlockRow>
-              <div><Tooltip tooltipText="This is the content">This is the trigger</Tooltip></div>
+              <div>
+                <Tooltip tooltipText="This is the content">Trigger</Tooltip>
+              </div>
+
+              <div>
+                <Tooltip side="right" tooltipText="Christine Dailey">
+                  <Avatar
+                    nameHidden
+                    image="/people/christine.png"
+                    name="Christine Dailey"
+                  />
+                </Tooltip>
+              </div>
+
+              <div>
+                <Tooltip side="bottom" tooltipText="This is the content">Trigger</Tooltip>
+              </div>
+
+              <div>
+                <Tooltip side="left" tooltipText="Christine Dailey">
+                  <Avatar
+                    nameHidden
+                    image="/people/christine.png"
+                    name="Christine Dailey"
+                  />
+                </Tooltip>
+              </div>
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>
 
         <BlockItem>
           <Code>
-            &lt;<CodeGreen>Chip</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"small"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bgColor</CodeBlue>=<CodeOrange>"gray" | "orange"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>"allCaps"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Callout"</CodeOrange>
-            <br/>&#47;&gt;
+            &lt;<CodeGreen>Tooltip</CodeGreen>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>side</CodeBlue>=<CodeOrange>"top" | "right" | "bottom" | "left"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>tooltipText</CodeBlue>=<CodeOrange>"Tooltip text"</CodeOrange>
+            <br/>&gt;
+            <br/>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Child example
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<CodeGreen>Avatar</CodeGreen>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>nameHidden</CodeBlue>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/path-to-image"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>name</CodeBlue>=<CodeOrange>"Christine Dailey"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#47;&gt;
+            <br/>
+            <br/>&lt;&#47;<CodeGreen>Tooltip</CodeGreen>&gt;
           </Code>
         </BlockItem>
       </Block>

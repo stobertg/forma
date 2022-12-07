@@ -70,7 +70,7 @@ export const Callout = ({ status, descp }:CalloutProps ) => {
             icon={ 
               status == 'success' ? 'check-circle' :
               status == 'warning' ? 'exclamation' :
-              status == 'error' ? 'close' :
+              status == 'error' ? 'cancel' :
               'exclamation'
             } 
           />

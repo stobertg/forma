@@ -113,14 +113,14 @@ const Page: NextPage = () => {
             </StageBlockRow>
 
             <StageBlockRow>
-              <div><Icon size="l1" icon="minus" /></div>
-              <div><Icon size="l1" icon="minus-circle" /></div>
-              <div><Icon size="l1" icon="check" /></div>
-              <div><Icon size="l1" icon="check-circle" /></div>
-              <div><Icon size="l1" icon="check-circle-filled" /></div>
-              <div><Icon size="l1" icon="exclamation" /></div>
-              <div><Icon size="l1" icon="megaphone" /></div>
-              <div><Icon size="l1" icon="stethoscope" /></div>
+              <Tooltip tooltipText="minus"><div><Icon size="l1" icon="minus" /></div></Tooltip>
+              <Tooltip tooltipText="minus-circle"><div><Icon size="l1" icon="minus-circle" /></div></Tooltip>
+              <Tooltip tooltipText="check"><div><Icon size="l1" icon="check" /></div></Tooltip>
+              <Tooltip tooltipText="check-circle"><div><Icon size="l1" icon="check-circle" /></div></Tooltip>
+              <Tooltip tooltipText="check-circle-filled"><div><Icon size="l1" icon="check-circle-filled" /></div></Tooltip>
+              <Tooltip tooltipText="exclamation"><div><Icon size="l1" icon="exclamation" /></div></Tooltip>
+              <Tooltip tooltipText="megaphone"><div><Icon size="l1" icon="megaphone" /></div></Tooltip>
+              <Tooltip tooltipText="stethoscope"><div><Icon size="l1" icon="stethoscope" /></div></Tooltip>
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>

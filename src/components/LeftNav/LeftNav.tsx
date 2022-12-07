@@ -44,6 +44,7 @@ export const LeftNav = ({
           title="Components" 
           links={[
             { href: '/components/accordion', title: 'Accordion' },
+            { href: '/components/avatar', title: 'Avatar' },
             { href: '/components/banner', title: 'Banner' },
             { href: '/components/breadcrumbs', title: 'Breadcrumbs' },
             { href: '/components/button', title: 'Button' },
@@ -52,6 +53,8 @@ export const LeftNav = ({
             { href: '/components/icons', title: 'Icons' },
             { href: '/components/illustrations', title: 'Illustrations' },
             { href: '/components/input', title: 'Input' },
+            { href: '/components/list', title: 'List' },
+            { href: '/components/list-horizontal', title: 'List - Horizontal' },
             { href: '/components/snackbar', title: 'Snackbar' },
             { href: '/components/tabs', title: 'Tabs' },
             { href: '/components/tooltip', title: 'Tooltip' },

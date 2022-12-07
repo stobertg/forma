@@ -9,7 +9,7 @@ const Page: NextPage = () => {
       <Block>
         <ProjectInfo
           title="Banners"
-          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7361%3A11097"
+          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=1768%3A6213&t=gmpAun8Hp21agt1Q-1"
           storybookLink="/"
           githubLink="/"
         >
@@ -28,8 +28,8 @@ const Page: NextPage = () => {
             titles={[
               { title: 'Default' },
               { title: 'Info' },
-              { title: 'Error' },
-              { title: 'Warning' }
+              { title: 'Warning' },
+              { title: 'Error' }
             ]}
           >
             <StageBlockColumn>
@@ -66,10 +66,8 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Banner</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Nothing out of pocket"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>subTitle</CodeBlue>=<CodeOrange>"Employees can choose how to use their benefits and spend anywhere Visa is accepted."</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/path-to-image"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bgColor</CodeBlue>=<CodeOrange>'white200' | 'pink100' | 'cyan 100'</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Status</CodeBlue>=<CodeOrange>"Info" | "warning" | "error"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Title</CodeBlue>=<CodeOrange>"Can be a string or component"</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

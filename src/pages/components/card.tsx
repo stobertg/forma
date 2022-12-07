@@ -31,7 +31,7 @@ const Page: NextPage = () => {
               { title: 'Small' },
             ]}
           >
-            <StageBlockRow>
+            <StageBlockRow align="top">
               <div>
                 <Card 
                   bgColor="white200" 
@@ -46,6 +46,7 @@ const Page: NextPage = () => {
                   bgColor="cyan100"
                   title="Automated approval"
                   subTitle="Most eligible payments smartly auto-adjudicate without receipts. For corner cases when a receipt is required, employees can quickly submit through desktop or mobile." 
+                  image="/illustration/snap.png"
                 />
               </div>
 
