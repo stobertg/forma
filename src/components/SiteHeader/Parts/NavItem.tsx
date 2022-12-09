@@ -56,7 +56,7 @@ const NavigationMenuContent = styled(NavigationMenu.Content, {
   '&[data-motion="to-end"]': { animationName: exitToRight },
 })
 
-const NavigationMenuLink = styled(NavigationMenu.Link, {
+const NavigationMenuLink = styled( NavigationMenu.Link, {
   display: 'block',
   textDecoration: 'none',
   fontSize: 15,
@@ -95,7 +95,7 @@ export const NavItem = ({
         <>
           <NavigationMenuTrigger>
             <div>{ triggerTitle }</div>
-            <Icon size="l0" icon="caret-down" />
+            <Icon size="l0" icon="chevron-down" />
           </NavigationMenuTrigger>
 
           <NavigationMenuContent>
@@ -104,7 +104,7 @@ export const NavItem = ({
         </>
 
       ) : (
-        <Button {...{ href, pageLink, onClick }}>{ title }</Button>
+        <Button pageLink={ pageLink }>{ title }</Button>
       )}
     </NavigationMenu.Item>
 

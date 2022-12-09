@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, List, Form, Heading, Chip, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, List, StageBlocks, StageBlockColumn, Heading, Chip, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -23,19 +23,36 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <List spacing="l1" decoration="dividers">
-            <li><Heading size="l10" title="Labil Grotesk 64px" /> <Chip title="$s10" /></li>
-            <li><Heading size="l9" title="Labil Grotesk 56px" /></li>
-            <li><Heading size="l8" title="Labil Grotesk 44px" /></li>
-            <li><Heading size="l7" title="Labil Grotesk 36px" /></li>
-            <li><Heading size="l6" title="Labil Grotesk 28px" /></li>
-            <li><Heading size="l5" title="Labil Grotesk 24px" /></li>
-            <li><Heading size="l4" title="Labil Grotesk 22px" /></li>
-            <li><Heading size="l3" title="Labil Grotesk 18px" /></li>
-            <li><Heading size="l2" title="Labil Grotesk 17px" /></li>
-            <li><Heading size="l1" title="Labil Grotesk 14px" /></li>
-            <li><Heading size="l0" title="Labil Grotesk 12px" /></li>
-          </List>
+          <StageBlocks
+            rows="11"
+            titles={[
+              { title: 'Display 1' },
+              { title: 'Display 2' },
+              { title: 'Display 3' },
+              { title: 'Headline 1' },
+              { title: 'Headline 2' },
+              { title: 'Headline 3' },
+              { title: 'Headline 4' },
+              { title: 'Headline 5' },
+              { title: 'Headline 6' },
+              { title: 'Subheader 1' },
+              { title: 'Subheader 2' }
+            ]}
+          >
+            <StageBlockColumn>
+              <div><Heading size="l10" title="Labil Grotesk 64px" /><Chip title="l11" /><Chip title="$s10" /></div>
+              <div><Heading size="l9" title="Labil Grotesk 56px" /></div>
+              <div><Heading size="l8" title="Labil Grotesk 44px" /></div>
+              <div><Heading size="l7" title="Labil Grotesk 36px" /></div>
+              <div><Heading size="l6" title="Labil Grotesk 28px" /></div>
+              <div><Heading size="l5" title="Labil Grotesk 24px" /></div>
+              <div><Heading size="l4" title="Labil Grotesk 22px" /></div>
+              <div><Heading size="l3" title="Labil Grotesk 18px" /></div>
+              <div><Heading size="l2" title="Labil Grotesk 17px" /></div>
+              <div><Heading size="l1" title="Labil Grotesk 14px" /></div>
+              <div><Heading size="l0" title="Labil Grotesk 12px" /></div>
+            </StageBlockColumn>
+          </StageBlocks>
         </BlockItem>
 
         <BlockItem>

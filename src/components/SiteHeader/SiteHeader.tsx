@@ -6,9 +6,28 @@ export const SiteHeader = () => {
     
     <NavWrapper>
       <NavItem
-        triggerTitle="Learn"
+        callout
+        triggerTitle="Resources"
+        layout="two"
         links={[
-          {}
+          {  
+            illustration: 'account-lifestyle',
+            href: '/docs/primitives/overview/introduction',
+            title: 'LSA',
+            descp: 'Forma Research'
+          },
+          {  
+            illustration: 'account-lifestyle',
+            href: '/docs/primitives/overview/introduction',
+            title: 'LSA',
+            descp: 'Blog'
+          },
+          {  
+            illustration: 'account-lifestyle',
+            href: '/docs/primitives/overview/introduction',
+            title: 'LSA',
+            descp: 'Events & Webinars'
+          }
         ]}
       />
 

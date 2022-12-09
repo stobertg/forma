@@ -2,6 +2,13 @@ import React from 'react'
 import { styled } from '@theme'
 import { Card, Heading, Text, Illustration, Chip } from '@components'
 
+const BenefitWrap = styled('div', {
+  position: 'relative',
+  padding: '32px 16px',
+  borderRadius: '$r1',
+  border: '1px solid $border'
+})
+
 const ContentWrap = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -93,7 +100,7 @@ export const BenefitCard = ({
   
   return(
 
-    <Card border>  
+    <BenefitWrap>
       <ContentWrap>
         <ContentLeft>
           <Illustration size="l1" image={ illustration ? illustration : 'account-wellness' } />
@@ -125,7 +132,8 @@ export const BenefitCard = ({
           </ContentRight>
         ) : null }
       </ContentWrap>
-    </Card>
+    </BenefitWrap>
+
     
   )
 }

@@ -53,6 +53,7 @@ export const LeftNav = ({
             { href: '/components/icons', title: 'Icons' },
             { href: '/components/illustrations', title: 'Illustrations' },
             { href: '/components/input', title: 'Input' },
+            { href: '/components/switch', title: 'Input - Switch' },
             { href: '/components/list', title: 'List' },
             { href: '/components/list-horizontal', title: 'List - Horizontal' },
             { href: '/components/snackbar', title: 'Snackbar' },

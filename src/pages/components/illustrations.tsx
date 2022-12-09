@@ -9,9 +9,9 @@ const Page: NextPage = () => {
       <Block>
         <ProjectInfo
           title="Illustrations"
-          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
-          storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
-          githubLink="/"
+          figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7261%3A11077&t=udzfpmo3qQyIp8z6-1"
+          storybookLink="https://ui.joinforma.com/?path=/story/media-illustrations--illustrations&globals=theme:Light"
+          googleDriveLink='https://drive.google.com/drive/u/1/folders/1Z0e618-b_rdPhJytGpY7dFSKi0GT7YDT'
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 
@@ -55,15 +55,37 @@ const Page: NextPage = () => {
               <Tooltip tooltipText="account-wellness"><div><Illustration size="l1" image="/benefits/account-wellness.svg" /></div></Tooltip>
               <Tooltip tooltipText="account-workathome"><div><Illustration size="l1" image="/benefits/account-workathome.svg" /></div></Tooltip>
             </StageBlockRow>
-          </StageBlocks>
-        </BlockItem>
 
-        <BlockItem>
-          <StageBlocks columns="5">
             <StageBlockRow>
               <Tooltip tooltipText="account-teambuilding"><div><Illustration size="l1" image="/girl-waving.png" /></div></Tooltip>
               <Tooltip tooltipText="account-transit"><div><Illustration size="l1" image="/snap.png" /></div></Tooltip>
               <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/why-switch.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/advantages-platform.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/advantages-global.png" /></div></Tooltip>
+            </StageBlockRow>
+
+            <StageBlockRow>
+              <Tooltip tooltipText="account-teambuilding"><div><Illustration size="l1" image="/cv-never-settle.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-transit"><div><Illustration size="l1" image="/cv-own-your-work.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/cv-got-you.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/cv-raise-the-bar.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/people.png" /></div></Tooltip>
+            </StageBlockRow>
+
+            <StageBlockRow>
+              <Tooltip tooltipText="account-teambuilding"><div><Illustration size="l1" image="/member-feedback-1.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-transit"><div><Illustration size="l1" image="/member-feedback-2.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/signin-employers.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/signin-employees.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-vision"><div><Illustration size="l1" image="/why-switch-admin.png" /></div></Tooltip>
+            </StageBlockRow>
+
+            <StageBlockRow>
+              <Tooltip tooltipText="account-teambuilding"><div><Illustration size="l1" image="/why-switch-competition.png" /></div></Tooltip>
+              <Tooltip tooltipText="account-transit"><div><Illustration size="l1" image="/why-forma.png" /></div></Tooltip>
+              <div></div>
+              <div></div>
+              <div></div>
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>

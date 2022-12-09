@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Bredcrumbs"
+          title="Breadcrumbs"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=1768%3A6213&t=gmpAun8Hp21agt1Q-1"
           storybookLink="/"
           githubLink="/"

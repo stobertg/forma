@@ -34,7 +34,8 @@ const StageBlockTitles = styled('div', {
       2: {width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '50%' }},
       3: {},
       4: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '25%' }},
-      5: {}
+      5: {},
+      11: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '9.09%' }}
     },
 
     columns: {
@@ -76,7 +77,7 @@ interface StageBlocksProps {
   }[]
   children: React.ReactNode
   columns?: '2' | '3' | '4' | '5'
-  rows?: '2' | '3' | '4' | '5'
+  rows?: '2' | '3' | '4' | '5' | '11'
 } 
 
 // ---------- This is the end of declarations ---------- //

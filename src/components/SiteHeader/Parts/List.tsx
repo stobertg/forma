@@ -170,7 +170,7 @@ export const List = ({
           { links.map(( link, i ) => (
 
             <ListItem 
-              key={`link-${ i}`}
+              key={`link-${ i }`}
               illustration={ link.illustration }
               title={ link.title }
               descp={ link.descp }

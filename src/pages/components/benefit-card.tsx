@@ -24,7 +24,7 @@ const Page: NextPage = () => {
       <Block blockItemSpacing="l0">
         <BlockItem>
           <BenefitCard 
-            illustration="account-custom"
+            illustration="/benefits/account-custom.svg"
             title="Benefit Program Name"
             chipTitle="Program Status"
             text="Add one to three lines of text to describe the purpose and usage of this benefit program."

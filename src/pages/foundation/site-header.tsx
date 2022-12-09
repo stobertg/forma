@@ -147,7 +147,7 @@ const Page: NextPage = () => {
 
             <LinksWrap>
               <LinkWrap>
-                <Illustration size="l0" image="account-teambuilding" />
+                <Illustration size="l0" image="/benefits/account-teambuilding.svg" />
                 <LinkText>
                   <Heading size="l2" bold title="Forma Research" />
                   <Heading size="l1" color="gray" title="Lorem ipsum sit dolor emit" />
@@ -155,7 +155,7 @@ const Page: NextPage = () => {
               </LinkWrap>
 
               <LinkWrap>
-                <Illustration size="l0" image="account-workathome" />
+                <Illustration size="l0" image="/benefits/account-workathome.svg" />
                 <LinkText>
                   <Heading size="l2" bold title="Events & Webinars" />
                   <Heading size="l1" color="gray" title="Lorem ipsum sit dolor" />
@@ -163,7 +163,7 @@ const Page: NextPage = () => {
               </LinkWrap>
 
               <LinkWrap>
-                <Illustration size="l0" image="account-learning" />
+                <Illustration size="l0" image="/benefits/account-learning.svg" />
                 <LinkText>
                   <Heading size="l2" bold title="Blog" />
                   <Heading size="l1" color="gray" title="Lorem ipsum sit dolor" />

@@ -7,7 +7,8 @@ const CodeWrap = styled('div', {
   borderRadius: '$r2',
   background: '$white100',
   color: '$gray300',
-  fontSize: '$s1'
+  fontSize: '$s1',
+  overflow: 'scroll'
 })
 
 const CodeContent = styled('div', {
