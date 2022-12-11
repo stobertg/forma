@@ -32,7 +32,7 @@ const StageBlockTitles = styled('div', {
   variants: {
     rows: {
       2: {width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '50%' }},
-      3: {},
+      3: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '33.33%' }},
       4: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '25%' }},
       5: {},
       11: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '9.09%' }}

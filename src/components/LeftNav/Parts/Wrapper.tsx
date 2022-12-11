@@ -10,7 +10,11 @@ const NavContain = styled('section', {
   left: 0,
   width: 250,
   height: '100vh',
-  background: '$bgSecondary'
+  background: '$bgSecondary',
+
+  '@smallDesktop': {
+    display: 'none'
+  }
 })
 
 // -------------- Typescript declarations -------------- //

@@ -66,10 +66,10 @@ const StyledContent = styled(AccordionPrimitive.Content, {
   backgroundColor: '$bgPrimary',
 
   '&[data-state="open"]': {
-    animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    animation: `${ slideDown } 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
   '&[data-state="closed"]': {
-    animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    animation: `${ slideUp } 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
 })
 

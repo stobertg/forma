@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Input, Code } from '@components'
+import { SiteContainer, Block, BlockItem, ProjectInfo, InputCheckbox, StageBlocks, StageBlockRow, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Input"
+          title="Input - Radio"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
@@ -23,10 +23,21 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <Input 
-            label="Full name" 
-            name="name" 
-          />
+          <StageBlocks
+            columns="3"
+            titles={[
+              { title: 'Default' },
+              { title: 'All Caps' },
+              { title: 'Small' },
+            ]}
+          >
+            <StageBlockRow>
+              <div><InputCheckbox label="This is the label" /></div>
+              <div><InputCheckbox labelPlacement="left" label="This is the label" /></div>
+              <div><InputCheckbox label="This is the label" /></div>
+            </StageBlockRow>
+          </StageBlocks>
+          
         </BlockItem>
 
         <BlockItem>

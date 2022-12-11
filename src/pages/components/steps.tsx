@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, ProjectInfo, Input, Code } from '@components'
-import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
+import { SiteContainer, Block, BlockItem, ProjectInfo, Progress, StageBlocks, StageBlockColumn, Code } from '@components'
+import { CodeBlue, CodeGreen, CodePurple } from '@codeColors'
 
 const Page: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Input"
+          title="Steps"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=3162%3A8812"
           storybookLink="https://ui.joinforma.com/?path=/story/forms-button--primary"
           githubLink="/"
@@ -23,19 +23,27 @@ const Page: NextPage = () => {
 
       <Block blockItemSpacing="l0">
         <BlockItem>
-          <Input 
-            label="Full name" 
-            name="name" 
-          />
+          <StageBlocks
+            rows="3"
+            titles={[
+              { title: '0%' },
+              { title: '50%' },
+              { title: '100%' },
+            ]}
+          >
+            <StageBlockColumn>
+              <div><Progress value={ 0 } /></div>
+              <div><Progress value={ 50 } /></div>
+              <div><Progress value={ 100 } /></div>
+            </StageBlockColumn>
+          </StageBlocks>
+          
         </BlockItem>
 
         <BlockItem>
           <Code>
-            &lt;<CodeGreen>Heading</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bold</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Title"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2" | "l3" | "l4" | "l5" | "l6" | "l7" | "l8" | "l9" | "l10"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"white" | "gray" | "indigo"</CodeOrange>
+            &lt;<CodeGreen>Progress</CodeGreen>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>value</CodeBlue>=<CodePurple>&#123;&nbsp;<CodeBlue>50</CodeBlue>&nbsp;&#125;</CodePurple>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

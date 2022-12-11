@@ -9,7 +9,6 @@ const CheckboxWrap = styled('div', {
   justifyContent: 'flex-end',
   alignItems: 'center',
   position: 'relative',
-  width: '100%',
   fontFamily: '$sansSerif',
   cursor: 'pointer',
 
@@ -31,6 +30,12 @@ const CheckboxWrap = styled('div', {
     '&:hover': {
       color: '$electric'
     }
+  },
+
+  variants: {
+    labelPlacement: {
+      left: { flexDirecton: 'row' }
+    }
   }
 })
 
@@ -40,10 +45,10 @@ const Checkbox = styled(CheckboxPrimitive.Root, {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  width: 24,
-  height: 24,
-  border: '1px solid $blueBorder',
-  borderRadius: 8,
+  width: 20,
+  height: 20,
+  border: '2px solid $border',
+  borderRadius: 4,
   transition: '$s1',
 
   '&:before': {
@@ -51,8 +56,8 @@ const Checkbox = styled(CheckboxPrimitive.Root, {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    background: '$lavender',
-    borderRadius: 6,
+    background: '$buttonPrimary',
+    borderRadius: 4,
     transition: '$s1',
     transform: 'scale( 0.2 )',
     opacity: 0
@@ -69,18 +74,19 @@ const Checkbox = styled(CheckboxPrimitive.Root, {
   '&:focus': { borderColor: '$white' },
 
   '&[aria-checked = true]': {
-    borderColor: '$white !important',
+    borderColor: '$buttonPrimary !important',
 
     '&:before': {
       transform: 'scale( 1 ) !important',
-      background: '$white',
+      background: '$buttonPrimary',
+      borderRadius: 2,
       opacity: 1
     }
   },
 })
 
 const CheckboxIndicator = styled(CheckboxPrimitive.Indicator, {
-  color: '$secondaryBlue'
+  color: '$bgPrimary'
 });
 
 
@@ -91,6 +97,7 @@ interface CheckProps {
   defaultChecked?: boolean
   id?: any
   label?: string
+  labelPlacement?: 'left'
   listItems?: {
     id: any
     label: any
@@ -104,6 +111,7 @@ export const InputCheckbox = ({
     defaultChecked,
     id,
     label,
+    labelPlacement,
     listItems
   }: CheckProps ) => {
   
@@ -116,7 +124,7 @@ export const InputCheckbox = ({
           { listItems.map(( item, i ) => (
 
             <li key={`item-${ i }`}>
-              <CheckboxWrap>
+              <CheckboxWrap {...{ labelPlacement }}>
                 <label htmlFor={ item.id }>{ item.label }</label>
                 <Checkbox 
                   id={ item.id }
@@ -132,9 +140,9 @@ export const InputCheckbox = ({
 
       ) : (
 
-        <CheckboxWrap>
+        <CheckboxWrap {...{ labelPlacement }}>
           <label htmlFor={ id }>{ label }</label>
-          <Checkbox defaultChecked={ defaultChecked } id={ id }>
+          <Checkbox {...{ defaultChecked, id }}>
             <CheckboxIndicator><Icon size="l0" icon="check" /></CheckboxIndicator>
           </Checkbox>
         </CheckboxWrap>
