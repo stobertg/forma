@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tbody, Footer } from '@email'
+import { Tbody, Tr, Footer } from '@email'
 
 const TableStyles = {
   display: 'table',
@@ -28,8 +28,8 @@ export const GlobalContainer = ({
 
     <table style={{ ...TableStyles }}>
       <Tbody>
-        { children }
-        <Footer {...{ withoutFooter }} />
+        <Tr>{ children }</Tr>
+        {/* <Footer {...{ withoutFooter }} /> */}
       </Tbody>
     </table>
     

@@ -7,6 +7,10 @@ const StageWrap = styled('section', {
   alignItems: 'center',
   position: 'relative',
   width: 'calc( 100vw - 250px )',
+
+  '@smallDesktop': {
+    width: '100vw'
+  }
 })
 
 const StageContent = styled('div', {
@@ -15,7 +19,11 @@ const StageContent = styled('div', {
   width: '100%',
   minHeight: 'calc( 100vh - 200px )',
   margin: '0 auto',
-  padding: '50px 0'
+  padding: '50px 0',
+
+  '@smallDesktop': {
+    maxWidth: '90%'
+  }
 })
 
 // -------------- Typescript declarations -------------- //

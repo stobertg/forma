@@ -32,7 +32,14 @@ const Page: NextPage = () => {
           >
             <StageBlockColumn>
               <div>
-                <Accordion />
+                <Accordion 
+                  accordionOpen={ 2 }
+                  accordions={[
+                    { id: 1, title: 'This is the title', content: 'This is the content' },
+                    { id: 2, title: 'This is the title', content: 'This is the content' },
+                    { id: 3, title: 'This is the title', content: 'This is the content' }
+                  ]}
+                />
               </div>
             </StageBlockColumn>
           </StageBlocks>

@@ -13,7 +13,8 @@ const StageWrap = styled('section', {
       5: { flexDirection: 'column' },
       4: { flexDirection: 'column' },
       3: { flexDirection: 'column' },
-      2: { flexDirection: 'column' }
+      2: { flexDirection: 'column' },
+      1: { flexDirection: 'column' }
     }
   }
 })
@@ -42,7 +43,8 @@ const StageBlockTitles = styled('div', {
       5: { width: '100%', flexDirection: 'row', '> *': { width: '20%' }},
       4: { width: '100%', flexDirection: 'row', '> *': { width: '25%' }},
       3: { width: '100%', flexDirection: 'row', '> *': { width: '33.33%' }},
-      2: { width: '100%', flexDirection: 'row', '> *': { width: '50%' }}
+      2: { width: '100%', flexDirection: 'row', '> *': { width: '50%' }},
+      1: { width: '100%', flexDirection: 'row', '> *': { width: '100%' }}
     }
   }
 })
@@ -66,7 +68,8 @@ const StageBlocksWrap = styled('div', {
       5: { '> * > *': { flexDirection: 'row', width: '20%' }},
       4: { '> * > *': { flexDirection: 'row', width: '25%' }},
       3: { '> * > *': { flexDirection: 'row', width: '33.33%' }},
-      2: { '> * > *': { flexDirection: 'row', width: '50%' }}
+      2: { '> * > *': { flexDirection: 'row', width: '50%' }},
+      1: { '> * > *': { flexDirection: 'row', width: '100%' }}
     }
   }
 })
@@ -76,7 +79,7 @@ interface StageBlocksProps {
     title: string
   }[]
   children: React.ReactNode
-  columns?: '2' | '3' | '4' | '5'
+  columns?: '1' | '2' | '3' | '4' | '5'
   rows?: '2' | '3' | '4' | '5' | '11'
 } 
 

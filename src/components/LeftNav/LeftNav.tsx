@@ -71,14 +71,14 @@ export const LeftNav = ({
           links={[
             { href: '/brand/colors', title: 'Colors' },
             { href: '/brand/logo', title: 'Logo' },
-            { href: '/brand/typeface', title: 'Typeface' },
-            { href: '/brand/font-sizes', title: 'Font Sizes' }
+            { href: '/brand/typeface', title: 'Typeface' }
           ]} 
         />
 
         <NavLinks 
           title="Foundation" 
           links={[
+            { href: '/foundation/font-sizes', title: 'Font Sizes' },
             { href: '/foundation/site-header', title: 'Site Header' },
             { href: '/foundation/user-header', title: 'User Header' },
           ]} 
@@ -110,6 +110,15 @@ export const LeftNav = ({
             { href: '/components/switch', title: 'Switch' },
             { href: '/components/tabs', title: 'Tabs' },
             { href: '/components/tooltip', title: 'Tooltip' }
+          ]} 
+        />
+
+        <NavLinks 
+          title="Emails" 
+          links={[
+            { href: '/emails/template1', title: 'Template 1' },
+            { href: '/emails/template1', title: 'Template 2' },
+            { href: '/emails/template1', title: 'Template 3' }
           ]} 
         />
       </NavLinkWrap>

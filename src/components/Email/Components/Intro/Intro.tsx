@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tr, Td, Logo } from '@email'
+import { Tr, Td, Tbody, Logo } from '@email'
 
 const IntroStyle = {
   width: '100%'
@@ -45,17 +45,17 @@ export const Intro = ({
   }: IntroProps ) => {
   
   return(
-
-    <Tr {...{ spacingTop, sideSpacing, padding }}>
-      <Td>
-        <div style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
-          <div style={ bgColor ? IntroContentHasBg : IntroContent }>
+    
+    <Td {...{ spacingTop, sideSpacing, padding }}>
+      <table style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
+        <Tbody>
+          <Tr>
             <Logo onDarkBg={ logoOnDarkBg } />
-            { children }
-          </div>
-        </div>
-      </Td>
-    </Tr>
+            <Td>{ children }</Td>
+          </Tr>
+        </Tbody>
+      </table>
+    </Td>
   
   )
 }

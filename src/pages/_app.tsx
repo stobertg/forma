@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <SiteWrap>
         <LeftNav />
         <Stage><Component {...pageProps} /></Stage>
-        {/* <Footer /> */}
       </SiteWrap>
     </ThemeProvider>
   )

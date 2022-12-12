@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tr, Image, Heading } from '@email'
+import { Td, Image, Heading } from '@email'
 
 const LogoMarkStyle = {
   display: 'inline-block',
@@ -33,7 +33,7 @@ export const Logo = ({
   
   return(
 
-    <Tr {...{ spacingTop }}>
+    <Td {...{ spacingTop }}>
       <div style={ LogoMarkStyle }><Image src="/global/logo/logomark.png" alt="Forma Logomark" /></div>
       
       <>
@@ -61,7 +61,7 @@ export const Logo = ({
           </>
         )}
       </>
-    </Tr>
+    </Td>
     
   )
 }

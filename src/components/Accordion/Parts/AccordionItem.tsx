@@ -1,10 +1,7 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { Heading, Icon } from '@components'
-
-// For the animations of the accordions
-// This will animated the content section, below the title that shows and hides the accordion content
+import { Icon } from '@components'
 
 const slideDown = keyframes({
   from: { height: 0 },
@@ -14,15 +11,6 @@ const slideDown = keyframes({
 const slideUp = keyframes({
   from: { height: 'var(--radix-accordion-content-height)' },
   to: { height: 0 },
-})
-
-// For the master container of the Accordion
-// This contains the always-visible trigger buttons and the content of the accordion that shows when clicked
-
-const AccordionRoot = styled(AccordionPrimitive.Root, {
-	position: 'relative',
-	width: '100%',
-  backgroundColor: '$bgPrimary'
 })
 
 // For the container of the individual accordion
@@ -60,16 +48,7 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   backgroundColor: '$bgPrimary',
   padding: '0 20px',
   '&:hover': { backgroundColor: '$bgSecondary' },
-
-	'&[data-state="open"]': {
-    '> *:last-child': {
-			'&:after': { transform: 'rotate( 180deg )' }
-		}
-  },
 })
-
-// For the content of the accordion
-// This is the content shown when the title of the accordion is clicked
 
 const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: 'hidden',
@@ -88,59 +67,31 @@ const StyledContentText = styled('div', {
   padding: '15px 20px',
 })
 
-const AccordionIcon = styled('div', {
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-	position: 'relative',
-	width: 14,
-	height: 14,
-
-	'&:before, &:after': {
-		content: '',
-		position: 'absolute',
-		width: '100%',
-		height: 2,
-		background: '$textPrimary',
-		borderRadius: 2,
-		transition: '$s1'
-	},
-
-	'&:after': { transform: 'rotate( 90deg )' }
-})
-
 // -------------- Typescript declarations -------------- //
 
 interface AccordionProps {
-	accordionOpen?: any
-	accordions: {
-		id: any
-		title: string
-		content: any
-	}[]
+
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Accordion = ({ accordionOpen, accordions }:AccordionProps) => {
+export const AccoridonItem = ({}:AccordionProps) => {
   return(
 
-		<AccordionRoot type="single"  defaultValue={ accordionOpen } collapsible>
-			{ accordions.map(( accordion, i ) => (
+    <AccordionItem value="item-1">
+      <StyledHeader>
+        <StyledTrigger>
+          Is it accessible?
+          <Icon size="l0" icon="plus" aria-hidden />
+        </StyledTrigger>
+      </StyledHeader>
 
-				<AccordionItem key={`accordion-${ i }`} value={ accordion.id }>
-					<StyledHeader>
-						<StyledTrigger>
-							<Heading size="l2" title={ accordion.title } />
-							<AccordionIcon />
-						</StyledTrigger>
-					</StyledHeader>
-
-					<StyledContent><StyledContentText>{ accordion.content }</StyledContentText></StyledContent>
-				</AccordionItem>
-
-			))}
-		</AccordionRoot>
-
-	)
+      <StyledContent>
+        <StyledContentText>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </StyledContentText>
+      </StyledContent>
+    </AccordionItem>
+      
+  )
 }

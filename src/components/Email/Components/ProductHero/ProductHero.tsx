@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tr, Image, Chip, Heading, Button } from '@email'
+import { Tbody, Tr, Td, Image, Chip, Heading, Button } from '@email'
 
 const ProductStyles = {
   padding: '50px 0',
@@ -49,16 +49,24 @@ export const ProductHero = ({
   
   return(
 
-    <Tr {...{ spacingTop, sideSpacing }}>
-      <div style={ ProductStyles }>
-        <div style={ ProductContent }>
-          <div style={ productWidth == 'small' ? ProductImage : ProductImageFull }><Image src={ image } alt={ title } /></div>
-          <Chip spacing="medium" title={ deal } />
-          <Heading spacing="small" bold size="medium" {...{ title }} />
-          <Button spacing="small" variant="primary" title={ buttonTitle } />
-        </div>
-      </div>
-    </Tr>
+    <Td {...{ spacingTop, sideSpacing }}>
+      <table>
+        <Tbody>
+          <Tr>
+            <Td>
+              <div style={ ProductStyles }>
+                <div style={ ProductContent }>
+                  <div style={ productWidth == 'small' ? ProductImage : ProductImageFull }><Image src={ image } alt={ title } /></div>
+                  <Chip spacing="medium" title={ deal } />
+                  <Heading spacing="small" bold size="medium" {...{ title }} />
+                  <Button spacing="small" variant="primary" title={ buttonTitle } />
+                </div>
+              </div>
+            </Td>
+          </Tr>
+        </Tbody>
+      </table>
+    </Td>
     
   )
 }
