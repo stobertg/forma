@@ -23,9 +23,8 @@ export const Support = ({
 
     <>
       { supportItems.map(( item, i ) => (
-
-        <Tr key={`support-${ i }`} spacingTop={ item.spacingTop }>
-          <Td>
+        <Td key={`support-${ i }`} spacingTop={ item.spacingTop }>
+          <div>
             <Heading 
               size="medium" 
               title={ item.title }
@@ -41,9 +40,8 @@ export const Support = ({
               title={ item.buttonTitle } 
               href={ item.href }
             />
-          </Td>
-        </Tr>
-
+          </div>
+        </Td>
       ))}
     </>
     

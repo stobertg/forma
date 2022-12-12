@@ -22,7 +22,7 @@ export const Image = ({
   return(
 
     <Spacing {...{ spacing }}>
-      <img style={{ maxWidth: '100%', height: height }} src={ src } alt={ alt } />
+      <img style={{ maxWidth: '100%', width: 'auto', height: height }} src={ src } alt={ alt } />
     </Spacing>
 
   )

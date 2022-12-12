@@ -37,27 +37,25 @@ export const DownloadApp = ({
   
   return(
 
-    <Tr spacingTop="small">
-      <Td>
-        <div style={ WrapStyle }>
-          <Heading bold size="small" title={ title } />
+    <Td spacingTop="small">
+      <div style={ WrapStyle }>
+        <Heading bold size="small" title={ title } />
 
-          <Spacing spacing="small">
-            <div style={ ButtonContainer }>
-              { appProviders.map(( provider, i ) => (
-                <a 
-                  key={`provider-${ i }`}
-                  style={{ ...ButtonStyle, marginRight: 12 }} 
-                  href={ provider.href }
-                >
-                  <Image src={`/appstore/${ provider.provider }.png`} alt={ provider.title } />
-                </a>
-              ))}
-            </div>
-          </Spacing>
-        </div>
-      </Td>
-    </Tr>
+        <Spacing spacing="small">
+          <div style={ ButtonContainer }>
+            { appProviders.map(( provider, i ) => (
+              <a 
+                key={`provider-${ i }`}
+                style={{ ...ButtonStyle, marginRight: 12 }} 
+                href={ provider.href }
+              >
+                <Image src={`/appstore/${ provider.provider }.png`} alt={ provider.title } />
+              </a>
+            ))}
+          </div>
+        </Spacing>
+      </div>
+    </Td>
     
   )
 }

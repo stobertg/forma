@@ -63,10 +63,10 @@ const Page: NextPage = () => {
           <Code>
             &lt;<CodeGreen>Logo</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>homeLink</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>"logo-mark" | "word-mark"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>&#34;logo-mark&#34; | &#34;word-mark&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>&#34;light&#34; | &#34;dark&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>&#34;light&#34; | &#34;dark&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>&#34;l0&#34; | &#34;l1&#34; | &#34;l2&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

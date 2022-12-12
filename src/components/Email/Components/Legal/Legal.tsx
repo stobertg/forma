@@ -17,15 +17,13 @@ export const Legal = ({
   
   return(
 
-    <Tr spacingTop="small">
-      <Td>
-        <Text fontSize="small">
-          { items.map(( item, i ) => (
-            <div key={`item-${ i }`}>{ item.title }</div>
-          ))}
-        </Text>
-      </Td>
-    </Tr>
+    <Td spacingTop="small">
+      <div style={{ fontSize: 14, lineHeight: 1.3, color: '#67677C' }}>
+        { items.map(( item, i ) => (
+          <div key={`item-${ i }`}>{ item.title }</div>
+        ))}
+      </div>
+    </Td>
 
             
   )

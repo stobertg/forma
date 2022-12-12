@@ -65,14 +65,14 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>List</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0r" | "l1r" | "l2r"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>decoration</CodeBlue>=<CodeOrange>"dividers"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>direction</CodeBlue>=<CodeOrange>&#34;horizontal&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>&#34;l0r&#34; | &#34;l1r&#34; | &#34;l2r&#34;</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>listItems</CodeBlue>=<CodeBlue>&#123;</CodeBlue><CodeYellow>&#91;</CodeYellow>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'documents'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item one'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'transactions'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item two'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'folder'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item three'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'store'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item four'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'wallet'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'List item five'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;documents&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;List item one&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;transactions&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;List item two&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;folder&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;List item three&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;store&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;List item four&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;wallet&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;List item five&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeYellow>&#93;</CodeYellow><CodeBlue>&#125;</CodeBlue>
             <br/>&#47;&gt;
 
@@ -80,8 +80,8 @@ const Page: NextPage = () => {
             <br/>// The attributes still remain the same, but custom list removes the need for "listItem"
 
             <br/><br/>&lt;<CodeGreen>List</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>"l0r" | "l1r" | "l2r"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>decoration</CodeBlue>=<CodeOrange>"dividers"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>direction</CodeBlue>=<CodeOrange>&#34;horizontal&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>spacing</CodeBlue>=<CodeOrange>&#34;l0r&#34; | &#34;l1r&#34; | &#34;l2r&#34;</CodeOrange>
             <br/>&gt;
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<CodeGreen>li</CodeGreen>&gt;<CodePurple>&#123;</CodePurple>&nbsp;&nbsp;<CodeBlue>children</CodeBlue>&nbsp;&nbsp;<CodePurple>&#125;</CodePurple>&lt;&#47;<CodeGreen>li</CodeGreen>&gt;
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<CodeGreen>li</CodeGreen>&gt;<CodePurple>&#123;</CodePurple>&nbsp;&nbsp;<CodeBlue>children</CodeBlue>&nbsp;&nbsp;<CodePurple>&#125;</CodePurple>&lt;&#47;<CodeGreen>li</CodeGreen>&gt;

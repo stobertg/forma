@@ -39,10 +39,10 @@ const Page: NextPage = () => {
           <Code>
             &lt;<CodeGreen>Heading</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bold</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Title"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2" | "l3" | "l4" | "l5" | "l6" | "l7" | "l8" | "l9" | "l10"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>"light" | "dark"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&#34;Title&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>&#34;l0&#34; | &#34;l1&#34; | &#34;l2&#34; | &#34;l3&#34; | &#34;l4&#34; | &#34;l5&#34; | &#34;l6&#34; | &#34;l7&#34; | &#34;l8&#34; | &#34;l9&#34; | &#34;l10&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>wordMarkColor</CodeBlue>=<CodeOrange>&#34;light&#34; | &#34;dark&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>&#34;l0&#34; | &#34;l1&#34; | &#34;l2&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

@@ -63,13 +63,13 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Button</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Action"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>icon</CodeBlue>=<CodeOrange>"icon-name"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>iconPlacement</CodeBlue>=<CodeOrange>"right"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>"primary" | "secondary" | "danger" | "disabled"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&#34;Action&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>icon</CodeBlue>=<CodeOrange>&#34;icon-name&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>iconPlacement</CodeBlue>=<CodeOrange>&#34;right&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>&#34;primary&#34; | &#34;secondary&#34; | &#34;danger&#34; | &#34;disabled&#34;</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>onClick</CodeBlue>=<CodeBlue>&#123;</CodeBlue><CodeOrange>&#40;&#41;</CodeOrange><CodeBlue>&#61;&#62;</CodeBlue>&nbsp;<CodeOrange>function</CodeOrange>&nbsp;<CodeBlue>&#125;</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>pageLink</CodeBlue>=<CodeOrange>"/path-to-internal-page"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>href</CodeBlue>=<CodeOrange>"https://url-to-external-site"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>pageLink</CodeBlue>=<CodeOrange>&#34;/path-to-internal-page&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>href</CodeBlue>=<CodeOrange>&#34;https://url-to-external-site&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

@@ -29,7 +29,7 @@ export const GlobalContainer = ({
     <table style={{ ...TableStyles }}>
       <Tbody>
         <Tr>{ children }</Tr>
-        {/* <Footer {...{ withoutFooter }} /> */}
+        <Footer {...{ withoutFooter }} />
       </Tbody>
     </table>
     

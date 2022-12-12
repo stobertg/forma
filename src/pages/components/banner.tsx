@@ -66,8 +66,8 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Banner</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Status</CodeBlue>=<CodeOrange>"Info" | "warning" | "error"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Title</CodeBlue>=<CodeOrange>"Can be a string or component"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Status</CodeBlue>=<CodeOrange>&#34;info&#34; | &#34;warning&#34; | &#34;error&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>Title</CodeBlue>=<CodeOrange>&#34;Can be a string or component&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

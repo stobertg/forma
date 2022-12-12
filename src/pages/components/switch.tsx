@@ -43,8 +43,8 @@ const Page: NextPage = () => {
           <Code>
             &lt;<CodeGreen>Switch</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>labelHidden</CodeBlue>&nbsp;&nbsp;// Optional boolean
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>labelPlacement</CodeBlue>=<CodeOrange>"right"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>label</CodeBlue>=<CodeOrange>"I opt into emails"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>labelPlacement</CodeBlue>=<CodeOrange>&#34;right&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>label</CodeBlue>=<CodeOrange>&#34;I opt into emails&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

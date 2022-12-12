@@ -62,8 +62,8 @@ const Page: NextPage = () => {
           <Code>
             &lt;<CodeGreen>Avatar</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>firstNameOnly | nameHidden</CodeBlue>&nbsp;&nbsp;// Optional booleans
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/path-to-image"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>name</CodeBlue>=<CodeOrange>"Christine Dailey"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>&#34;/path-to-image&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>name</CodeBlue>=<CodeOrange>&#34;Christine Dailey&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

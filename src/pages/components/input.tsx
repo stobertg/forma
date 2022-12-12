@@ -25,7 +25,6 @@ const Page: NextPage = () => {
         <BlockItem>
           <Input 
             label="Full name" 
-            name="name" 
           />
         </BlockItem>
 

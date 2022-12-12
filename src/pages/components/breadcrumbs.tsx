@@ -132,12 +132,12 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Breadcrumbs</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>"truncated"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>divider</CodeBlue>=<CodeOrange>"slashes"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>variant</CodeBlue>=<CodeOrange>&#34;truncated&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>divider</CodeBlue>=<CodeOrange>&#34;slashes&#34;</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>links</CodeBlue>=<CodeBlue>&#123;</CodeBlue><CodeYellow>&#91;</CodeYellow>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>'/path-to-page'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'star'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'Link'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>'/path-to-page'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'star'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'Link'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>'/path-to-page'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>'star'</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>'Link'</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>&apos;/path-to-page&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;star&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;Link&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>&apos;/path-to-page&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;star&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;Link&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>,
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodePurple>&#123;</CodePurple>&nbsp;<CodeBlue>pageLink:</CodeBlue>&nbsp;<CodeOrange>&apos;/path-to-page&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>icon:</CodeBlue>&nbsp;<CodeOrange>&apos;star&apos;</CodeOrange>,&nbsp;&nbsp;<CodeBlue>title:</CodeBlue>&nbsp;<CodeOrange>&apos;Link&apos;</CodeOrange>&nbsp;<CodePurple>&#125;</CodePurple>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeYellow>&#93;</CodeYellow><CodeBlue>&#125;</CodeBlue>
             <br/>&#47;&gt;
           </Code>

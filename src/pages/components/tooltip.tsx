@@ -67,15 +67,15 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Tooltip</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>side</CodeBlue>=<CodeOrange>"top" | "right" | "bottom" | "left"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>tooltipText</CodeBlue>=<CodeOrange>"Tooltip text"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>side</CodeBlue>=<CodeOrange>&#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>tooltipText</CodeBlue>=<CodeOrange>&#34;Tooltip text&#34;</CodeOrange>
             <br/>&gt;
             <br/>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Child example
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<CodeGreen>Avatar</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>nameHidden</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/path-to-image"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>name</CodeBlue>=<CodeOrange>"Christine Dailey"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>&#34;/path-to-image&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>name</CodeBlue>=<CodeOrange>&#34;Christine Dailey&#34;</CodeOrange>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#47;&gt;
             <br/>
             <br/>&lt;&#47;<CodeGreen>Tooltip</CodeGreen>&gt;

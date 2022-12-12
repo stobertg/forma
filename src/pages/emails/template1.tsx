@@ -76,6 +76,52 @@ const Page: NextPage = () => {
                       },
                     ]}
                   />
+
+                  <ProductHero
+                    spacingTop="small"
+                    sideSpacing="small"
+                    image="/products/fluidstance/board.png"
+                    deal="Best Deal"
+                    title="FluidStance Springboard Active-Standing Mat"
+                    buttonTitle="Hurry up, limited time offer"
+                  />
+
+                  <ProductThumb 
+                    productList={[
+                      { 
+                        href: 'http://tylerstober.com',
+                        productHeight: 150,
+                        marginRight: 6, 
+                        productImage: "/products/fluidstance/naturalwood.png",
+                        product: 'Sont Earbuds',
+                        buttonTitle: 'Shop Forma Store'
+                      },
+                      { 
+                        href: 'http://tylerstober.com',
+                        productHeight: 150,
+                        marginLeft: 6, 
+                        productImage: "/products/fluidstance/graphite.png",
+                        product: 'Sont Earbuds',
+                        buttonTitle: 'Shop Forma Store'
+                      },
+                      { 
+                        href: 'http://tylerstober.com',
+                        productHeight: 63,
+                        marginRight: 6, 
+                        productImage: "/products/fluidstance/dryerase.png",
+                        product: 'Sont Earbuds',
+                        buttonTitle: 'Shop Forma Store'
+                      },
+                      { 
+                        href: 'http://tylerstober.com',
+                        productHeight: 63,
+                        marginLeft: 6, 
+                        productImage: "/products/fluidstance/whiteboard.png",
+                        product: 'Sont Earbuds',
+                        buttonTitle: 'Shop Forma Store'
+                      }
+                    ]}
+                  />
                 </Email>
 
               </div>

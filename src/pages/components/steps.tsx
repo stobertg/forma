@@ -42,9 +42,8 @@ const Page: NextPage = () => {
 
         <BlockItem>
           <Code>
-            &lt;<CodeGreen>Progress</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>value</CodeBlue>=<CodePurple>&#123;&nbsp;<CodeBlue>50</CodeBlue>&nbsp;&#125;</CodePurple>
-            <br/>&#47;&gt;
+            &lt;<CodeGreen>Steps</CodeGreen>
+            &#47;&gt;
           </Code>
         </BlockItem>
       </Block>

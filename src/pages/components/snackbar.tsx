@@ -45,12 +45,8 @@ const Page: NextPage = () => {
 
         <BlockItem>
           <Code>
-            &lt;<CodeGreen>Card</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Nothing out of pocket"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>subTitle</CodeBlue>=<CodeOrange>"Employees can choose how to use their benefits and spend anywhere Visa is accepted."</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/path-to-image"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bgColor</CodeBlue>=<CodeOrange>'white200' | 'pink100' | 'cyan 100'</CodeOrange>
-            <br/>&#47;&gt;
+            &lt;<CodeGreen>Snackbar</CodeGreen>
+            &#47;&gt;
           </Code>
         </BlockItem>
       </Block>
