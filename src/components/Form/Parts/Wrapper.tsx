@@ -65,7 +65,7 @@ interface FormProps {
   title?: string
   descp?: string
   children: React.ReactNode
-  onSubmit: any
+  onSubmit?: any
 }
 
 // ---------- This is the end of declarations ---------- //

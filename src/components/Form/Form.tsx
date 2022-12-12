@@ -28,35 +28,18 @@ export const Form = ({
 
   const form = useRef<HTMLFormElement>(null);
 
-  const { handleSubmit, control } = useForm<FormValues>({
-    defaultValues: {
-      name: "",
-      email: "",
-      message: ""
-    },
-    mode: "onChange"
-  })
-  
-  const onSubmit = ( data:FormValues ) => {
-    emailjs.sendForm('contact_form', 'template_continuum', form.current, 'JIo1rNfaUflvW0z-3')
-    .then((result) => {
-        console.log(result.text);     
-    }, (error) => {
-        console.log(error.text);
-    });
-  }
+
   
   return(
 
     <FormWrap   
       formRef={ form }
       {...{ title, descp }}
-      onSubmit={ handleSubmit(onSubmit) }
     >
       { children }
-      <Input label="Full name" control={ control } name="name" rules={{ required: true }} />
-      <Input label="Email" type="email" control={ control } name="email" rules={{ required: true }} />
-      <Textarea name="message" control={ control } rules={{ required: true }} />
+      <Input label="Full name" />
+      <Input label="Email" type="email" />
+      <Textarea name="message"/>
     </FormWrap> 
 
   )
