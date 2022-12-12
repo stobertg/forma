@@ -21,7 +21,6 @@ export const Primary = () => (
             buttonTitle: 'Visit Help Center'
           },
           { 
-            spacing: 'medium',
             href:'https://client.joinforma.com/explore/massage_envy/membership?utm_source=one_time_send&utm_medium=email&utm_campaign=user_massage', 
             title: 'Chat with us',
             descp: 'Chat with our support team online 24/7 when you login to Forma, or email support@joinforma.com',
