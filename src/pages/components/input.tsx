@@ -32,9 +32,9 @@ const Page: NextPage = () => {
           <Code>
             &lt;<CodeGreen>Heading</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>bold</CodeBlue>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Title"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>"l0" | "l1" | "l2" | "l3" | "l4" | "l5" | "l6" | "l7" | "l8" | "l9" | "l10"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>"white" | "gray" | "indigo"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&quot;Title&quot;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>size</CodeBlue>=<CodeOrange>&quot;l0&quot; | &quot;l1&quot; | &quot;l2&quot; | &quot;l3&quot; | &quot;l4&quot; | &quot;l5&quot; | &quot;l6&quot; | &quot;l7&quot; | &quot;l8&quot; | &quot;l9&quot; | &quot;l10&quot;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>color</CodeBlue>=<CodeOrange>&quot;white&quot; | &quot;gray&quot; | &quot;indigo&quot;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>

@@ -35,28 +35,28 @@ const Page: NextPage = () => {
             <StageBlockColumn>
               <div>
                 <Banner 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
+                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what&apos;s new or have changed effective July 31, 2021</span></> }
                 />
               </div>
 
               <div>
                 <Banner 
                   status="info" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
+                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what&apos;s new or have changed effective July 31, 2021</span></> }
                 />
               </div>
 
               <div>
                 <Banner 
                   status="warning" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }
+                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what&apos;s new or have changed effective July 31, 2021</span></> }
                 />
               </div>
 
               <div>
                 <Banner 
                   status="error" 
-                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what's new or have changed effective July 31, 2021</span></> }  
+                  title={ <><strong>Your program policy was updated.</strong> <span>Check out what&apos;s new or have changed effective July 31, 2021</span></> }  
                 />
               </div>
             </StageBlockColumn>

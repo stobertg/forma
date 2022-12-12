@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { styled } from '@theme'
 import { ListItem } from './ListItem'
@@ -152,7 +153,7 @@ export const List = ({
                   </svg>
                 </CalloutBg>
 
-                <img src="/header/roi.png" />
+                <Image layout="fill" alt="roi" src="/header/roi.png" />
               </CalloutHero>
 
               <CalloutText>

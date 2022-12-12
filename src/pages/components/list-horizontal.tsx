@@ -76,8 +76,8 @@ const Page: NextPage = () => {
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeYellow>&#93;</CodeYellow><CodeBlue>&#125;</CodeBlue>
             <br/>&#47;&gt;
 
-            <br/><br/>// If the default list doesn't provide the need, we use the custom format for more complex cases
-            <br/>// The attributes still remain the same, but custom list removes the need for "listItem"
+            <br/><br/>!! If the default list doesn&apos;t provide the need, we use the custom format for more complex cases
+            <br/>!! The attributes still remain the same, but custom list removes the need for &quot;listItem&quot;
 
             <br/><br/>&lt;<CodeGreen>List</CodeGreen>
             <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>direction</CodeBlue>=<CodeOrange>&#34;horizontal&#34;</CodeOrange>

@@ -30,7 +30,7 @@ export const Progress = ({ value }:ProgressProps) => {
   useEffect(() => {
     const timer = setTimeout(() => setProgress( value ), 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [value]);
 
   return(
 

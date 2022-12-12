@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import { SiteContainer, Block, BlockItem, ProjectInfo, SiteHeader, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
@@ -115,7 +116,7 @@ const Page: NextPage = () => {
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 
-            justo volutpat, consequat ligula et, cursus erat. Nulla vitae mattis ligula. Ut et nisi at ipsum tempor dapibus. 
+            justo volutpat, consequat ligula et, cursus erat. Nulla vitae mattis ligula. Ut et nisi at ipsum tempor dapibus. .
             Maecenas luctus nisl leo, sit amet bibendum sem tempor commodo. Nullam quis viverra augue.
           </p>
         </ProjectInfo>
@@ -135,7 +136,7 @@ const Page: NextPage = () => {
                     </svg>
                   </CalloutBg>
 
-                  <img src="/header/roi.png" />
+                  <Image layout="fill" src="/header/roi.png" alt="roi" />
                 </CalloutHero>
 
                 <CalloutText>
@@ -176,10 +177,10 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>BenefitCard</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>illustration</CodeBlue>=<CodeOrange>"account-custom"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Benefit Program Name"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>chipTitle</CodeBlue>=<CodeOrange>"Program Status"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>"Add one to three lines of text to describe the purpose and usage of this benefit program."</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>illustration</CodeBlue>=<CodeOrange>&#34;account-custom&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&#34;Benefit Program Name&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>chipTitle</CodeBlue>=<CodeOrange>&#34;Program Status&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>text</CodeBlue>=<CodeOrange>&#34;Add one to three lines of text to describe the purpose and usage of this benefit program.&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>
