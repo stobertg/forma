@@ -20,7 +20,7 @@ const Home: NextPage = () => {
             </p>
 
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim tellus at sem tempus 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim tellus at sem tempus 
               tristique. Fusce nec turpis vestibulum, molestie dui sit amet, hendrerit arcu. Cras quis rutrum ante. 
               Sed egestas urna egestas, hendrerit justo non, iaculis odio. Donec mattis nibh elit.
             </p>

@@ -63,12 +63,12 @@ const Home: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>ProductHero</CodeGreen>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>sideSpacing</CodeBlue>=<CodeOrange>"small"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>productWidth</CodeBlue>=<CodeOrange>"small"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>"/products/sony/sony-noise-canceling.png"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>deal</CodeBlue>=<CodeOrange>"Save 10%"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>"Sony inteligent industry-leading noise canceling headphones - black"</CodeOrange>
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>buttonTitle</CodeBlue>=<CodeOrange>"Hurry up, limited time offer"</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>sideSpacing</CodeBlue>=<CodeOrange>&#34;small&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>productWidth</CodeBlue>=<CodeOrange>&#34;small&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>image</CodeBlue>=<CodeOrange>&#34;/products/sony/sony-noise-canceling.png&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>deal</CodeBlue>=<CodeOrange>&#34;Save 10%&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&#34;Sony inteligent industry-leading noise canceling headphones - black&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>buttonTitle</CodeBlue>=<CodeOrange>&#34;Hurry up, limited time offer&#34;</CodeOrange>
             <br/>&#47;&gt;
           </Code>
         </BlockItem>
