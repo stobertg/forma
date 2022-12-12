@@ -12,6 +12,6 @@ export default story
 
 export const Primary = () => (
 
-  <Iphone image="account-childcare" />
+  <Iphone />
   
 )
