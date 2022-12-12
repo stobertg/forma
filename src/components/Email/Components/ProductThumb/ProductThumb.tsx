@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tr, Td, Image, Button } from '@email'
+import { Tbody, Tr, Td, Image, Button } from '@email'
 
 const ProductImage = {
   width: 150,
@@ -28,35 +28,43 @@ export const ProductThumb = ({
   
   return(
 
-    <Tr 
-      sideSpacing="small"
-      align="center"
-    > 
-      { productList.map(( product, i ) => (
+    <Td>
+      <table>
+        <Tbody>
+          <Tr 
+            sideSpacing="small"
+            align="center"
+          > 
 
-        <Td 
-          key={`product-${ i }`}
-          spacingTop="small"
-          width="half" 
-          bgColor="#fff"
-          padding="medium"
-          marginLeft={ product.marginLeft }
-          marginRight={ product.marginRight }
-        >
-          <a href={ product.href }>
-            <div style={ ProductImage }>
-              <Image 
-                height={ product.productHeight }
-                src={ product.productImage } 
-                alt={ product.product } 
-              />
-            </div>
-            <Button spacing="small" title={ product.buttonTitle } />
-          </a>
-        </Td>
+              { productList.map(( product, i ) => (
 
-      ))}
-    </Tr>
-    
+                <Td 
+                  key={`product-${ i }`}
+                  display="inline"
+                  spacingTop="small"
+                  bgColor="#fff"
+                  padding="medium"
+                  marginLeft={ product.marginLeft }
+                  marginRight={ product.marginRight }
+                >
+                  <a href={ product.href }>
+                    <div style={ ProductImage }>
+                      <Image 
+                        height={ product.productHeight }
+                        src={ product.productImage } 
+                        alt={ product.product } 
+                      />
+                    </div>
+                    <Button spacing="small" title={ product.buttonTitle } />
+                  </a>
+                </Td>
+
+              ))}
+          
+          </Tr>
+        </Tbody>
+      </table>
+    </Td>
+
   )
 }

@@ -3,6 +3,7 @@ import React from 'react'
 // -------------- Typescript declarations -------------- //
 
 interface TdProps {
+  display?: 'inline'
   spacingTop?: 'small' | 'medium' | 'large'
   padding?: 'small' | 'medium' | 'large'
   sideSpacing?: 'small' | 'medium'
@@ -16,6 +17,7 @@ interface TdProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Td = ({
+    display,
     spacingTop,
     sideSpacing,
     marginLeft,
@@ -30,7 +32,7 @@ export const Td = ({
 
     <td 
       style={{ 
-        display: 'inline-block', 
+        display: display == 'inline' ? 'inline-block' : 'block', 
         width: width == 'half' ? '48.6%' : 'initial',
         marginTop: spacingTop == 'small' ? 12 : spacingTop == 'medium' ? 32 : spacingTop == 'large' ? 50 :  0,
         marginLeft: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginLeft,
