@@ -25,7 +25,7 @@ export const Primary = () => (
   
   <SiteContainer>
     <Block width="small">
-      <Form />
+      This is some content
     </Block>
   </SiteContainer>
   
