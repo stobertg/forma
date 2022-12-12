@@ -28,7 +28,7 @@ export const ProductThumb = ({
   
   return(
 
-    <Td>
+    <Td className="item--block">
       <table>
         <Tbody>
           <Tr 

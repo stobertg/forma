@@ -25,6 +25,5 @@ export const Legal = ({
       </div>
     </Td>
 
-            
   )
 }

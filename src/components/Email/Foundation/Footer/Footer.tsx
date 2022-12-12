@@ -11,6 +11,7 @@ export const Footer = ({ withoutFooter }:FooterProps) => {
     <>
       { withoutFooter ? null : (
         <Tr 
+          className="item--block-tight"
           spacingTop="large" 
           sideSpacing="medium"
           bgColor="#fff" 
@@ -18,7 +19,7 @@ export const Footer = ({ withoutFooter }:FooterProps) => {
         >
           <Td>
             <table> 
-              
+
               <Tbody>
                 <Tr>
                   { 

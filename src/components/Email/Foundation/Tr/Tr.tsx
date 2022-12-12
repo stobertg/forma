@@ -3,6 +3,7 @@ import React from 'react'
 // -------------- Typescript declarations -------------- //
 
 interface TrProps {
+  className?: string
   display?: 'inline'
   sideSpacing?: 'small' | 'medium'
   marginLeft?: any
@@ -20,6 +21,7 @@ interface TrProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Tr = ({
+    className,
     display,
     sideSpacing,
     marginLeft,
@@ -33,7 +35,8 @@ export const Tr = ({
   
   return(
 
-    <tr 
+    <tr  
+      {...{ className }}
       style={{ 
         display: display == 'inline' ? 'inline-block' : 'block',
         borderCollapse: 'collapse',

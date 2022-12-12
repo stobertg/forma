@@ -49,7 +49,7 @@ export const ProductHero = ({
   
   return(
 
-    <Td {...{ spacingTop, sideSpacing }}>
+    <Td className="item--block" {...{ spacingTop, sideSpacing }}>
       <table>
         <Tbody>
           <Tr>

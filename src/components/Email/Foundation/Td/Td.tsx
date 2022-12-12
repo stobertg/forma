@@ -3,6 +3,7 @@ import React from 'react'
 // -------------- Typescript declarations -------------- //
 
 interface TdProps {
+  className?: string
   display?: 'inline'
   spacingTop?: 'small' | 'medium' | 'large'
   padding?: 'small' | 'medium' | 'large'
@@ -17,6 +18,7 @@ interface TdProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Td = ({
+    className,
     display,
     spacingTop,
     sideSpacing,
@@ -31,6 +33,7 @@ export const Td = ({
   return(
 
     <td 
+      {...{ className }}
       style={{ 
         display: display == 'inline' ? 'inline-block' : 'block', 
         width: width == 'half' ? '48.6%' : 'initial',
