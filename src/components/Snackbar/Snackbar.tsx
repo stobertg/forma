@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { styled, keyframes } from '@theme'
 import * as ToastPrimitive from '@radix-ui/react-toast'
+import { styled, keyframes } from '@theme'
 import { Icon, Button, Heading } from '@components'
 
 const hide = keyframes({
@@ -23,6 +23,9 @@ const SnackWrap = styled(ToastPrimitive.Provider, {
 })
 
 const ToastContent = styled(ToastPrimitive.Root, {
+  position: 'relative',
+  padding: 20,
+  listStyle: 'none',
 
   '&[data-state="open"]': {
     animation: `${slideIn} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
@@ -43,15 +46,34 @@ const ToastContent = styled(ToastPrimitive.Root, {
 })  
 
 const SnackTitle = styled(ToastPrimitive.Title, {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
 
+  '> div': {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+
+    '> *:not(:last-child)': {
+      marginRight: 12
+    }
+  }
 })
 
 const ToastViewport = styled(ToastPrimitive.Viewport, {
   position: 'fixed',
-  top: 0,
+  top: 30,
   left: 0,
   right: 0,
-  margin: 'auto'
+  margin: 'auto',
+  maxWidth: 550,
+  background: '$brandPrimary',
+  boxShadow: '0 10px 20px rgba( 0, 0, 0, 0.2 )',
+  borderRadius: '$r0',
+  color: '$white50'
 })
 
 interface SnackbarProps {
@@ -59,17 +81,24 @@ interface SnackbarProps {
 }
 
 export const Snackbar = ({ }:SnackbarProps) => {
-  const [ open, setOpen ] = useState( false )
+  const [ open, setOpen ] = useState( true )
 
   return(
 
     <ToastPrimitive.Provider swipeDirection="right">
       <Button variant="primary" title="Action" />
 
-      <ToastContent>
+      <ToastContent open={true} onOpenChange={setOpen}>
         <SnackTitle>
-          <Icon icon="check" />
-          <Heading title="This is the title" />
+          <div>
+            <Icon size="l0" icon="check-circle" />
+            <Heading size="l1" title="851 Cypress St, Monterey CA 93940 was saved as your primary residential address" />
+          </div>
+
+          <ToastPrimitive.Action asChild altText="Goto schedule to undo">
+            <button><strong>Undo</strong></button>
+          </ToastPrimitive.Action>
+          {/* <ToastPrimitive.Close>Cancel</ToastPrimitive.Close> */}
         </SnackTitle>
       </ToastContent>
       

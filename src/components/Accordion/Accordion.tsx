@@ -86,6 +86,8 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 
 const StyledContentText = styled('div', {
   padding: '15px 20px',
+	fontSize: '1rem',
+	lineHeight: 1.5
 })
 
 const AccordionIcon = styled('div', {
