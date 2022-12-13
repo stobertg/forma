@@ -16,7 +16,7 @@ const HeadingWrap = styled('div', {
   variants: {
     size: {
       l0: { fontSize: '$s0' },
-      l1: { fontSize: '$s1', lineHeight: 1.2 },
+      l1: { fontSize: '$s1', lineHeight: 1.3 },
       l2: { fontSize: '$s2' },
       l3: { fontSize: '$s3', lineHeight: 1.3 },
       l4: { fontSize: '$s4', lineHeight: 1.3 },
