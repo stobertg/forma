@@ -27,7 +27,6 @@ const ButtonWrap = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-  width: '100%',
 
   // Here we automate the spcaing between the buttons, excluding the last button in the container
   // By defualt, the layout is horizontal, and the spacing is automated to the right of the button

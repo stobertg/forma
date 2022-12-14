@@ -126,7 +126,7 @@ const Page: NextPage = () => {
         <BlockItem>
           <SiteHeader />
 
-          <DropdownContent>
+          {/* <DropdownContent>
             <DropdownCallout>
               <CalloutImage>
                 <CalloutHero>
@@ -171,7 +171,7 @@ const Page: NextPage = () => {
                 </LinkText>
               </LinkWrap>
             </LinksWrap>
-          </DropdownContent>
+          </DropdownContent> */}
         </BlockItem>
 
         <BlockItem>

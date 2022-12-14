@@ -24,22 +24,47 @@ const exitToLeft = keyframes({
   to: { transform: 'translateX(-200px)', opacity: 0 },
 });
 
+const NavWrap = styled(NavigationMenu.Item, {
+
+  button: {
+    padding: '8px 12px',
+  }
+})
+
+// For the triggers of the dropdown menu
+// This holds the trigger title on the left and the chevron down icon on the right 
+
 const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
-  all: 'unset',
-  padding: '8px 12px',
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  position: 'relative',
   outline: 'none',
   userSelect: 'none',
-  fontWeight: 500,
-  lineHeight: 1,
-  borderRadius: 4,
-  fontSize: 15,
-  color: '$textPrimary',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 2,
+  
+  transition: '$s1',
   '&:focus': { boxShadow: `0 0 0 2px $textPrimary` },
-  '&:hover': { backgroundColor: '$bgPrimary' },
+
+  // Automate the spacing between the title and the icon 
+  
+  '> *:not(:last-child)': {
+    marginRight: 8
+  },
+
+  '> *:last-child': {
+    minWidth: 10,
+    width: 10,
+    minHeight: 14,
+    height: 14
+  },
+
+  // For the hover effect to show the affordance that the use is on that tab
+  // This will turn the color of the title and the icon lighter
+
+  '&:hover': {
+    color: '$indigo300'
+  }
 })
 
 const NavigationMenuContent = styled(NavigationMenu.Content, {
@@ -89,7 +114,7 @@ export const NavItem = ({
   
     return(
 
-    <NavigationMenu.Item>
+    <NavWrap>
       { links ? (
 
         <>
@@ -104,9 +129,9 @@ export const NavItem = ({
         </>
 
       ) : (
-        <Button pageLink={ pageLink }>{ title }</Button>
+        <button>{ title }</button>
       )}
-    </NavigationMenu.Item>
+    </NavWrap>
 
   )
 }
