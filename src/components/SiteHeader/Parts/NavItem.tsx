@@ -28,6 +28,11 @@ const NavWrap = styled(NavigationMenu.Item, {
 
   button: {
     padding: '8px 12px',
+
+    // For the hover effect to show the affordance that the use is on that tab
+    // This will turn the color of the title and the icon lighter
+
+  '&:hover': { color: '$indigo300' }
   }
 })
 
@@ -57,13 +62,6 @@ const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
     width: 10,
     minHeight: 14,
     height: 14
-  },
-
-  // For the hover effect to show the affordance that the use is on that tab
-  // This will turn the color of the title and the icon lighter
-
-  '&:hover': {
-    color: '$indigo300'
   }
 })
 
