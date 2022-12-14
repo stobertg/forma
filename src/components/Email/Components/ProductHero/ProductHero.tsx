@@ -4,7 +4,8 @@ import { Tbody, Tr, Td, Image, Chip, Heading, Button } from '@email'
 const ProductStyles = {
   padding: '50px 0',
   borderRadius: 16,
-  backgroundColor: '#fff'
+  backgroundColor: '#fff',
+  color: '#150050'
 }
 
 const ProductImage = {
@@ -49,7 +50,7 @@ export const ProductHero = ({
   
   return(
 
-    <Td className="item--block" {...{ spacingTop, sideSpacing }}>
+    <Td className="mobile__margin--none" {...{ spacingTop, sideSpacing }}>
       <table>
         <Tbody>
           <Tr>

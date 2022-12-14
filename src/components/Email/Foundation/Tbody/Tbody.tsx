@@ -1,7 +1,6 @@
 import React from 'react'
 
 const BodyStyles = {
-  display: 'table',
   borderRadius: 16
 }
 
@@ -28,6 +27,7 @@ const BodyWidthMedium = {
 // -------------- Typescript declarations -------------- //
 
 interface TbodyProps {
+  additionalStyles?: any
   bgColor?: string
   width?: 'small' | 'medium' | 'smallIntro' | 'mediumIntro'
   children: React.ReactNode
@@ -37,6 +37,7 @@ interface TbodyProps {
 
 export const Tbody = ({
     bgColor,
+    additionalStyles,
     width,
     children
   }: TbodyProps ) => {
@@ -49,7 +50,7 @@ export const Tbody = ({
         width == 'mediumIntro' ? { ...BodyWidthMediumIntro, backgroundColor: bgColor } :  
         width == 'small' ? { ...BodyWidthSmall, backgroundColor: bgColor } : 
         width == 'medium' ? { ...BodyWidthMedium, backgroundColor: bgColor } : 
-        { ...BodyStyles, backgroundColor: bgColor }
+        { ...BodyStyles, backgroundColor: bgColor, ...additionalStyles }
       }
     >
       { children }

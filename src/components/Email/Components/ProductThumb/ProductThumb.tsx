@@ -28,10 +28,11 @@ export const ProductThumb = ({
   
   return(
 
-    <Td className="item--block">
-      <table>
+    <Td>
+      <table style={{ display: 'table' }} align="center">
         <Tbody>
           <Tr 
+            className="mobile__margin--none"
             sideSpacing="small"
             align="center"
           > 
@@ -39,6 +40,7 @@ export const ProductThumb = ({
               { productList.map(( product, i ) => (
 
                 <Td 
+                  className="thumbnail"
                   key={`product-${ i }`}
                   display="inline"
                   spacingTop="small"

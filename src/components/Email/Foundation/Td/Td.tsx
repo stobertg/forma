@@ -35,6 +35,7 @@ export const Td = ({
     <td 
       {...{ className }}
       style={{ 
+        borderCollapse: 'collapse',
         display: display == 'inline' ? 'inline-block' : 'block', 
         width: width == 'half' ? '48.6%' : 'initial',
         marginTop: spacingTop == 'small' ? 12 : spacingTop == 'medium' ? 32 : spacingTop == 'large' ? 50 :  0,

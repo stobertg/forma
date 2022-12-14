@@ -1,16 +1,6 @@
 import React from 'react'
 import { Spacing } from '@email'
 
-const ChipStyles = {
-  display: 'inline-block',
-  background: '#ffcc95',
-  borderRadius: 9999,
-  padding: '12px 20px',
-  color: '#000',
-  fontSize: 14,
-  fontFamily: 'Labil Grotesk'
-}
-
 // -------------- Typescript declarations -------------- //
 
 interface ChipProps {
@@ -28,7 +18,18 @@ export const Chip = ({
   return(
 
     <Spacing {...{ spacing }}>
-      <div style={ ChipStyles }><strong>{ title }</strong></div>
+      <div 
+        style={{
+          display: 'inline-block',
+          background: '#ffcc95',
+          borderRadius: 9999,
+          padding: '12px 20px',
+          color: 'hsl( 256, 100%, 16% )',
+          fontSize: 14,
+          fontFamily: 'Labil Grotesk'
+        }}>
+          <strong>{ title }</strong>
+        </div>
     </Spacing>
 
   )

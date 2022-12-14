@@ -2,7 +2,8 @@ import React from 'react'
 import { Tr, Td, Tbody, Logo } from '@email'
 
 const IntroStyle = {
-  width: '100%'
+  width: '100%',
+  color: '#000'
 }
 
 const IntroHasBg = {

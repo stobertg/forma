@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { styled } from '@theme'
 import { Tbody, Tr, Footer } from '@email'
 
@@ -7,6 +8,7 @@ const TableStyles = {
   maxWidth: 560,
   width: '100%',
   margin: '0 auto',
+  paddingBottom: 20,
   backgroundColor: '#fff5e5'
 }
 
@@ -27,12 +29,12 @@ export const GlobalContainer = ({
   
   return(
 
-    <table style={{ ...TableStyles }}>
+    <table className="mobile__padding--bottom-none" style={{ ...TableStyles }} cellPadding="0" cellSpacing="0" role="presentation">
       <Tbody>
         <Tr>{ children }</Tr>
         <Footer {...{ withoutFooter }} />
       </Tbody>
     </table>
-    
+
   )
 }

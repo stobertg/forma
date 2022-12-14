@@ -13,6 +13,7 @@ const ButtonStyles = {
 const ButtonPrimary = {
   ...ButtonStyles,
   backgroundColor: '#4967E5',
+  backgroundImage: 'linear-gradient(#4967E5, #4967E5)',
   color: '#fff'
 }
 

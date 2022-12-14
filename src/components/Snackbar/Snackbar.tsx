@@ -60,6 +60,7 @@ interface SnackbarProps {
   triggerTitle?: string
   actionTitle?: string
   onClick?: React.MouseEventHandler<HTMLButtonElement>
+  children?: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -69,7 +70,8 @@ export const Snackbar = ({
     title,
     triggerTitle,
     actionTitle,
-    onClick
+    onClick,
+    children
   }:SnackbarProps) => {
   const [ open, setOpen ] = useState( false )
 
@@ -78,10 +80,12 @@ export const Snackbar = ({
     <ToastPrimitive.Provider swipeDirection="down">
       { triggerTitle ? (
         <Button 
-          variant="primary" 
-          title={ triggerTitle } 
+          variant={ triggerTitle ? "primary" : undefined }
+          title={ triggerTitle ? triggerTitle : null } 
           onClick={() => { setOpen( true ) }}
-        />
+        >
+          { children }
+        </Button>
       ) : null}
 
       <ToastContent open={ open } onOpenChange={ setOpen }>

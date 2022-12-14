@@ -91,7 +91,11 @@ const Page: NextPage = () => {
         <BlockItem>
           <Code>
             &lt;<CodeGreen>Snackbar</CodeGreen>
-            &#47;&gt;
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>status</CodeBlue>=<CodeOrange>&#34;success&#34; | &#34;warning&#34; | &#34;error&#34; | &#34;download&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>title</CodeBlue>=<CodeOrange>&#34;Card number copied to clipboard&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>actionTitle</CodeBlue>=<CodeOrange>&#34;Dismiss&#34;</CodeOrange>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CodeBlue>onClick</CodeBlue>=<CodeBlue>&#123;</CodeBlue><CodeOrange>&#40;&#41;</CodeOrange><CodeBlue>&#61;&#62;</CodeBlue>&nbsp;<CodeOrange>function</CodeOrange>&nbsp;<CodeBlue>&#125;</CodeBlue>
+            <br/>&#47;&gt;
           </Code>
         </BlockItem>
       </Block>
