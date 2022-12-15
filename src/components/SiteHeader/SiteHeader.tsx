@@ -29,7 +29,33 @@ export const SiteHeader = () => {
         <HeaderMiddleLinks>
           <NavItem
             callout
-            triggerTitle="Resources"
+            triggerTitle="Product"
+            layout="two"
+            links={[
+              {  
+                illustration: '/benefits/account-teambuilding.svg',
+                href: '/docs/primitives/overview/introduction',
+                title: 'LSA',
+                descp: 'Forma Research'
+              },
+              {  
+                illustration: '/benefits/account-teambuilding.svg',
+                href: '/docs/primitives/overview/introduction',
+                title: 'LSA',
+                descp: 'Blog'
+              },
+              {  
+                illustration: '/benefits/account-teambuilding.svg',
+                href: '/docs/primitives/overview/introduction',
+                title: 'LSA',
+                descp: 'Events & Webinars'
+              }
+            ]}
+          />
+
+          <NavItem
+            callout
+            triggerTitle="Platform"
             layout="two"
             links={[
               {  
@@ -59,33 +85,7 @@ export const SiteHeader = () => {
             layout="two"
             links={[
               {  
-                illustration: 'account-lifestyle',
-                href: '/docs/primitives/overview/introduction',
-                title: 'LSA',
-                descp: 'Forma Research'
-              },
-              {  
-                illustration: 'account-lifestyle',
-                href: '/docs/primitives/overview/introduction',
-                title: 'LSA',
-                descp: 'Blog'
-              },
-              {  
-                illustration: 'account-lifestyle',
-                href: '/docs/primitives/overview/introduction',
-                title: 'LSA',
-                descp: 'Events & Webinars'
-              }
-            ]}
-          />
-
-          <NavItem
-            callout
-            triggerTitle="Products"
-            layout="two"
-            links={[
-              {  
-                illustration: 'account-lifestyle',
+                illustration: '/benefits/account-lifestyle',
                 href: '/docs/primitives/overview/introduction',
                 title: 'LSA',
                 descp: 'Lifestyle Spending Accounts'

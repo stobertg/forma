@@ -1,32 +1,22 @@
 import React from 'react'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { styled, keyframes } from '@theme'
+import { Viewport } from './index'
 
-const fadeIn = keyframes({
-  from: { opacity: 0 },
-  to: { opacity: 1 },
-})
+// For the animations used for displaying the dropdown menu
+// This includes, intro, outro, and left and right transition
 
-const fadeOut = keyframes({
-  from: { opacity: 1 },
-  to: { opacity: 0 },
-})
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } })
+const fadeOut = keyframes({ from: { opacity: 1 }, to: { opacity: 0 } })
 
-const scaleIn = keyframes({
-  from: { transform: 'rotateX(-30deg) scale(0.9)', opacity: 0 },
-  to: { transform: 'rotateX(0deg) scale(1)', opacity: 1 },
-})
-
-const scaleOut = keyframes({
-  from: { transform: 'rotateX(0deg) scale(1)', opacity: 1 },
-  to: { transform: 'rotateX(-10deg) scale(0.95)', opacity: 0 },
-})
+// For the master container for all of the dropdown links
+// This is the container that holds all of the navigation links in the center of the header
 
 const NavigationMenuRoot = styled(NavigationMenu.Root, {
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
-  // width: '100vw',
+  width: '100vw',
   zIndex: 1,
 })
 
@@ -67,38 +57,13 @@ const Arrow = styled('div', {
   transform: 'rotate(45deg)'
 })
 
-const ViewportPosition = styled('div', {
-  position: 'absolute',
-  display: 'flex',
-  justifyContent: 'center',
-  width: '100%',
-  top: '100%',
-  left: 0,
-  perspective: '2000px',
-})
-
-const NavigationMenuViewport = styled(NavigationMenu.Viewport, {
-  position: 'relative',
-  transformOrigin: 'top center',
-  marginTop: 10,
-  width: '100%',
-  backgroundColor: 'white',
-  borderRadius: 6,
-  overflow: 'hidden',
-  boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
-  height: 'var(--radix-navigation-menu-viewport-height)',
-  transition: 'width, height, 300ms ease',
-  '&[data-state="open"]': { animation: `${scaleIn} 200ms ease` },
-  '&[data-state="closed"]': { animation: `${scaleOut} 200ms ease` },
-
-  '@media only screen and (min-width: 600px)': {
-    width: 'var(--radix-navigation-menu-viewport-width)',
-  }
-})
+// -------------- Typescript declarations -------------- //
 
 interface NavProps {
   children: React.ReactNode
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const NavWrapper = ({ children }:NavProps) => {
   return(
@@ -106,14 +71,10 @@ export const NavWrapper = ({ children }:NavProps) => {
     <NavigationMenuRoot>
       <NavigationMenuList>
         { children }
-        <NavigationMenuIndicator>
-          <Arrow />
-        </NavigationMenuIndicator>
+        <NavigationMenuIndicator><Arrow /></NavigationMenuIndicator>
       </NavigationMenuList>
 
-      <ViewportPosition>
-        <NavigationMenuViewport />
-      </ViewportPosition>
+      <Viewport />
     </NavigationMenuRoot>
 
   )

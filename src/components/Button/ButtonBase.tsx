@@ -36,6 +36,7 @@ const Button = styled('div', {
   color: '$textLink',
   transition: '$s1',
   userSelect: 'none',
+  whiteSpace: 'nowrap',
 
   // For the default hover effect for the button
   // This is the hover effect when the variant is not present and is a stand-alone link

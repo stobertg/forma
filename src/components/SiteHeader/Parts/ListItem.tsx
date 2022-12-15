@@ -1,30 +1,33 @@
 import React from 'react'
-import { styled } from '@theme'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import { styled } from '@theme'
 import { Heading, Button, Illustration } from '@components'
+
+// For the master container of the link wrap
+// This holds the icon/illustration on the left and the title on the right of the container
 
 const LinkWrap = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
+  position: 'relative',
   width: '100%',
-  color: '$textPrimary',
 
-  '> *:not(:last-child)': {
-    marginRight: 12
-  }
+  // Here we automate the spacing between any content within the container
+  // Currently, it is the spacing between the title on the left and the icon on the right
+
+  '> *:not(:last-child)': { marginRight: 12 }
 })
 
-// const ListItem = React.forwardRef(({ children, title, ...props }, forwardedRef) => (
-//   <li>
-//     <NavigationMenu.Link asChild>
-//       <ListItemLink {...props} ref={forwardedRef}>
-//         <ListItemHeading>{title}</ListItemHeading>
-//         <ListItemText>{children}</ListItemText>
-//       </ListItemLink>
-//     </NavigationMenu.Link>
-//   </li>
-// ))
+// For the container of the text within the button
+// This sits on the right side of the container, next to the icon
+
+const LinkText = styled('div', {
+  position: 'relative',
+  '> *:not(:last-child)': { marginBottom: 4 }
+})
+
+// -------------- Typescript declarations -------------- //
 
 interface ListProps {
   illustration?: string
@@ -35,31 +38,35 @@ interface ListProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const ListItem = ({ 
-    illustration,
-    title,
-    descp,
-    href,
-    pageLink,
-    onClick
+    illustration, // Optional - for the icon on the left of the container
+    title, // Required - for the title of the link
+    descp, // Optional - for the subtitle below the title
+    href, // Optional - this supports the ability for the click to go to an external link
+    pageLink, // Optional - this supports the ability for the click to go to an internal link
+    onClick // Optional - this supports the ability for the click to return a function on the current page
   }:ListProps) => {
   
-    return(
+  return(
 
     <li>
 
       <NavigationMenu.Link asChild>
-        <Button {...{ href, onClick, pageLink }}>
+        {/* <Button {...{ href, onClick, pageLink }}> */}
+
           <LinkWrap>
             <Illustration size="l0" image={ illustration } />
-            <div>
-              <Heading bold {...{ title }} />
-              <Heading size="l1" title={ descp } />
-            </div>
+            <LinkText>
+              <Heading size="l2" bold {...{ title }} />
+              <Heading size="l1" color="gray" title={ descp } />
+            </LinkText>
           </LinkWrap>
-        </Button>
+
+        {/* </Button> */}
       </NavigationMenu.Link>
-      
+
     </li>
 
   )

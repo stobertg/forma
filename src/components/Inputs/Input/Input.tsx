@@ -25,7 +25,9 @@ export const Input = ( props: InputProps ) => {
       inputSize={ props.width }
       state={ value ? 'active' : 'inactive' }
     >
-      <></>
+      <input 
+        
+      />
     </InputWrap>
 
   )

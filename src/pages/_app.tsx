@@ -9,7 +9,9 @@ const SiteWrap = styled('div', {
   flexDirection: 'row',
   justifyContent: 'flex-end',
   position: 'relative',
-  width: '100vw'
+  width: '100vw',
+
+  
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
