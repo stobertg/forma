@@ -81,7 +81,6 @@ const LinksWrap = styled('div', {
   gap: 40,
   position: 'relative',
   width: '65%',
-
 })
 
 const LinkWrap = styled('div', {
@@ -126,7 +125,7 @@ const Page: NextPage = () => {
         <BlockItem>
           <SiteHeader />
 
-          <DropdownContent>
+          {/* <DropdownContent>
             <DropdownCallout>
               <CalloutImage>
                 <CalloutHero>
@@ -171,7 +170,7 @@ const Page: NextPage = () => {
                 </LinkText>
               </LinkWrap>
             </LinksWrap>
-          </DropdownContent>
+          </DropdownContent> */}
         </BlockItem>
 
         <BlockItem>
