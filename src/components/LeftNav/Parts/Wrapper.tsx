@@ -13,7 +13,9 @@ const NavContain = styled('section', {
   background: '$bgSecondary',
 
   '@smallDesktop': {
-    display: 'none'
+    width: '100vw',
+    height: 'auto',
+    zIndex: 9999
   }
 })
 

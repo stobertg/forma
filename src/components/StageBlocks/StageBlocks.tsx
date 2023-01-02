@@ -2,6 +2,10 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
 
+// For the master container of the stage wrap
+// This holds all the visual content for the content of the component
+// For example, you can find this on the logo page - the areas with all of the logos in the boxes
+
 const StageWrap = styled('section', {
   display: 'flex',
   flexDirection: 'row',
@@ -32,8 +36,8 @@ const StageBlockTitles = styled('div', {
 
   variants: {
     rows: {
-      1: {width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '100%' }},
-      2: {width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '50%' }},
+      1: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '100%' }},
+      2: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '50%' }},
       3: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '33.33%' }},
       4: { width: '10%', height: '100%', '> *': { display: 'flex', alignItems: 'center', height: '25%' }},
       5: {},
@@ -47,6 +51,13 @@ const StageBlockTitles = styled('div', {
       2: { width: '100%', flexDirection: 'row', '> *': { width: '50%' }},
       1: { width: '100%', flexDirection: 'row', '> *': { width: '100%' }}
     }
+  },
+
+  // For the layout changes on mobile breakpoints
+  // This is for the titles to stack on top of the component 
+
+  '@tablet': {
+    display: 'none'
   }
 })
 

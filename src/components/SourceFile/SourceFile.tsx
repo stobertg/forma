@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@theme'
-import { List } from '@components'
+import { List, Icon } from '@components'
 
 // For the master container of the source links buttons on the top right of each of the documentation pages
 // This holds the optional links to Figma, Storybook, and GitHub
@@ -53,6 +53,25 @@ const SourceText = styled('div', {
   textTransform: 'capitalize'
 })
 
+const MenuOnSmallDesktop = styled('div', {
+  
+  '@tablet': { ul: { display: 'none' }}
+})
+
+const MenuTitle = styled ('button', {
+  display: 'none',
+  flexDirection: 'row',
+  alignItems: 'center',
+  padding: '12px 20px',
+  border: '1px solid $border',
+  borderRadius: '$r1',
+  transition: '$s1',
+  '&:hover': { background: '$bgSecondary' },
+  '> *:not(:last-child)': { marginRight: 4 },
+  '> *:last-child': { marginTop: 2 },
+  '@tablet': { display: 'flex' }
+})  
+
 // -------------- Typescript declarations -------------- //
 
 interface SourceFileProps {
@@ -71,6 +90,9 @@ export const SourceFile = ({
     googleDriveLink
   }: SourceFileProps ) => {
 
+  const [ closed, setClosed ] = useState( false )
+  const openMenu = () => { setClosed(!closed) }
+  
   const Base = ({ href, title }:any) => {
     return(
       <li key={`item-${ title }`}>
@@ -84,12 +106,19 @@ export const SourceFile = ({
   
   return(
 
-    <List direction="horizontal" spacing="l1r">
-      { figmaLink ? ( <Base href={ figmaLink } title="figma" /> ) : null}
-      { storybookLink ? ( <Base href={ storybookLink } title="storybook" /> ) : null }
-      { githubLink ? ( <Base href={ githubLink } title="github" /> ) : null }
-      { googleDriveLink ? ( <Base href={ googleDriveLink } title="drive" /> ) : null }
-    </List>
+    <MenuOnSmallDesktop>
+      <MenuTitle onClick={ openMenu }>
+        <span>Resource</span>
+        <Icon size="l0" icon="chevron-down" />
+      </MenuTitle>
+      
+      <List direction="horizontal" spacing="l1r">
+        { figmaLink ? ( <Base href={ figmaLink } title="figma" /> ) : null}
+        { storybookLink ? ( <Base href={ storybookLink } title="storybook" /> ) : null }
+        { githubLink ? ( <Base href={ githubLink } title="github" /> ) : null }
+        { googleDriveLink ? ( <Base href={ googleDriveLink } title="drive" /> ) : null }
+      </List>
+    </MenuOnSmallDesktop>
     
   )
 }

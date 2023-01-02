@@ -22,7 +22,8 @@ const StageContent = styled('div', {
   padding: '50px 0',
 
   '@smallDesktop': {
-    maxWidth: '90%'
+    maxWidth: '90%',
+    padding: '90px 0 0'
   }
 })
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { Heading, Icon } from '@components'
+import { Heading } from '@components'
 
 // For the animations of the accordions
 // This will animated the content section, below the title that shows and hides the accordion content
@@ -31,7 +31,6 @@ const AccordionRoot = styled(AccordionPrimitive.Root, {
 const AccordionItem = styled(AccordionPrimitive.Item, {
 	position: 'relative',
 	width: '100%',
-  // overflow: 'hidden',
 
   '&:focus-within': {
     position: 'relative',
@@ -50,6 +49,9 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 	width: '100%'
 })
 
+// For the trigger of the animation of the accordion
+// This contains the title on the left and the plus icon on the right of the contianer
+
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 	display: 'flex',
   alignItems: 'center',
@@ -60,6 +62,8 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   backgroundColor: '$bgPrimary',
   padding: '0 20px',
   '&:hover': { backgroundColor: '$bgSecondary' },
+
+	// When the accordion is opened, chage the background of the content within the accordion
 
 	'&[data-state="open"]': {
     '> *:last-child': {
@@ -72,23 +76,30 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 // This is the content shown when the title of the accordion is clicked
 
 const StyledContent = styled(AccordionPrimitive.Content, {
+	padding: '15px 20px',
   overflow: 'hidden',
   color: '$textPrimary',
+	fontSize: '1rem',
+	lineHeight: 1.5,
   backgroundColor: '$bgPrimary',
+
+	// For the animation of the content within the accordion when the state is opened
+	// This expands the accordion to show the content
 
   '&[data-state="open"]': {
     animation: `${ slideDown } 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
+
+	// For the animation of the content within the accordion when the state is closed
+	// This expands the accordion to hide the content
+
   '&[data-state="closed"]': {
     animation: `${ slideUp } 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
 })
 
-const StyledContentText = styled('div', {
-  padding: '15px 20px',
-	fontSize: '1rem',
-	lineHeight: 1.5
-})
+// For the plus and minus icon on the right side of the trigger container
+// This contains the + when the accordion is collapsed and the minus when it is opened
 
 const AccordionIcon = styled('div', {
 	display: 'flex',
@@ -97,6 +108,9 @@ const AccordionIcon = styled('div', {
 	position: 'relative',
 	width: 14,
 	height: 14,
+
+	// For the lines to show the icon as a plus or minus, depending on the state
+	// These are shared between the hotizontal and verical lines that make the icon
 
 	'&:before, &:after': {
 		content: '',
@@ -107,6 +121,8 @@ const AccordionIcon = styled('div', {
 		borderRadius: 2,
 		transition: '$s1'
 	},
+
+	// Here we rotate the line to be horizontal for the plus icon when the accordion is collapsed
 
 	'&:after': { transform: 'rotate( 90deg )' }
 })
@@ -138,7 +154,7 @@ export const Accordion = ({ accordionOpen, accordions }:AccordionProps) => {
 						</StyledTrigger>
 					</StyledHeader>
 
-					<StyledContent><StyledContentText>{ accordion.content }</StyledContentText></StyledContent>
+					<StyledContent>{ accordion.content }</StyledContent>
 				</AccordionItem>
 
 			))}
