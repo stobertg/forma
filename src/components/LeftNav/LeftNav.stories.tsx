@@ -11,13 +11,6 @@ const story = {
 export default story
 export const Primary = () => ( 
 
-  <LeftNav 
-    links={[
-      { href: '/', title: 'This is the title' },
-      { href: '/', title: 'This is the title' },
-      { href: '/', title: 'This is the title' },
-      { href: '/', title: 'This is the title' }
-    ]}
-  />
+  <LeftNav />
 
 )
