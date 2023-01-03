@@ -29,6 +29,8 @@ interface IntroProps {
   sideSpacing?: 'small' | 'medium'
   padding?: 'small' | 'medium' | 'large'
   logoOnDarkBg?: boolean
+  noWordMark?: boolean
+  logoSize?: 'large'
   contentWidth?: 'small' | 'medium'
   bgColor?: string
   children: React.ReactNode
@@ -38,6 +40,8 @@ interface IntroProps {
 
 export const Intro = ({
     logoOnDarkBg,
+    noWordMark,
+    logoSize,
     spacingTop,
     sideSpacing,
     padding,
@@ -51,7 +55,7 @@ export const Intro = ({
       <table style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
         <Tbody>
           <Tr>
-            <Logo onDarkBg={ logoOnDarkBg } />
+            <Logo {...{ noWordMark, logoSize }} onDarkBg={ logoOnDarkBg } />
             <Td>{ children }</Td>
           </Tr>
         </Tbody>

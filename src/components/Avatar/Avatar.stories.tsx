@@ -22,6 +22,7 @@ const story = {
 }
 export default story
 
-export const Default = () => ( <Avatar image="https://res.cloudinary.com/kaleidoscope/image/upload/v1649080299/web3_public/team/rene.png" name="Rene Pinnell" /> )
-export const NameHidden = () => ( <Avatar nameHidden image="https://res.cloudinary.com/kaleidoscope/image/upload/v1649080299/web3_public/team/rene.png" name="Rene Pinnell" /> )
-export const Fallback = () => ( <Avatar name="Rene Pinnell" /> )
+export const Default = () => ( <Avatar image="/people/christine.png" name="Christine Dailey" /> )
+export const FirstNameOnly = () => ( <Avatar firstNameOnly image="/people/christine.png" name="Christine Dailey" /> )
+export const NameHidden = () => ( <Avatar nameHidden image="/people/christine.png" name="Christine Dailey" /> )
+export const Fallback = () => ( <Avatar name="Christine Dailey" /> )

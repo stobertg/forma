@@ -8,7 +8,7 @@ module.exports = {
     'storybook-addon-css-user-preferences',
     'storybook-addon-swc',
     'storybook-dark-mode',
-    // "@whitespace/storybook-addon-html"
+    "@whitespace/storybook-addon-html"
   ],
   features: { modernInlineRender: true },
   framework: '@storybook/react',

@@ -1,16 +1,11 @@
 import React from 'react'
 import { Td, Image, Heading } from '@email'
 
-const LogoMarkStyle = {
-  display: 'inline-block',
-  width: 32
-}
-
 const WordMarkStyle = {
   display: 'inline-block',
   width: 80,
   marginLeft: 12,
-  transform: 'translateY( -25% )'
+  transform: 'translateY( -25% )',
 }
 
 // -------------- Typescript declarations -------------- //
@@ -19,6 +14,7 @@ interface LogoProps {
   spacingTop?: 'small' | 'medium' | 'large'
   text?: string
   noWordMark?: boolean
+  logoSize?: 'large'
   onDarkBg?: boolean
 }
 
@@ -28,13 +24,21 @@ export const Logo = ({
     spacingTop,
     text,
     noWordMark,
+    logoSize,
     onDarkBg
   }: LogoProps ) => {
   
   return(
 
     <Td {...{ spacingTop }}>
-      <div style={ LogoMarkStyle }><Image src="/global/logo/logomark.png" alt="Forma Logomark" /></div>
+      <div 
+        style={{
+          display: 'inline-block',
+          width: logoSize == 'large' ? 60 : 32,
+        }}
+      >
+        <Image src="/global/logo/logomark.png" alt="Forma Logomark" />
+      </div>
       
       <>
         { noWordMark ? null : (

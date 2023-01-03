@@ -26,10 +26,11 @@ export const Primary = () => (
 
   <Steps 
     steps={[
-      { icon: 'give', title: 'Donate to FreeRossDAO' },
-      { icon: 'trend-up', title: 'Get amplified by the raffle' },
-      { icon: 'celebrate', title: 'Win an NFT' }
-    ]}
+      { status: 'completed', title: 'Step one', subTitle: 'Summary if needed' },
+      { status: 'active', title: 'Step two', subTitle: 'Summary if needed' },
+      { status: 'disabled', title: 'Step three', subTitle: 'Very long summary if needed, which is two lines' },
+      { status: 'disabled', title: 'Step four', subTitle: 'Summary if needed' }
+    ]} 
   />
   
 )
