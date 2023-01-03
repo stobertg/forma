@@ -88,6 +88,7 @@ export const LeftNav = () => {
             { href: '/components/modal', title: 'Modal' },   
             { href: '/components/progress', title: 'Progress' },
             { href: '/components/snackbar', title: 'Snackbar' },
+            { href: '/components/steps', title: 'Steps' },
             { href: '/components/switch', title: 'Switch' },
             { href: '/components/tabs', title: 'Tabs' },
             { href: '/components/tooltip', title: 'Tooltip' }

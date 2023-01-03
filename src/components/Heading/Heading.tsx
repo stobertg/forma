@@ -31,9 +31,10 @@ const HeadingWrap = styled('div', {
     // For the support of different colors that the heading can be
 
     color: {
+      disabled: { color: '$textDisabled' },
       gray: { color: '$textSecondary' },
       white: { color: '$white' },
-      purple: { color: '$majorelleBlue' }
+      primary: { color: '$textPrimary' }
     },
 
     alignment: {
@@ -50,7 +51,7 @@ const HeadingWrap = styled('div', {
 
 interface HeadingProps {
   size?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4' | 'l5' | 'l6' | 'l7' | 'l8' | 'l9' | 'l10'
-  color?: 'gray' | 'white' | 'purple'
+  color?: 'disabled' | 'gray' | 'white' | 'primary'
   alignment?: 'center'
   title: any
   bold?: boolean
