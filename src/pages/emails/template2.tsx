@@ -30,49 +30,48 @@ const Page: NextPage = () => {
               { title: 'Template Two' }
             ]}
           >
-            <StageBlockRow>
+            <StageBlockRow spacing="removeOnMobile">
               <div>
+                <Email>
+                  <Intro 
+                    noWordMark 
+                    logoSize="large"
+                    padding="large"
+                  >
+                    <Heading 
+                      spacing="medium"
+                      bold
+                      size="large" 
+                      title="Your Forma card is on the way"
+                    />
 
-              <Email>
-                <Intro 
-                  noWordMark 
-                  logoSize="large"
-                  padding="large"
-                >
-                  <Heading 
-                    spacing="medium"
-                    bold
-                    size="large" 
-                    title="Your Forma card is on the way"
-                  />
+                    <Heading 
+                      spacing="medium"
+                      size="small" 
+                      title="Hello Micky,"
+                    />
+                  </Intro>
 
-                  <Heading 
-                    spacing="medium"
-                    size="small" 
-                    title="Hello Micky,"
-                  />
-                </Intro>
+                  <EmailBlock sideSpacing="small">
+                    <Image 
+                      src="/card/debit-card-1.png" 
+                      alt="Forma card" 
+                    />
 
-                <EmailBlock sideSpacing="small">
-                  <Image 
-                    src="/card/debit-card-1.png" 
-                    alt="Forma card" 
-                  />
+                    <Text color="gray" spacing="medium" fontSize="medium">
+                      Your card should arrive in 2-3 business days. When it arrives, call the number on the back of the card to activate 
+                      it and set your PIN.
+                    </Text>
 
-                  <Text color="gray" spacing="medium" fontSize="medium">
-                    Your card should arrive in 2-3 business days. When it arrives, call the number on the back of the card to activate 
-                    it and set your PIN.
-                  </Text>
+                    <Text color="gray" spacing="medium" fontSize="medium">
+                      Feel free to reach out to our member experience team via live chat, or at <a href="mailto:support@joinforma.com">support@joinforma.com</a>.
+                    </Text>
 
-                  <Text color="gray" spacing="medium" fontSize="medium">
-                    Feel free to reach out to our member experience team via live chat, or at <a href="mailto:support@joinforma.com">support@joinforma.com</a>.
-                  </Text>
-
-                  <Button href="https://client.joinforma.com/login" spacing="medium" variant="primary" title="Sign in to Forma" />
-                </EmailBlock>
-              </Email>
-
+                    <Button href="https://client.joinforma.com/login" spacing="medium" variant="primary" title="Sign in to Forma" />
+                  </EmailBlock>
+                </Email>
               </div>
+
             </StageBlockRow>
           </StageBlocks>
         </BlockItem>

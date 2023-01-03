@@ -8,7 +8,12 @@ const CodeWrap = styled('div', {
   background: '$white100',
   color: '$gray300',
   fontSize: '$s1',
-  overflow: 'scroll'
+  overflow: 'scroll',
+
+  '@mobile': {
+    width: '90%',
+    margin: '0 auto'
+  }
 })
 
 const CodeContent = styled('div', {

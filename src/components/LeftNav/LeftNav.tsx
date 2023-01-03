@@ -17,15 +17,13 @@ const NavLinkWrap = styled('div', {
           top: 0,
           left: 0,
           width: '100%',
-          height: '100vh',
-          background: '$bgSecondary',
+          background: '$bgSecondary'
         }
         
       },
 
       menuOpen: { 
-        
-
+        height: 'calc( 100vh - 68px )'
       }
     }
   },

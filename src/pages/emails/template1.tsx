@@ -30,7 +30,7 @@ const Page: NextPage = () => {
               { title: 'Template One' }
             ]}
           >
-            <StageBlockRow>
+            <StageBlockRow spacing="removeOnMobile">
               <div>
 
                 <Email>

@@ -4,6 +4,10 @@ import { Heading, Text, SourceFile } from '@components'
 
 const IntroWrap = styled('section', {
 
+  '@mobile': {
+    width: '90%',
+    margin: '0 auto'
+  }
 })
 
 const IntroHeader = styled('header', {
@@ -15,7 +19,12 @@ const IntroHeader = styled('header', {
   width: '100%',
   marginBottom: 50,
   paddingBottom: 24,
-  borderBottom: '1px solid $border'
+  borderBottom: '1px solid $border',
+
+  '@mobile': {
+    marginBottom: 24,
+    paddingBottom: 16,
+  }
 })
 
 const IntroContent = styled('div', {

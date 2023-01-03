@@ -26,6 +26,10 @@ const RowWrap = styled('div', {
 
     align: {
       top: { '> *': { alignItems: 'flex-start' }}
+    },
+
+    spacing: {
+      removeOnMobile: { '@mobile': { '> *': { padding: 0 } }}
     }
   }
 })
@@ -34,15 +38,16 @@ interface StageBlockRowProps {
   align?: 'top'
   bgColor?: 'light' | 'dark'
   children: React.ReactNode
+  spacing?: 'removeOnMobile'
 } 
 
 // ---------- This is the end of declarations ---------- //
 
-export const StageBlockRow = ({ align, bgColor, children }:StageBlockRowProps) => {
+export const StageBlockRow = ({ align, bgColor, children, spacing }:StageBlockRowProps) => {
   
   return(
 
-    <RowWrap {...{ align, bgColor }}>{ children }</RowWrap>
+    <RowWrap {...{ align, bgColor, spacing }}>{ children }</RowWrap>
     
   )
 }

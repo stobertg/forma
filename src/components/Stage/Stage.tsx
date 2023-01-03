@@ -24,6 +24,10 @@ const StageContent = styled('div', {
   '@smallDesktop': {
     maxWidth: '90%',
     padding: '90px 0 0'
+  },
+
+  '@mobile': {
+    maxWidth: '100%'
   }
 })
 
