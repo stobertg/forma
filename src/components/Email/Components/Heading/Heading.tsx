@@ -4,7 +4,7 @@ import { Spacing } from '@email'
 // -------------- Typescript declarations -------------- //
 
 interface HeadingProps {
-  color?: 'gray'
+  color?: 'white' | 'gray'
   spacing?: 'small' | 'medium' | 'large'
   alignment?: 'center' | 'right'
   title: string | React.ReactNode
@@ -32,7 +32,7 @@ export const Heading = ({
           fontSize: size == "xlarge" ? 56 : size == 'large' ? 44 : size == 'medium' ? 24 : size == 'small' ? 18 : size == 'tiny' ? 14 : 16,
           lineHeight: size == 'large' ? 1 : size == 'medium' ? 1.2 : size == 'small' ? 1.5 : size == 'tiny' ? 1.5 : 1,
           textAlign: alignment == 'center' ? 'center' : alignment == 'right' ? 'right' : 'initial',
-          color: color == 'gray' ? '#67677C' : '#150050'
+          color: color == 'gray' ? '#67677C' : color == 'white' ? '#fff' : '#150050'
         }}
       >
         { bold ? ( 
@@ -40,7 +40,7 @@ export const Heading = ({
         ) : (
 
           <span style={{
-            color: color == 'gray' ? '#67677C' : '#150050'
+            color: color == 'gray' ? '#67677C' : color == 'white' ? '#fff' : '#150050'
           }}>
             { title }
           </span> 
