@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, EmailBlock, Intro, Heading, Text, Image, ProductHero, ProductThumb, Button, Perks } from '@email'
+import { Email, EmailBlock, Intro, Heading, Text, OfferCard } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -53,7 +53,30 @@ const Page: NextPage = () => {
                 </Intro>
 
                 <EmailBlock sideSpacing="small">
-                  
+                  <OfferCard
+                    cards={[
+                      { 
+                        bgColor: 'green', 
+                        image: '/illustration/benefits/account-custom.svg', 
+                        deal: '+$200', 
+                        category: 'PerFi Wellbeing',
+                        primaryButtonTitle: 'Shop Forma store',
+                        primaryButtonLink: '/',
+                        secondaryButtonTitle: "What's eligible?",
+                        secondaryButtonLink: '/'
+                      },
+                      { 
+                        bgColor: 'cyan', 
+                        image: '/illustration/benefits/account-gym.svg', 
+                        deal: '+$200', 
+                        category: 'Sweaty Pursuits',
+                        primaryButtonTitle: 'Shop Forma store',
+                        primaryButtonLink: '/',
+                        secondaryButtonTitle: "What's eligible?",
+                        secondaryButtonLink: '/'
+                      }
+                    ]}
+                  />
                 </EmailBlock>
               </Email>
 

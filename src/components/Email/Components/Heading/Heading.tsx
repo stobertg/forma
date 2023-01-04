@@ -6,9 +6,9 @@ import { Spacing } from '@email'
 interface HeadingProps {
   color?: 'gray'
   spacing?: 'small' | 'medium' | 'large'
-  alignment?: 'center'
+  alignment?: 'center' | 'right'
   title: string | React.ReactNode
-  size?: 'small' | 'medium' | 'large' | 'tiny'
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | 'tiny'
   bold?: boolean
 }
 
@@ -29,9 +29,9 @@ export const Heading = ({
       <div
         style={{
           fontFamily: 'Labil Grotesk',
-          fontSize: size == 'large' ? 44 : size == 'medium' ? 24 : size == 'small' ? 18 : size == 'tiny' ? 14 : 16,
+          fontSize: size == "xlarge" ? 56 : size == 'large' ? 44 : size == 'medium' ? 24 : size == 'small' ? 18 : size == 'tiny' ? 14 : 16,
           lineHeight: size == 'large' ? 1 : size == 'medium' ? 1.2 : size == 'small' ? 1.5 : size == 'tiny' ? 1.5 : 1,
-          textAlign: alignment == 'center' ? 'center' : 'initial',
+          textAlign: alignment == 'center' ? 'center' : alignment == 'right' ? 'right' : 'initial',
           color: color == 'gray' ? '#67677C' : '#150050'
         }}
       >
