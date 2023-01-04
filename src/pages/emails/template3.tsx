@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, EmailBlock, Button, Image, Intro, Heading, Text, OfferCard, PartnerLogos } from '@email'
+import { Email, EmailBlock, Button, Image, Intro, Heading, Text, OfferCard, PartnerCallout } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -80,18 +80,9 @@ const Page: NextPage = () => {
                   </EmailBlock>
 
                   <EmailBlock bgColor="#5e85fe" color="#fff" spacingTop="large">
-                    <div
-                      className="mobile__spacing--small"
-                      style={{
-                        padding: 50
-                      }}
-                    >
-                      <Heading bold size="large" color="white" title="No second guessing, no claims required*" />
-                      <Image spacing="large" src="/emails/bubbles.png" alt="Forma graphic" />
-                      <Image spacing="large" src="/emails/partner-logos/logos-1.png" alt="Forma graphic" />
-                      <div style={{ display: 'block', textAlign: 'center', marginTop: 32 }}><Button variant="primary" title="Shop now" /></div>
-                      <Heading alignment="center" size="tiny" spacing="medium" color="white" title="*Store products are subject to availability and employer eligibility" />
-                    </div>
+                    <PartnerCallout 
+                      title="No second guessing, no claims required*"
+                    />
                   </EmailBlock>
                 </Email>
               </div>

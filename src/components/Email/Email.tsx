@@ -27,6 +27,7 @@ export const Email = ({
           table * { font-family: Labil Grotesk, Arial, Helvetica, sans-serf !important }
           body{ margin: 0 }
           @media(max-width: 600px) {
+            .mobile__add--br { border-radius: 16px }
             .mobile__margin--small { margin-left: 10px !important; margin-right: 10px !important; }
             .mobile__margin--none { margin-left: 0px !important; margin-right: 0px !important; }
             .mobile__spacing--small { padding-left: 20px !important; padding-right: 20px !important; }

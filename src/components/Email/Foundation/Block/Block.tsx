@@ -24,6 +24,7 @@ export const EmailBlock = ({
 
     <Td className="mobile__margin--none mobile__spacing--small" {...{ spacingTop, sideSpacing, padding }}>
       <table 
+        className="mobile__add--br"
         style={{ 
           backgroundColor: bgColor, 
           width: '100%',
