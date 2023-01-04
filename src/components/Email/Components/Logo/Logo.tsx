@@ -14,7 +14,7 @@ interface LogoProps {
   spacingTop?: 'small' | 'medium' | 'large'
   text?: string
   noWordMark?: boolean
-  logoSize?: 'large'
+  logoSize?: 'large' | 'medium'
   onDarkBg?: boolean
 }
 
@@ -34,7 +34,7 @@ export const Logo = ({
       <div 
         style={{
           display: 'inline-block',
-          width: logoSize == 'large' ? 60 : 32,
+          width: logoSize == 'large' ? 60 : logoSize == 'medium' ? 40 : 32,
         }}
       >
         <Image src="/global/logo/logomark.png" alt="Forma Logomark" />

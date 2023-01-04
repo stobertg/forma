@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, EmailBlock, Button, Image, Intro, Heading, Text, OfferCard, PartnerCallout } from '@email'
+import { Email, EmailBlock, Intro, Heading, Text, OfferCard, PartnerCallout } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {

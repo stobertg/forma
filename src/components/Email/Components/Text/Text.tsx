@@ -32,7 +32,7 @@ export const Text = ({
               fontFamily : 'Labil Grotesk',
               fontSize: fontSize == 'large' ? 20 : fontSize == 'medium' ? 18 : fontSize == 'small' ? 14 : 16,
               lineHeight: fontSize == 'large' ? 1.4 : fontSize == 'medium' ? 1.4 : fontSize == 'small' ? 1.4 : 1.3,
-              color: color == 'gray' ? '#67677C' : '#150050'
+              color: color == 'gray' ? '#67677C' : 'inherit'
             }}
           >
             <p>{ bold ? ( <strong>{ children }</strong> ) : <>{ children }</> }</p>
@@ -46,7 +46,7 @@ export const Text = ({
             fontFamily : 'Labil Grotesk',
             fontSize: fontSize == 'large' ? 20 : fontSize == 'medium' ? 18 : fontSize == 'small' ? 14 : 16,
             lineHeight: fontSize == 'large' ? 1.4 : fontSize == 'medium' ? 1.4 : fontSize == 'small' ? 1.4 : 1.3,
-            color: color == 'gray' ? '#67677C' : '#150050'
+            color: color == 'gray' ? '#67677C' : 'inherit'
           }}
         >
           <p>{ bold ? ( <strong>{ children }</strong> ) : <>{ children }</> }</p>

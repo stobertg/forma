@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tr, Td, Tbody, Logo } from '@email'
+import { Tr, Td, Tbody, Logo, Button } from '@email'
 
 const IntroStyle = {
   width: '100%',
@@ -8,8 +8,8 @@ const IntroStyle = {
 
 const IntroHasBg = {
   ...IntroStyle,
+  padding: 50,
   color: '#fff',
-  // borderRadius: 32
 }
 
 const IntroContent = {
@@ -30,9 +30,11 @@ interface IntroProps {
   padding?: 'small' | 'medium' | 'large'
   logoOnDarkBg?: boolean
   noWordMark?: boolean
-  logoSize?: 'large'
+  logoSize?: 'large' | 'medium'
   contentWidth?: 'small' | 'medium'
   bgColor?: string
+  buttonTitle?: string
+  buttonLink?: string
   children: React.ReactNode
 }
 
@@ -45,18 +47,24 @@ export const Intro = ({
     spacingTop,
     sideSpacing,
     padding,
-    bgColor, 
+    bgColor,
+    buttonTitle,
+    buttonLink, 
     children
   }: IntroProps ) => {
   
   return(
     
     <Td className="mobile__spacing--small" {...{ spacingTop, sideSpacing, padding }}>
-      <table style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }>
+      <table 
+        className={ bgColor ? 'mobile__spacing--small mobile__add--br' : '' }
+        style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }
+      >
         <Tbody>
           <Tr>
             <Logo {...{ noWordMark, logoSize }} onDarkBg={ logoOnDarkBg } />
             <Td>{ children }</Td>
+            { buttonTitle ? ( <Td><Button spacing="medium" href={ buttonLink } variant="primary" title={ buttonTitle } /></Td> ) : null }
           </Tr>
         </Tbody>
       </table>
