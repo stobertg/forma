@@ -81,6 +81,7 @@ const Page: NextPage = () => {
 
                   <EmailBlock bgColor="#5e85fe" color="#fff" spacingTop="large">
                     <div
+                      className="mobile__spacing--small"
                       style={{
                         padding: 50
                       }}

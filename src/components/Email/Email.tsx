@@ -24,7 +24,7 @@ export const Email = ({
     <>
       <style>
         {`
-          * { font-family: Labil Grotesk, Arial, Helvetica, sans-serf !important }
+          table * { font-family: Labil Grotesk, Arial, Helvetica, sans-serf !important }
           body{ margin: 0 }
           @media(max-width: 600px) {
             .mobile__margin--small { margin-left: 10px !important; margin-right: 10px !important; }
