@@ -21,7 +21,7 @@ export const Spacing = ({
     <div 
       style={{
         marginTop: spacing == "large" ? 50 : spacing == "medium" ? 32 : spacing == "small" ? 12 : 0,
-        textAlign: alignment == 'center' ? 'center' : ''
+        textAlign: alignment == 'center' ? 'center' : 'inherit'
       }}
     >
       { children }
