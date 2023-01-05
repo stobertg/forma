@@ -30,7 +30,7 @@ export const Heading = ({
         style={{
           fontFamily: 'Labil Grotesk',
           fontSize: size == "xlarge" ? 56 : size == 'large' ? 44 : size == 'medium' ? 24 : size == 'small' ? 18 : size == 'tiny' ? 14 : 16,
-          lineHeight: size == 'large' ? 1 : size == 'medium' ? 1.2 : size == 'small' ? 1.5 : size == 'tiny' ? 1.5 : 1,
+          lineHeight: size == 'large' ? 1 : size == 'medium' ? 1.2 : size == 'small' ? 1.5 : size == 'tiny' ? 1.1 : 1,
           textAlign: alignment == 'center' ? 'center' : alignment == 'right' ? 'right' : 'initial',
           color: color == 'gray' ? '#67677C' : color == 'white' ? '#fff' : '#150050'
         }}

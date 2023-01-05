@@ -88,7 +88,35 @@ const Page: NextPage = () => {
                   </EmailBlock>
 
                   <EmailBlock spacingTop="large" bgColor="#f5f5f7">
-                    <Features />
+                    <Features 
+                      title="Your benefits features"
+                      list={[
+                        { 
+                          image: '/emails/store-page.png',
+                          title: 'Forma store',
+                          items: [
+                            { title: 'Savings with best in class vendors at Forma' },
+                            { title: 'Guaranteed eligibility and 24/7 support' }
+                          ]
+                        },
+                        { 
+                          image: '/emails/card-with-blob.png',
+                          title: 'Forma card',
+                          items: [
+                            { title: 'Get a Forma debit card to take with you' },
+                            { title: 'Take Forma at preferable eligible merchants' }
+                          ]
+                        },
+                        { 
+                          image: '/emails/wave-with-blob.png',
+                          title: 'Simple claims',
+                          items: [
+                            { title: 'Claims review within 24-48 hours' },
+                            { title: 'World-class support team and chat in-app' }
+                          ]
+                        }
+                      ]}
+                    />
                   </EmailBlock>
                 </Email>
               </div>

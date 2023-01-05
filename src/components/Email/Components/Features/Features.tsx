@@ -1,36 +1,34 @@
 import React from 'react'
 import { Spacing, Heading, Image } from '@email'
+import { Text } from './Parts/Text'
+import { FeaturesBase } from './Parts/Base'
 
 interface FeaturesProps {
-
+  spacing?: 'small' | 'medium' | 'large'
+  title: string
+  list: {
+    title: string
+    image: string
+    items: {
+      title: string
+    }[]
+  }[]
 }
 
-export const Features = ({ }:FeaturesProps) => {
+export const Features = ({ 
+    spacing,
+    title,
+    list
+  }:FeaturesProps) => {
+  
   return(
 
-    <Spacing>
-      <div style={{ padding: '50px 0' }}>
-        <Heading size="medium" alignment="center" title="Your benefits features" />
-      </div>
+    <Spacing {...{ spacing }}>
+      <div style={{ marginLeft: 50, marginRight: 50, padding: '50px 0' }}>
+        <Heading size="medium" alignment="center" {...{ title }} />
 
-      <div>
-        <Heading size="medium" title="Forma Store" />
-        <div>
-          <div>
-            <div style={{ display: 'inline-block', width: 150, marginTop: 2 }}><Image src="/emails/store-page.png" alt="Forma store" /></div>
-            <div>
-              <div style={{ display: 'block', verticalAlign: 'top' }}>
-                <div style={{ display: 'inline-block', marginTop: 2 }}><Image src="/emails/icons/check-cyan-filled.png" alt="Forma checkmark" /></div>
-                <div style={{ display: 'inline-block', verticalAlign: 'top', marginLeft: 8 }}><Heading size="small" title="Savings with best in class vendors at Forma" /></div>
-              </div>
+        <FeaturesBase {...{ list }} />
 
-              <div style={{ display: 'block', verticalAlign: 'top' }}>
-                <div style={{ display: 'inline-block', marginTop: 2 }}><Image src="/emails/icons/check-cyan-filled.png" alt="Forma checkmark" /></div>
-                <div style={{ display: 'inline-block', verticalAlign: 'top', marginLeft: 8 }}><Heading size="small" title="Guaranteed eligibility and 24/7 support" /></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </Spacing>
 
