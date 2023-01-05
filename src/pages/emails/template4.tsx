@@ -50,12 +50,12 @@ const Page: NextPage = () => {
                     />
 
                     <Text spacing="medium" fontSize="medium">
-                      Hi &#123; first name &#125;,
+                      Hi &#123;&nbsp;first name&nbsp;&#125;,
                     </Text>
 
                     <Text spacing="small" fontSize="medium">
                       Just a reminder to activate your Forma account with your work email to start using your employee
-                      benefits from &#123; employer_name &#125;
+                      benefits from &#123;&nbsp;employer_name&nbsp;&#125;
                     </Text>
 
                     <Text spacing="small" fontSize="medium">
