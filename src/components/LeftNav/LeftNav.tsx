@@ -99,7 +99,8 @@ export const LeftNav = () => {
             { href: '/emails/template1', title: 'Template 1' },
             { href: '/emails/template2', title: 'Template 2' },
             { href: '/emails/template3', title: 'Template 3' },
-            { href: '/emails/template4', title: 'Template 4' }
+            { href: '/emails/template4', title: 'Template 4' },
+            { href: '/emails/template5', title: 'Template 5' }
           ]} 
         />
       </NavLinkWrap>

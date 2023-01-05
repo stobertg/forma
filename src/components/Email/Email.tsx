@@ -8,7 +8,7 @@ interface EmailProps {
   children: React.ReactNode
   supportInFooter?: boolean
   withoutFooter?: boolean
-  bgColor?: 'white'
+  bgColor?: 'white' | 'gray'
   removeFooterTopSpacing?: boolean
 }
 

@@ -7,7 +7,7 @@ interface GlobalContainerProps {
   supportInFooter?: boolean
   children: React.ReactNode
   withoutFooter?: boolean
-  bgColor?: 'white'
+  bgColor?: 'white' | 'gray'
   removeFooterTopSpacing?: boolean
 }
 
@@ -33,8 +33,9 @@ export const GlobalContainer = ({
         width: '100%',
         margin: '0 auto',
         paddingBottom: 20,
-        backgroundColor: bgColor == 'white' ? '#fff' : '#fff5e5',
-        border: bgColor == 'white' ? '1px solid #e5e5e5' : 'none'
+        backgroundColor: bgColor == 'white' ? '#fff' : bgColor == 'gray' ? '#f5f5f7' : '#fdf9f4',
+        border: bgColor == 'white' ? '1px solid #e5e5e5' : 'none',
+        borderRadius: 20
       }} 
     >
 
