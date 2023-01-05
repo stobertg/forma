@@ -60,7 +60,7 @@ export const Intro = ({
       {...{ spacingTop, sideSpacing, padding }}
     >
       <table 
-        className={ bgColor ? 'mobile__spacing--small mobile__add--br' : '' }
+        className={ bgColor ? 'mobile__spacing--medium mobile__add--br' : '' }
         style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }
       >
         <Tbody>

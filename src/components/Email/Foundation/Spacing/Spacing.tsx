@@ -1,33 +1,28 @@
 import React from 'react'
 
-const SpacingLarge = { marginTop: 50 }
-const SpacingMedium = { marginTop: 32 }
-const SpacingSmall = { marginTop: 12 }
-
 // -------------- Typescript declarations -------------- //
 
 interface SpacingProps {
   children: React.ReactNode
   spacing?: 'small' | 'medium' | 'large' | undefined
+  alignment?: 'center'
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Spacing = ({
     children,
-    spacing
+    spacing,
+    alignment
   }: SpacingProps ) => {
   
   return(
 
     <div 
-      // @ts-ignore: Unreachable code error
-      style={
-        spacing == "large" ? SpacingLarge :
-        spacing == "medium" ? SpacingMedium :
-        spacing == "small" ? SpacingSmall :
-        null
-      }
+      style={{
+        marginTop: spacing == "large" ? 50 : spacing == "medium" ? 32 : spacing == "small" ? 12 : 0,
+        textAlign: alignment == 'center' ? 'center' : 'initial'
+      }}
     >
       { children }
     </div>

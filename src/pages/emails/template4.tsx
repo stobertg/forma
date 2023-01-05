@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, Intro, Heading, Text, OfferChip } from '@email'
+import { Email, Intro, Heading, Text, OfferChip, Image, EmailBlock } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -50,20 +50,42 @@ const Page: NextPage = () => {
                     />
 
                     <Text spacing="medium" fontSize="medium">
-                      Hi first name,
+                      Hi &#123; first name &#125;,
                     </Text>
 
                     <Text spacing="small" fontSize="medium">
-                      Just a reminder to activate your Forma account with your work email to start using your emaployee
-                      benefits from employer_name
+                      Just a reminder to activate your Forma account with your work email to start using your employee
+                      benefits from &#123; employer_name &#125;
                     </Text>
 
                     <Text spacing="small" fontSize="medium">
-                      If you need help or have any questions, reach out to support@joinforma.com
+                      If you need help or have any questions, reach out to <a href="mailto:support@joinforma.com">support@joinforma.com</a>
                     </Text>
                   </Intro>
 
-                  
+                  <EmailBlock spacingTop="large" sideSpacing="small">
+                    <Image alignment="center" height={ 100 } src="/emails/partner-logos/salesforce.png" alt="Forma illustrations" />
+                    <Image alignment="center" height={ 180 } src="/emails/img-welcome_benefits.png" alt="Forma illustrations" />
+                  </EmailBlock>
+
+                  <EmailBlock spacingTop="medium" sideSpacing="small">
+                    <Heading alignment="center" size="medium" title="Benefits sponsored by {employer}" />
+                    <OfferChip
+                      spacing="medium"
+                      chips={[
+                        { 
+                          bgColor: 'cyan',
+                          title: '$999/mo',
+                          benefitName: 'Benefit name'
+                        },
+                        { 
+                          bgColor: 'yellow',
+                          title: '$9,999/yr',
+                          benefitName: 'Benefit name'
+                        }
+                      ]}
+                    />
+                  </EmailBlock>
                 </Email>
               </div>
 

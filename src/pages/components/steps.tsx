@@ -14,9 +14,14 @@ const Page: NextPage = () => {
           githubLink="/"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat nibh. Sed eget posuere sapien. Nullam ut 
-            justo volutpat, consequat ligula et, cursus erat. Nulla vitae mattis ligula. Ut et nisi at ipsum tempor dapibus. 
-            Maecenas luctus nisl leo, sit amet bibendum sem tempor commodo. Nullam quis viverra augue.
+            This component is a design element that is used to display and highlight the steps or stages in a process or 
+            workflow. It is typically used to show the progress of a task or to guide a user through a series of actions.
+          </p>
+
+          <p>
+            Step components are often used in tutorials, onboarding experiences, or other types of interactive content where 
+            it is important to convey the order and sequence of actions. They can be presented in various formats, such as a 
+            numbered list, a series of dots or circles, or a horizontal bar with markers.
           </p>
         </ProjectInfo>
       </Block>

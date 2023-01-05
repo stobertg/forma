@@ -31,6 +31,7 @@ export const Email = ({
             .mobile__margin--small { margin-left: 10px !important; margin-right: 10px !important; }
             .mobile__margin--none { margin-left: 0px !important; margin-right: 0px !important; }
             .mobile__spacing--small { padding-left: 20px !important; padding-right: 20px !important; }
+            .mobile__spacing--medium { padding-left: 30px !important; padding-right: 30px !important; }
             .mobile__padding--bottom-none { padding-bottom: 0 !important }
             .thumbnail { padding: 20px 0 !important; font-size: 14px !important; }
             .thumbnail img { max-width: 100px !important; }
