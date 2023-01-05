@@ -55,7 +55,10 @@ export const Intro = ({
   
   return(
     
-    <Td className="mobile__spacing--small" {...{ spacingTop, sideSpacing, padding }}>
+    <Td 
+      className={ bgColor ? 'mobile__spacing--none' : 'mobile__spacing--small'} 
+      {...{ spacingTop, sideSpacing, padding }}
+    >
       <table 
         className={ bgColor ? 'mobile__spacing--small mobile__add--br' : '' }
         style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }
