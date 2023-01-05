@@ -8,6 +8,8 @@ interface EmailProps {
   children: React.ReactNode
   supportInFooter?: boolean
   withoutFooter?: boolean
+  bgColor?: 'white'
+  removeFooterTopSpacing?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -16,7 +18,9 @@ export const Email = ({
     contentWidth,
     children,
     supportInFooter,
-    withoutFooter
+    withoutFooter,
+    bgColor,
+    removeFooterTopSpacing
   }: EmailProps ) => {
   
   return(
@@ -39,7 +43,7 @@ export const Email = ({
         `}
       </style>
 
-      <GlobalContainer {...{ contentWidth, supportInFooter, withoutFooter }}>
+      <GlobalContainer {...{ contentWidth, supportInFooter, withoutFooter, bgColor, removeFooterTopSpacing }}>
         { children }
       </GlobalContainer>
     </>

@@ -3,16 +3,21 @@ import { Tbody, Tr, Td, Support, DownloadApp, Legal, Logo } from '@email'
 
 interface FooterProps {
   withoutFooter?: boolean
+  removeTopSpacing?: boolean
 }
 
-export const Footer = ({ withoutFooter }:FooterProps) => {
+export const Footer = ({ 
+    withoutFooter,
+    removeTopSpacing
+  }:FooterProps) => {
+
   return(
 
     <>
       { withoutFooter ? null : (
         <Tr 
           className="mobile__margin--none mobile__spacing--small"
-          spacingTop="large" 
+          spacingTop={ removeTopSpacing ? undefined : "large" } 
           sideSpacing="medium"
           bgColor="#fff" 
           padding="large"

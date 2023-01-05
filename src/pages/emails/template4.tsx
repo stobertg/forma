@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, Intro, Heading, Text, OfferChip, Image, EmailBlock } from '@email'
+import { Email, Intro, Heading, Text, OfferChip, Image, EmailBlock, Features } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -33,7 +33,7 @@ const Page: NextPage = () => {
             <StageBlockRow spacing="removeOnMobile">
 
               <div>
-                <Email>
+                <Email bgColor="white" removeFooterTopSpacing>
                   <Intro 
                     noWordMark
                     bgColor="#150050" 
@@ -85,6 +85,10 @@ const Page: NextPage = () => {
                         }
                       ]}
                     />
+                  </EmailBlock>
+
+                  <EmailBlock spacingTop="large" bgColor="#f5f5f7">
+                    <Features />
                   </EmailBlock>
                 </Email>
               </div>
