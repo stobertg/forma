@@ -9,7 +9,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Email Template - Subscription confirmation"
+          title="Email - Subscription renewal failed"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7361%3A11097"
           storybookLink="/"
           githubLink="/"
@@ -27,7 +27,7 @@ const Page: NextPage = () => {
           <StageBlocks 
             columns="1"
             titles={[
-              { title: 'Subscription confirmation' }
+              { title: 'Subscription renewal failed' }
             ]}
           >
             <StageBlockRow spacing="removeOnMobile">
@@ -36,7 +36,7 @@ const Page: NextPage = () => {
                 <Email bgColor="gray" removeFooterTopSpacing>
                   <Reciept 
                     recieptType="subscription"
-                    emailTitle="Thanks for your order!"
+                    emailTitle="There was a problem renewing your subscription"
                     productImage="/products/headspace/headspace.png"
                     productTitle="Headspace"
                     intro={
@@ -46,7 +46,8 @@ const Page: NextPage = () => {
                         </Text>
 
                         <Text spacing="medium" fontSize="medium">
-                          We won&apos;t charge your &#123;&nbsp;this.wallet_name&nbsp;&#125; account until &#123;&nbsp;vendor_title&nbsp;&#125; confirms your subscription.
+                          Your &#123;&nbsp;vendor_title&nbsp;&#125; subscription was renewed and charged to your 
+                          &#123;&nbsp;this.wallet_name&nbsp;&#125;. We took care of everything, there&apos;s nothing to do on your end!
                         </Text>
 
                         <Text spacing="medium" fontSize="medium">
@@ -62,10 +63,6 @@ const Page: NextPage = () => {
                       {
                         title: 'Headspace',
                         items: [{ title: '$9.99/month' }, { title: 'You save $10 every month with Forma 🎉' }]
-                      },
-                      {
-                        title: 'Estimated Start Date',
-                        items: [{ title: 'October 1, 2022' }]
                       },
                       {
                         title: 'Shipment Notifications',

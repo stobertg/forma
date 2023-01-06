@@ -9,7 +9,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Email Template Five"
+          title="Email Template - Order Confirmation"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7361%3A11097"
           storybookLink="/"
           githubLink="/"
@@ -27,12 +27,12 @@ const Page: NextPage = () => {
           <StageBlocks 
             columns="1"
             titles={[
-              { title: 'Template Five' }
+              { title: 'Order confirmation' }
             ]}
           >
             <StageBlockRow spacing="removeOnMobile">
               <div>
-                
+
                 <Email bgColor="gray" removeFooterTopSpacing>
                   <Reciept 
                     emailTitle="Thanks for your order!"

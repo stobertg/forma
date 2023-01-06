@@ -19,12 +19,8 @@ const NavLinkWrap = styled('div', {
           width: '100%',
           background: '$bgSecondary'
         }
-        
       },
-
-      menuOpen: { 
-        height: 'calc( 100vh - 68px )'
-      }
+      menuOpen: {  height: 'calc( 100vh - 68px )' }
     }
   },
 
@@ -101,7 +97,9 @@ export const LeftNav = () => {
             { href: '/emails/template2-1', title: 'Template 2.1' },
             { href: '/emails/template3', title: 'Template 3' },
             { href: '/emails/template4', title: 'Template 4' },
-            { href: '/emails/template5', title: 'Template 5' }
+            { href: '/emails/template5', title: 'Order confirmation' },
+            { href: '/emails/template5-1', title: 'Sub confirmation' },
+            { href: '/emails/template5-2', title: 'Sub renewal' }
           ]} 
         />
       </NavLinkWrap>
