@@ -16,6 +16,7 @@ export const Reciept = ({ orderItems, buttonLink }:RecieptProps) => {
 
     <Td>
       <table
+        className="mobile__margin--none"
         style={{
           marginLeft: 20,
           marginRight: 20,
