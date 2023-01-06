@@ -66,7 +66,7 @@ export const Reciept = ({ orderItems, buttonLink }:RecieptProps) => {
               <table style={{ width: '100%' }}>
                 <tbody>
                   <tr style={{ width: '100%' }}>
-                    <td style={{ verticalAlign: 'top', width: '35%' }}>
+                    <td style={{ verticalAlign: 'top', width: '35%', marginRight: 22 }}>
                       <Spacing spacing="medium">
                         <div style={{ width: 100 }}>
                           <Image src="/products/fitbit/fitbit-watch.png" alt="Fitbit watch" />
