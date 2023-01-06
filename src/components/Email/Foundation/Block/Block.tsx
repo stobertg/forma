@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tbody, Td, Tr } from '@email'
+import { Tbody, Thead, Td, Tr, Heading } from '@email'
 
 interface BlockProps {
   spacingTop?: 'small' | 'medium' | 'large'
@@ -8,6 +8,7 @@ interface BlockProps {
   contentWidth?: 'small' | 'medium'
   bgColor?: string
   color?: string
+  title?: string
   children: React.ReactNode
 }
 
@@ -17,6 +18,7 @@ export const EmailBlock = ({
     padding,
     bgColor, 
     color,
+    title,
     children
   }:BlockProps ) => {
 
@@ -31,6 +33,8 @@ export const EmailBlock = ({
           color: color ? color : '#150050'
         }}
       >
+        { title ? ( <thead><tr><th><Heading bold size="medium" {...{ title }} /></th></tr></thead> ) : null }
+        
         <Tbody>
           <Tr>
             <Td>{ children }</Td>

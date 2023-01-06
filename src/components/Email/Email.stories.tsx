@@ -109,20 +109,20 @@ export const Template2 = () => (
   <Email>
     <Intro 
       noWordMark 
-      logoSize="large"
+      logoSize="medium"
       padding="large"
     >
       <Heading 
         spacing="medium"
         bold
         size="large" 
-        title="Your Forma card is on the way"
+        title="Your Pre-tax Forma Card is on the way"
       />
 
       <Heading 
         spacing="medium"
         size="small" 
-        title="Hello Micky,"
+        title="Hey {{ insert first_name 'default=valued member' }}!"
       />
     </Intro>
 
@@ -133,16 +133,41 @@ export const Template2 = () => (
       />
 
       <Text color="gray" spacing="medium" fontSize="medium">
-        Your card should arrive in 2-3 business days. When it arrives, call the number on the back of the card to activate 
-        it and set your PIN.
+        Use this card to spend money on any of your pre-tax benefits. Depending on what benefits you get from 
+        your employer, this includes HSA, FSA, LPFSA, DCFSA, Transit, and Parking. You might only have some of these 
+        benefits depending on your employer.
       </Text>
 
-      <Text color="gray" spacing="medium" fontSize="medium">
-        Feel free to reach out to our member experience team via live chat, or at support@joinforma.com.
+      <Heading spacing="medium" size="medium" title="What do I do when it arrives?" />
+      <Text color="gray" spacing="small" fontSize="medium">
+        Call the number on the back of the card to activate it and set your PIN. It should arrive in 5-7 business 
+        days. Check out more 
+        <a href="https://support.joinforma.com/en/articles/6542665-new-forma-card-activation">card FAQs.</a>
       </Text>
 
-      <Button href="https://client.joinforma.com/login" spacing="medium" variant="primary" title="Sign in to Forma" />
+      <Heading spacing="medium" size="medium" title="What if I have dependents?" />
+
+      <Text color="gray" spacing="small" fontSize="medium">
+        You can request a card for them, too! First add them as dependents to your Forma account and we&apos;ll 
+        send them a card.
+      </Text>
+
+      <Text color="gray" spacing="small" fontSize="medium">
+        You&apos;ll be able to manage their cards from your accounts settings in case they&apos;re lost or stolen.
+      </Text>
+
+      <Button href="https://client.joinforma.com/login" spacing="large" variant="primary" title="Sign in to Forma" />
+
+      <Text color="gray" spacing="large" fontSize="medium">
+        If you have any questions, reach out to member support via live chat or 
+        <a href="mailto:support@joinforma.com">support@joinforma.com</a>
+      </Text>
     </EmailBlock>
   </Email>
 
 )
+
+export const Template3 = () => {
+
+
+}

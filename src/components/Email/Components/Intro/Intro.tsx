@@ -27,6 +27,7 @@ const IntroContentHasBg = {
 interface IntroProps {
   spacingTop?: 'small' | 'medium' | 'large'
   sideSpacing?: 'small' | 'medium'
+  smallPaddingBottom?: boolean
   padding?: 'small' | 'medium' | 'large'
   logoOnDarkBg?: boolean
   noWordMark?: boolean
@@ -46,6 +47,7 @@ export const Intro = ({
     logoSize,
     spacingTop,
     sideSpacing,
+    smallPaddingBottom,
     padding,
     bgColor,
     buttonTitle,
@@ -61,7 +63,12 @@ export const Intro = ({
     >
       <table 
         className={ bgColor ? 'mobile__spacing--medium mobile__add--br' : '' }
-        style={ bgColor ? { ...IntroHasBg, backgroundColor: bgColor } : IntroStyle }
+        style={{
+          width: '100%',
+          padding: bgColor ? 50 : '',
+          color: bgColor ? '#fff' : '#000',
+          backgroundColor: bgColor
+        }}
       >
         <Tbody>
           <Tr>

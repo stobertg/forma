@@ -4,7 +4,7 @@ import React from 'react'
 
 interface SpacingProps {
   children: React.ReactNode
-  spacing?: 'small' | 'medium' | 'large' | undefined
+  spacing?: 'tiny' | 'small' | 'medium' | 'large' | undefined
   alignment?: 'center'
 }
 
@@ -20,7 +20,7 @@ export const Spacing = ({
 
     <div 
       style={{
-        marginTop: spacing == "large" ? 50 : spacing == "medium" ? 32 : spacing == "small" ? 12 : 0,
+        marginTop: spacing == "large" ? 50 : spacing == "medium" ? 32 : spacing == "small" ? 12 : spacing == "tiny" ? 4 : 0,
         textAlign: alignment == 'center' ? 'center' : 'inherit'
       }}
     >
