@@ -6,6 +6,7 @@ interface SpacingProps {
   children: React.ReactNode
   spacing?: 'tiny' | 'small' | 'medium' | 'large' | undefined
   alignment?: 'center'
+  style?: any
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -13,7 +14,8 @@ interface SpacingProps {
 export const Spacing = ({
     children,
     spacing,
-    alignment
+    alignment,
+    style
   }: SpacingProps ) => {
   
   return(
@@ -21,7 +23,8 @@ export const Spacing = ({
     <div 
       style={{
         marginTop: spacing == "large" ? 50 : spacing == "medium" ? 32 : spacing == "small" ? 12 : spacing == "tiny" ? 4 : 0,
-        textAlign: alignment == 'center' ? 'center' : 'inherit'
+        textAlign: alignment == 'center' ? 'center' : 'inherit',
+        ...style
       }}
     >
       { children }
