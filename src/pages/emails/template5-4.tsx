@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, StageBlocks, StageBlockRow, Code } from '@components'
-import { Email, EmailBlock, Heading, Text, Reciept, Button } from '@email'
+import { Email, EmailBlock, Heading, Text, Reciept, Button, List } from '@email'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
 
 const Page: NextPage = () => {
@@ -9,7 +9,7 @@ const Page: NextPage = () => {
     <SiteContainer blockSpacing="l1">
       <Block>
         <ProjectInfo
-          title="Email - Subscription renewal failed"
+          title="Email - Subscription canceled"
           figmaLink="https://www.figma.com/file/mebc7LtV1mavpIfDdpte9S/3.-Forma---Components?node-id=7361%3A11097"
           storybookLink="/"
           githubLink="/"
@@ -27,7 +27,7 @@ const Page: NextPage = () => {
           <StageBlocks 
             columns="1"
             titles={[
-              { title: 'Subscription renewal failed' }
+              { title: 'Subscription canceled' }
             ]}
           >
             <StageBlockRow spacing="removeOnMobile">
@@ -35,7 +35,7 @@ const Page: NextPage = () => {
                 
                 <Email bgColor="gray" removeFooterTopSpacing>
                   <Reciept 
-                    recieptType="failure"
+                    recieptType="canceled"
                     emailTitle="There was a problem renewing your subscription"
                     intro={
                       <>
@@ -44,12 +44,29 @@ const Page: NextPage = () => {
                         </Text>
 
                         <Text spacing="medium" fontSize="medium">
-                          We can&apos;t renew your &#123;&nbsp;subscription_title&nbsp;&#125; because it exceeded the balance 
-                          of your &#123;&nbsp;this.wallet_name&nbsp;&#125; account. You can link a personal credit card to 
-                          Forma to pay for the rest of the fee and renew your subscription.
+                          We tried to renew your &#123;&nbsp;subscription_title&nbsp;&#125; for the third time, but we 
+                          couldn&apos;t because of a problem with your linked credit card so your subscription was cancelled.
                         </Text>
 
-                        <Button href="https://joinforma.com" spacing="medium" variant="primary" title="Update credit card" />
+                        <Text spacing="medium" fontSize="medium">
+                          If you still owe overdue fees:
+                        </Text>
+
+                        <List 
+                          spacing="medium"
+                          listItems={[
+                            { title: "We'll first try to take the fees from another eligible spending account" },
+                            { title: "If we can't take it from another account, we'll collect it on your {this.wallet_name} account next time it renews until all fees are paid" },
+                            { title: "You can't start a new subscription to { vendor_name } until the overdue fees are paid" }
+                          ]}
+                        />
+
+                        <Text spacing="medium" fontSize="medium">
+                          If you&apos;d like to keep the subscription active, please contact our Forma Support team via 
+                          live chat or at <a href="mailto:support@joinforma.com">support@joinforma.com</a>.
+                        </Text>
+
+                        <Button href="https://joinforma.com" spacing="medium" variant="primary" title="Contact support" />
                       </>
                     }
                     buttonLink="https://joinforma.com" 
