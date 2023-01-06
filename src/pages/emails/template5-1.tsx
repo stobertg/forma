@@ -45,6 +45,12 @@ const Page: NextPage = () => {
                           Hi &#123;&nbsp;first name&nbsp;&#125;,
                         </Text>
 
+                        <Text spacing="small" fontSize="medium">
+                          Your subscription to &#123;&nbsp;vendor_title&nbsp;&#125; is in the works! We sent your information 
+                          to the vendor and it takes around 3-5 business days to activate the account. Once it is set up, you 
+                          will receive a confirmation email with instructions to start using your account.
+                        </Text>
+
                         <Text spacing="medium" fontSize="medium">
                           We won&apos;t charge your &#123;&nbsp;this.wallet_name&nbsp;&#125; account until &#123;&nbsp;vendor_title&nbsp;&#125; confirms your subscription.
                         </Text>
