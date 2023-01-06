@@ -7,6 +7,7 @@ interface TdProps {
   display?: 'inline'
   spacingTop?: 'small' | 'medium' | 'large'
   padding?: 'small' | 'medium' | 'large'
+  smallPaddingBottom?: boolean
   sideSpacing?: 'small' | 'medium'
   marginLeft?: any
   marginRight?: any
@@ -22,6 +23,7 @@ export const Td = ({
     display,
     spacingTop,
     sideSpacing,
+    smallPaddingBottom,
     marginLeft,
     marginRight,
     padding,
@@ -41,7 +43,7 @@ export const Td = ({
         marginTop: spacingTop == 'small' ? 12 : spacingTop == 'medium' ? 32 : spacingTop == 'large' ? 50 :  0,
         marginLeft: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginLeft,
         marginRight: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginRight,
-        padding: padding == 'small' ? 12 : padding == 'medium' ? 32 : padding == 'large' ? 50 : 0,
+        padding: padding == 'small' ? 12 : padding == 'medium' ? 32 : padding == 'large' ? 50 : smallPaddingBottom ? '50px 50px 20px' : 0,
         backgroundColor: bgColor,
         borderRadius: 16
       }}

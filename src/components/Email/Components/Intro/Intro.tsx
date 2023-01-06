@@ -59,7 +59,7 @@ export const Intro = ({
     
     <Td 
       className={ bgColor ? 'mobile__spacing--none' : 'mobile__spacing--small'} 
-      {...{ spacingTop, sideSpacing, padding }}
+      {...{ spacingTop, sideSpacing, padding, smallPaddingBottom }}
     >
       <table 
         className={ bgColor ? 'mobile__spacing--medium mobile__add--br' : '' }

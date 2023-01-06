@@ -29,7 +29,6 @@ export const Reciept = ({ orderItems, buttonLink }:RecieptProps) => {
         <Tbody>
           <Tr>
             <Intro 
-              padding="large"
               smallPaddingBottom
             >
               <Heading 
