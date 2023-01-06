@@ -14,6 +14,7 @@ interface TdProps {
   bgColor?: string
   width?: 'half'
   children: React.ReactNode
+  style?: any
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -29,6 +30,7 @@ export const Td = ({
     padding,
     bgColor,
     width,
+    style,
     children
   }: TdProps ) => {
   
@@ -45,7 +47,8 @@ export const Td = ({
         marginRight: sideSpacing == 'small' ? 50 : sideSpacing == 'medium' ? 20 : marginRight,
         padding: padding == 'small' ? 12 : padding == 'medium' ? 32 : padding == 'large' ? 50 : smallPaddingBottom ? '50px 50px 20px' : 0,
         backgroundColor: bgColor,
-        borderRadius: 16
+        borderRadius: 16,
+        ...style
       }}
     >
       { children }

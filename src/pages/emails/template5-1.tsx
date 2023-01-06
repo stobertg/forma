@@ -35,9 +35,10 @@ const Page: NextPage = () => {
                 
                 <Email bgColor="gray" removeFooterTopSpacing>
                   <Reciept 
+                    recieptType="subscription"
                     emailTitle="Thanks for your order!"
-                    productImage="/products/fitbit/fitbit-watch.png"
-                    productTitle="Fitbit Versa 3"
+                    productImage="/products/headspace/headspace.png"
+                    productTitle="Headspace"
                     intro={
                       <>
                         <Text spacing="medium" fontSize="medium">
@@ -45,35 +46,36 @@ const Page: NextPage = () => {
                         </Text>
 
                         <Text spacing="small" fontSize="medium">
-                          Thank you for shopping at Forma Store! We&apos;re working on getting everything ready. Your order will be 
-                          shipped in 5-10 business days* directly to you.
+                          Your subscription to &#123;&nbsp;vendor_title&nbsp;&#125; is in the works! We sent your information 
+                          to the vendor and it takes around 3-5 business days to activate the account. Once it is set up, you 
+                          will receive a confirmation email with instructions to start using your account.
                         </Text>
 
                         <Text spacing="medium" fontSize="medium">
-                          <strong>Order Number:</strong> <a href="https://joinforma.com">W1150150997</a>
+                          We won&apos;t charge your &#123;&nbsp;this.wallet_name&nbsp;&#125; account until &#123;&nbsp;vendor_title&nbsp;&#125; confirms your subscription.
                         </Text>
 
+                        <Text spacing="medium" fontSize="medium">
+                          <strong>Order Number:</strong> <a href="https://www.joinforma.com">W1736300082</a>
+                        </Text> 
+                        
                         <Text fontSize="medium">
-                          <strong>Order Date:</strong> July 20, 2022
+                          <strong>Order Date:</strong> September 30, 2022
                         </Text> 
                       </>
                     }
                     orderItems={[
                       {
-                        title: 'Fitbit Versa 3',
-                        items: [{ title: '$219.00' }, { title: 'You saved $60 with Forma 🎉' }]
+                        title: 'Headspace',
+                        items: [{ title: '$9.99/month' }, { title: 'You save $10 every month with Forma 🎉' }]
                       },
                       {
-                        title: 'Shipping Address',
-                        items: [{ title: '6095 Heron Ave' }, { title: 'Unit B' }, { title: 'Ewa Beach HI 96706' }]
+                        title: 'Estimated Start Date',
+                        items: [{ title: 'October 1, 2022' }]
                       },
                       {
                         title: 'Shipment Notifications',
                         items: [{ title: <a href="mailto:christine@joinforma.com">christine@joinforma.com</a> }]
-                      },
-                      {
-                        title: 'Shipping Method',
-                        items: [{ title: 'Standard 7-10 business days' }]
                       }
                     ]} 
                     buttonLink="https://joinforma.com" 
