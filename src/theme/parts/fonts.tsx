@@ -6,22 +6,27 @@ export const Typeface = [
   {
     fontFamily: 'Labil-Medium',
     src: 'local("Labil-Medium"), url("/fonts/LabilGrotesk-Medium.woff2")',
+    letterSpacing: 0
   },
   {
     fontFamily: 'Labil-Medium-Italic',
     src: 'local("Labil-Medium-Italic"), url("/fonts/LabilGrotesk-MediumItalic.woff2")',
+    letterSpacing: 0
   },
   {
     fontFamily: 'Labil-Regular',
     src: 'local("Labil-Regular"), url("/fonts/LabilGrotesk-Regular.woff2")',
+    letterSpacing: 0
   },
   {
     fontFamily: 'Labil-Regular-Italic',
     src: 'local("Labil-Regular-Italic"), url("/fonts/LabilGrotesk-RegularItalic.woff2")',
+    letterSpacing: 0
   },
   {
     fontFamily: 'code',
     src: 'local("Labil-Regular-Italic"), url("/fonts/SourceCodePro-Regular.ttf")',
+    letterSpacing: 0
   }
 ]
 
