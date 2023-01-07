@@ -8,7 +8,8 @@ export const globalStyle = {
     fontFamily: '$sansSerif',
     color: 'inherit',
     WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale'
+    MozOsxFontSmoothing: 'grayscale',
+    letterSpacing: 0
   },
 
   img: {
