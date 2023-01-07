@@ -33,7 +33,7 @@ export const Email = ({
           @media(max-width: 600px) {
             .mobile__add--br { border-radius: 16px }
             .mobile__margin--small { margin-left: 10px !important; margin-right: 10px !important; }
-            .mobile__margin--none { margin-top: 0px !important; margin-left: 0px !important; margin-right: 0px !important; }
+            .mobile__margin--none { margin-left: 0px !important; margin-right: 0px !important; }
             .mobile__spacing--small { padding-left: 20px !important; padding-right: 20px !important; }
             .mobile__spacing--medium { padding-left: 30px !important; padding-right: 30px !important; }
             .mobile__padding--bottom-none { padding-bottom: 0 !important }
