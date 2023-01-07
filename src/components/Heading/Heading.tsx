@@ -6,7 +6,8 @@ import { styled } from '@theme'
 
 const HeadingWrap = styled('div', {
   position: 'relative',
-  letterSpacing: 0,
+  
+  '*': { letterSpacing: 0 },
 
   strong: {
     fontFamily: '$sansSerifBold',
