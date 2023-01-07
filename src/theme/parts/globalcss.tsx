@@ -30,6 +30,8 @@ export const globalStyle = {
     color: '$textLink'
   },
 
+  strong: { fontFamily: 'Labil-Medium' }, 
+
   button: { cursor: 'pointer' },
 
   p: { margin: 0 },

@@ -6,12 +6,6 @@ import { styled } from '@theme'
 
 const HeadingWrap = styled('div', {
   position: 'relative',
-  
-  '*': { letterSpacing: 0 },
-
-  strong: {
-    fontFamily: '$sansSerifBold',
-  },
 
   // For the different font sizes supported within the headings of the site
 
@@ -22,7 +16,7 @@ const HeadingWrap = styled('div', {
       l2: { fontSize: '$s2' },
       l3: { fontSize: '$s3', lineHeight: 1.3 },
       l4: { fontSize: '$s4', lineHeight: 1.3 },
-      l5: { fontSize: '$s5', lineHeight: 1.3, letterSpacing: 0 },
+      l5: { fontSize: '$s5', lineHeight: 1.3 },
       l6: { fontSize: '$s6' },
       l7: { fontSize: '$s7', lineHeight: 1.1 },
       l8: { fontSize: '$s8', lineHeight: 1.1 },
