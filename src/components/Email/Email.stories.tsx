@@ -1,5 +1,5 @@
 import React from 'react'
-import { Intro, EmailBlock, Heading, Text, Image, HeroImage, ProductHero, ProductThumb, Button, Perks } from '@email'
+import { Intro, EmailBlock, Heading, Text, Image, HeroImage, ProductHero, ProductThumb, Button, Perks, Reciept } from '@email'
 import { Email } from './Email'
 
 const story = {
@@ -168,6 +168,54 @@ export const Template2 = () => (
 )
 
 export const Template3 = () => {
+  return(
+  <Email bgColor="gray" removeFooterTopSpacing>
+                  <Reciept 
+                    recieptType="subscription"
+                    emailTitle="Thanks for your order!"
+                    productImage="/products/headspace/headspace.png"
+                    productTitle="Headspace"
+                    intro={
+                      <>
+                        <Text spacing="medium" fontSize="medium">
+                          Hi &#123;&nbsp;first name&nbsp;&#125;,
+                        </Text>
 
+                        <Text spacing="small" fontSize="medium">
+                          Your subscription to &#123;&nbsp;vendor_title&nbsp;&#125; is in the works! We sent your information 
+                          to the vendor and it takes around 3-5 business days to activate the account. Once it is set up, you 
+                          will receive a confirmation email with instructions to start using your account.
+                        </Text>
 
+                        <Text spacing="medium" fontSize="medium">
+                          We won&apos;t charge your &#123;&nbsp;this.wallet_name&nbsp;&#125; account until &#123;&nbsp;vendor_title&nbsp;&#125; confirms your subscription.
+                        </Text>
+
+                        <Text spacing="medium" fontSize="medium">
+                          <strong>Order Number:</strong> <a href="https://www.joinforma.com">W1736300082</a>
+                        </Text> 
+                        
+                        <Text fontSize="medium">
+                          <strong>Order Date:</strong> September 30, 2022
+                        </Text> 
+                      </>
+                    }
+                    orderItems={[
+                      {
+                        title: 'Headspace',
+                        items: [{ title: '$9.99/month' }, { title: 'You save $10 every month with Forma 🎉' }]
+                      },
+                      {
+                        title: 'Estimated Start Date',
+                        items: [{ title: 'October 1, 2022' }]
+                      },
+                      {
+                        title: 'Shipment Notifications',
+                        items: [{ title: <a href="mailto:christine@joinforma.com">christine@joinforma.com</a> }]
+                      }
+                    ]} 
+                    buttonLink="https://joinforma.com" 
+                  />    
+                </Email>
+  )
 }

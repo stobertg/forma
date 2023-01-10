@@ -37,7 +37,7 @@ export const Logo = ({
           width: logoSize == 'large' ? 60 : logoSize == 'medium' ? 40 : 32,
         }}
       >
-        <Image src="/global/logo/logomark.png" alt="Forma Logomark" />
+        <Image src="https://forma-formads.vercel.app/global/logo/logomark.png" alt="Forma Logomark" />
       </div>
       
       <>
@@ -47,7 +47,7 @@ export const Logo = ({
 
               <>
                 <div style={ WordMarkStyle }>
-                  <Image src="/global/logo/wordmark-white.png" alt="Forma wordmark" />
+                  <Image src="https://forma-formads.vercel.app/global/logo/wordmark-white.png" alt="Forma wordmark" />
                 </div>
                 { text ? <Heading spacing="small" size="tiny" title={ text } /> : null }
               </>
@@ -56,7 +56,7 @@ export const Logo = ({
 
               <>
                 <div style={ WordMarkStyle }>
-                  <Image src="/global/logo/wordmark-indigo.png" alt="Forma wordmark" />
+                  <Image src="https://forma-formads.vercel.app/global/logo/wordmark-indigo.png" alt="Forma wordmark" />
                 </div>
                 { text ? <Heading spacing="small" size="tiny" title={ text } /> : null }
               </>

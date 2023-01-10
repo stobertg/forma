@@ -7,7 +7,8 @@ const ButtonStyles = {
   fontFamily: 'Labil Grotesk',
   padding: '16px 20px',
   borderRadius: 8,
-  color: '#4967e5'
+  color: '#4967e5',
+  whiteSpace: 'nowrap'
 }
 
 const ButtonPrimary = {

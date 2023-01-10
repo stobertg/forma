@@ -49,7 +49,11 @@ export const DownloadApp = ({
                 style={{ ...ButtonStyle, marginRight: 12 }} 
                 href={ provider.href }
               >
-                <Image src={`/appstore/${ provider.provider }.png`} alt={ provider.title } />
+                <Image src={
+                  provider.provider == 'apple' ? 'https://forma-formads.vercel.app/appstore/apple.png' : 
+                  provider.provider == 'google' ? 'https://storage.googleapis.com/assets.twicapp-production.twic.ai/sendgrid/member-stipend/AnimaPackage-Web-PJgaj/img/large-reminder-expiration-download-store-play-37D4ED26-D807-486B-B077-331820EDD4FF@2x.png' :
+                  `/appstore/${ provider.provider }.png`
+                } alt={ provider.title } />
               </a>
             ))}
           </div>

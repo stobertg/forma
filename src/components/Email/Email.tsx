@@ -29,7 +29,7 @@ export const Email = ({
       <style>
         {`
           table * { font-family: Labil Grotesk, Arial, Helvetica, sans-serf !important }
-          body{ margin: 0 }
+          body{ margin: 0; padding: 0 }
           @media(max-width: 600px) {
             .mobile__add--br { border-radius: 16px }
             .mobile__margin--small { margin-left: 10px !important; margin-right: 10px !important; }
@@ -39,6 +39,10 @@ export const Email = ({
             .mobile__padding--bottom-none { padding-bottom: 0 !important }
             .thumbnail { padding: 20px 0 !important; font-size: 14px !important; }
             .thumbnail img { max-width: 100px !important; }
+          }
+          :root {
+            color-scheme: light;
+            supported-color-schemes: light;
           }
         `}
       </style>
